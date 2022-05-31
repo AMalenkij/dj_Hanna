@@ -1,0 +1,8 @@
+Django
+Pillow
+django-on-heroku
+gunicorn
+
+python-dotenv
+python-decouple
+django-extensions
