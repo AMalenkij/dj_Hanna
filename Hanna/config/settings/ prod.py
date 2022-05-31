@@ -11,7 +11,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['dj-hanna.herokuapp.com']
 
 # Heroku Settings
 django_on_heroku.settings(locals(), staticfiles=False)
