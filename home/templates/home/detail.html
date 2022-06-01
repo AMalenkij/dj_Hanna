@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="bg-dark">
+    {% include 'header.html' %}
+</div>
+
+<div class="p-3 container"><a href="{% url 'news' %}" class="link-primary"><--news</a></div>
+
+<!-- DetailPost -->
+<section class="p-3 container">
+    <div>
+        {% if photo %}
+        <p><img class="img-fluid img-article-left" src="{{photo.url}}"></p>
+        {% endif %}
+        <p>
+        <h3>{{ title }}</h3></p>
+        <p><h6>
+        {{ created_at|date:"Y.m.d" }}
+    </h6></p>
+        <p>{{ content | linebreaks }}</p>
+    </div>
+</section>
+
+<div class="container"><a href="{% url 'news' %}" class="link-primary"><--news</a></div>
+
+{% endblock content %}
