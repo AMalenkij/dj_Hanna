@@ -4,14 +4,6 @@ from django.views.generic import ListView
 from .models import News
 
 
-def index(request):
-    context = {
-        'title': 'Home',
-        'nav_footer': ['Home', 'News', 'About'],
-    }
-    return render(request, template_name='home/home.html', context=context)
-
-
 class NewsList(ListView):
     paginate_by = 4
     model = News
