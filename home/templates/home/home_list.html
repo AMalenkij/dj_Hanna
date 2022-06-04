@@ -19,7 +19,10 @@
                 <h6><p>{{ item.created_at|date:"Y.m.d" }}</p></h6>
                 <p>{{ item.intro }}</p>
                 <a href="{{item.get_absolute_url}}">
-                    <p><u><h5 class="text-end">Read more</h5></u></p>
+                    <u><p>
+                        <h5 class="text-end">Read more</h5>
+                    </u>
+                    </p>
                 </a>
             </div>
         </div>
