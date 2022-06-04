@@ -1,6 +1,6 @@
 <!-- Footer -->
 <footer class="footer mt-auto py-3 bg-dark text-white">
-<!-- Paginator -->
+    <!-- Paginator -->
     {% if page_obj.has_other_pages %}
     <section class="container">
         <nav aria-label="Search results pages">
@@ -33,12 +33,17 @@
     </section>
     {% endif %}
     <div class="container">
-            <div class="d-flex justify-content-between py-2 my-2 border-top">
+        <div class="row d-flex justify-content-between py-2 my-2 border-top">
+            <div class="col-md-2 col-sm-3">
                 <p>© 2022 HANNA</p>
-                <!--icon -->
+            </div>
+            <!--icon -->
+            <div class="col-md-10 col-sm-9">
                 {% include "icon.html" %}
             </div>
         </div>
-        </footer>
     </div>
+    </div>
+</footer>
+</div>
 </footer>
