@@ -1,3 +1,72 @@
 i {
-    font-size: 34px;
+    font-size: 22px;
 }
+
+.masthead {
+    background-size: cover;
+    min-height: 20vh;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/*.pagination {
+    display: flex;
+    background-color: greenyellow;
+    column-gap: 20px;
+}
+.page-item {
+    background-color: chocolate;
+
+}
+
+
+.page-link {
+
+    background-color: red;
+}
+*/
+
+
+/* pagination
+.pagintion-container {
+    display: flex;
+}
+
+.pagintion-container a {
+    color: #4a4a4a;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 14px;
+    padding: 15px 15px;
+    border-radius: 50px;
+}
+
+.pagintion-container a:hover {
+    background-color: #939396;
+    color: white;
+    transition: 200ms ease;
+}
+
+
+.pagintion-left {
+
+}
+
+
+.pagintion-center {
+
+}
+
+.pagintion-right {
+
+}
+*/
