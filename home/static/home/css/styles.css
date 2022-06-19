@@ -18,6 +18,10 @@ main {
     flex-grow: 1;
 }
 
+.img-bg {
+    clip-path: polygon(0 140px, 100% 0, 100% 100%, 0 100%);
+}
+
 /*.pagination {
     display: flex;
     background-color: greenyellow;

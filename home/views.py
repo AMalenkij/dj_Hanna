@@ -10,6 +10,12 @@ def index(request):
     }
     return render(request, 'home/about.html', context)
 
+def index_2(request):
+    context = {
+        'title': 'Concerts',
+    }
+    return render(request, 'home/concerts.html', context)
+
 
 class NewsList(ListView):
     paginate_by = 4
