@@ -25,7 +25,6 @@
         padding: 30px;
         overflow: hidden;
         align-items: center;
-        max-width: 1000px;
         margin: auto;
         color: #333;
         font-family: 'Lato', sans-serif;
@@ -158,8 +157,8 @@
 </style>
 {% for item in news %}
 
-<div class="bg-white">
-    <div class="blog-item">
+<div class="container mx-auto">
+    <div class="blog-item ">
         <a href="{{item.get_absolute_url}}">
             {% if item.photo %}
             <img class="w-64" src="{{item.photo.url}}">
