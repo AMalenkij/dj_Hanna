@@ -1,0 +1,43 @@
+ <nav class=" py-3 w-full">
+            <ol class="list-reset flex">
+                <li><a
+                       {% if request.resolver_match.url_name == 'home' %}
+                       class="text-gray-500"
+                       {% else %}
+                       href="{% url 'home' %}" class="text-blue-600 hover:text-blue-700"
+                       {% endif %}
+                >Home</a></li>
+                <li><span class="text-gray-500 mx-2">|</span></li>
+                <li><a
+                        {% if request.resolver_match.url_name == 'news' %}
+                       class="text-gray-500"
+                       {% else %}
+                       href="{% url 'news' %}" class="text-blue-600 hover:text-blue-700"
+                       {% endif %}
+                >News</a></li>
+                <li><span class="text-gray-500 mx-2">|</span></li>
+                <li><a
+                {% if request.resolver_match.url_name == 'concerts' %}
+                       class="text-gray-500"
+                       {% else %}
+                       href="{% url 'concerts' %}" class="text-blue-600 hover:text-blue-700"
+                       {% endif %}
+                >Concerts</a></li>
+                <li><span class="text-gray-500 mx-2">|</span></li>
+                <li><a
+                        {% if request.resolver_match.url_name == 'contacts' %}
+                       class="text-gray-500"
+                       {% else %}
+                       href="{% url 'contacts' %}" class="text-blue-600 hover:text-blue-700"
+                       {% endif %}
+                >Contacts</a></li>
+                <li><span class="text-gray-500 mx-2">|</span></li>
+                <li><a
+                 {% if request.resolver_match.url_name == 'about' %}
+                       class="text-gray-500"
+                       {% else %}
+                       href="{% url 'about' %}" class="text-blue-600 hover:text-blue-700"
+                       {% endif %}
+                >About</a></li>
+            </ol>
+        </nav>

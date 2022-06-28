@@ -22,3 +22,20 @@ class News(models.Model):
 
     def get_absolute_url(self):
         return reverse('post', kwargs={'post_slug': self.slug})
+
+
+class Concerts(models.Model):
+    title = models.CharField(max_length=255)
+    time = models.TimeField()
+    date = models.DateField()
+    location = models.CharField(max_length=255)
+    place = models.CharField(max_length=500)
+    link = models.URLField(max_length=200)
+    is_published = models.BooleanField(default=True)
+
+    class Meta:
+        verbose_name = 'Concert'
+        verbose_name_plural = 'Concerts'
+
+    def __str__(self):
+        return self.title

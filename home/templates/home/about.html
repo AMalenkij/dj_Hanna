@@ -1,3 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="relative container mx-auto  ">
+<div class="absolute w-full">
+{% include 'header.html' %}</div></div>
 <!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
@@ -9,7 +14,7 @@
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
     }
 
-      .clip-poly-b-md {
+    .clip-poly-b-md {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
     }
 
@@ -100,164 +105,163 @@
         </div>
     </div>
 </div>
-
 <!-- card -->
 <div>
     <!-- gallary -->
-<style>
+    <style>
 
-    .gallery-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        /* background-color: #fff; */
-        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
-        width: 80%;
-        /* margin: 0 auto; */
-        padding: 10px;
-    }
-
-    .gallery-item {
-        flex-basis: 32.7%;
-        margin-bottom: 6px;
-        opacity: .85;
-        cursor: pointer;
-    }
-
-    .gallery-item:hover {
-        opacity: 1;
-    }
-
-    .gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .gallery-content {
-        font-size: .8em;
-    }
-
-    .lightbox {
-        position: fixed;
-        display: none;
-        background-color: rgba(0, 0, 0, 0.8);
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        top: 0;
-        left: 0;
-    }
-
-    .lightbox-content {
-        position: relative;
-        width: 70%;
-        height: 70%;
-        margin: 5% auto;
-
-    }
-
-    .lightbox-content img {
-        border-radius: 7px;
-        box-shadow: 0 0 3px 0 rgba(225, 225, 225, .25);
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .lightbox-prev,
-    .lightbox-next {
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.8);
-        color: #fff;
-        padding: 7px;
-        top: 45%;
-        cursor: pointer;
-    }
-
-    .lightbox-prev {
-        left: 0;
-    }
-
-    .lightbox-next {
-        right: 0;
-    }
-
-    .lightbox-prev:hover,
-    .lightbox-next:hover {
-        opacity: .8;
-    }
-
-    @media (max-width: 767px) {
         .gallery-container {
-            width: 100%;
-        }
-
-        .gallery-item {
-            flex-basis: 49.80%;
-            margin-bottom: 3px;
-        }
-
-        .lightbox-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* background-color: #fff; */
+            box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
             width: 80%;
-            height: 60%;
-            margin: 15% auto;
+            /* margin: 0 auto; */
+            padding: 10px;
         }
-    }
 
-    @media (max-width: 480px) {
         .gallery-item {
-            flex-basis: 100%;
-            margin-bottom: 1px;
+            flex-basis: 32.7%;
+            margin-bottom: 6px;
+            opacity: .85;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            opacity: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-content {
+            font-size: .8em;
+        }
+
+        .lightbox {
+            position: fixed;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            top: 0;
+            left: 0;
         }
 
         .lightbox-content {
-            width: 90%;
-            margin: 20% auto;
+            position: relative;
+            width: 70%;
+            height: 70%;
+            margin: 5% auto;
+
         }
-    }
-</style>
-<div class="w-64 mx-auto mb-14">
-    <p class="text-center  text-white text-5xl"> Gallery</p>
-    <div class="h-1 w-8 bg-violet-500 mx-auto mt-4 rounded-xl"></div>
-</div>
-<div class="gallery-container bg-black mx-auto mb-44 mb-20 ">
-    <div class="gallery-item" data-index="1">
-        <img src="/static/home/img/band_Hanna.jpg">
+
+        .lightbox-content img {
+            border-radius: 7px;
+            box-shadow: 0 0 3px 0 rgba(225, 225, 225, .25);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .lightbox-prev,
+        .lightbox-next {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 7px;
+            top: 45%;
+            cursor: pointer;
+        }
+
+        .lightbox-prev {
+            left: 0;
+        }
+
+        .lightbox-next {
+            right: 0;
+        }
+
+        .lightbox-prev:hover,
+        .lightbox-next:hover {
+            opacity: .8;
+        }
+
+        @media (max-width: 767px) {
+            .gallery-container {
+                width: 100%;
+            }
+
+            .gallery-item {
+                flex-basis: 49.80%;
+                margin-bottom: 3px;
+            }
+
+            .lightbox-content {
+                width: 80%;
+                height: 60%;
+                margin: 15% auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-item {
+                flex-basis: 100%;
+                margin-bottom: 1px;
+            }
+
+            .lightbox-content {
+                width: 90%;
+                margin: 20% auto;
+            }
+        }
+    </style>
+    <div class="w-64 mx-auto mb-14">
+        <p class="text-center  text-white text-5xl"> Gallery</p>
+        <div class="h-1 w-8 bg-violet-500 mx-auto mt-4 rounded-xl"></div>
     </div>
-    <div class="gallery-item" data-index="2">
-        <img src="https://images.pexels.com/photos/5969/wood-nature-forest-bridge.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
+    <div class="gallery-container bg-black mx-auto mb-44 mb-20 ">
+        <div class="gallery-item" data-index="1">
+            <img src="/static/home/img/band_Hanna.jpg">
+        </div>
+        <div class="gallery-item" data-index="2">
+            <img src="https://images.pexels.com/photos/5969/wood-nature-forest-bridge.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
+        </div>
+        <div class="gallery-item" data-index="3">
+            <img src="https://images.pexels.com/photos/531321/pexels-photo-531321.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
+        </div>
+        <div class="gallery-item" data-index="4">
+            <img src="https://images.pexels.com/photos/373920/pexels-photo-373920.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260">
+        </div>
+        <div class="gallery-item" data-index="5">
+            <img src="https://images.pexels.com/photos/164241/pexels-photo-164241.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260">
+        </div>
+        <div class="gallery-item" data-index="6">
+            <img src="https://images.pexels.com/photos/417054/pexels-photo-417054.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+        </div>
+        <div class="gallery-item" data-index="7">
+            <img src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+        </div>
+        <div class="gallery-item" data-index="8">
+            <img src="https://images.pexels.com/photos/38326/pexels-photo-38326.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+        </div>
+        <div class="gallery-item" data-index="9">
+            <img src="https://images.pexels.com/photos/266691/pexels-photo-266691.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+        </div>
     </div>
-    <div class="gallery-item" data-index="3">
-        <img src="https://images.pexels.com/photos/531321/pexels-photo-531321.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
-    </div>
-    <div class="gallery-item" data-index="4">
-        <img src="https://images.pexels.com/photos/373920/pexels-photo-373920.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260">
-    </div>
-    <div class="gallery-item" data-index="5">
-        <img src="https://images.pexels.com/photos/164241/pexels-photo-164241.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260">
-    </div>
-    <div class="gallery-item" data-index="6">
-        <img src="https://images.pexels.com/photos/417054/pexels-photo-417054.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-    </div>
-    <div class="gallery-item" data-index="7">
-        <img src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-    </div>
-    <div class="gallery-item" data-index="8">
-        <img src="https://images.pexels.com/photos/38326/pexels-photo-38326.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-    </div>
-    <div class="gallery-item" data-index="9">
-        <img src="https://images.pexels.com/photos/266691/pexels-photo-266691.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-    </div>
-</div>
-<script src="/static/home/scripts/script.js"></script>
+    <script src="/static/home/scripts/script.js"></script>
 
     <div class="w-full h-64 bg-stone-900">
         <div class="h-96 w-4/5 mx-auto relative bg-gradient-to-tl from-blue-700 to-teal-500 rounded-xl shadow-2xl">
             <div class="absolute top-0 right-0 bg-gradient-to-tr from-teal-600 to-blue-500 w-full h-full clip-poly-Rectangle-b rounded-xl shadow-2xl"></div>
             <div class="relative  h-full w-96 mx-auto pt-10 text-center">
                 <img class="mx-auto" width="80" height="80" src="/static/home/img/HANNA_LOGO.png">
-                <div class="text-3xl mt-9 mb-5  text-white ">Live music </div>
+                <div class="text-3xl mt-9 mb-5  text-white ">Live music</div>
                 <a href="#" class="text-white  hover:text-violet-800/50 transition duration-500 font-bold text-2xl">
                     bay tickets
                 </a>
@@ -267,3 +271,4 @@
     </div>
 </div>
 <div class="-mt-20 w-full h-64 bg-black"></div>
+{% endblock content %}

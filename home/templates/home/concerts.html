@@ -1,4 +1,40 @@
 {% extends 'base.html' %}
 {% block content %}
-<img class="mx-auto" src="/static/home/img/concert_hero.jpg"/>
+
+{% include 'header.html' %}
+
+
+<img class="w-full object-cover h-fit absolute z-10 min-w-full max-w-none"
+     src="/static/home/img/concert_hero.jpg"/>
+
+<div class="mt-96 z-50 m-10 container mx-auto">
+    <div class="mb-10 mt-96"><span class="text-5xl"> Concerts </span></div>
+    <table class="border-collapse border border-slate-500 ...">
+        <thead>
+        <tr>
+            <th class="border border-slate-600 ...">date</th>
+            <th class="border border-slate-600 ...">month</th>
+            <th class="border border-slate-600 ...">time</th>
+            <th class="border border-slate-600 ...">title</th>
+            <th class="border border-slate-600 ...">place</th>
+        </tr>
+        </thead>
+        {% for item in concerts %}
+        <tbody class="">
+        <tr>
+            <td class="border border-slate-700 text-5xl pl-5 pr-5 ">{{ item.date|date:"d" }}</td>
+            <td class="border border-slate-700 text-2xl pl-5 pr-5">{{ item.date|date:"M" }}<br>{{ item.date|date:"Y" }}
+            </td>
+            <td class="border border-slate-700 pl-5 pr-5">{{ item.time|time:"H:i" }}</td>
+            <td class="border border-slate-700 pl-5 pr-5">{{ item.title }}</td>
+            <td class="border border-slate-700 pl-5 pr-5">{{ item.location }} <br> <span class="text-5xl">{{ item.location }}</span>
+            </td>
+        </tr>
+        </tbody>
+
+        {% endfor %}
+    </table>
+</div>
+
+
 {% endblock content %}
