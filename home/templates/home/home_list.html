@@ -163,9 +163,10 @@
 
 
 </style>
+<div class="clip-poly-md  lg:clip-poly bg-stone-900">
 {% for item in news %}
 
-<div class="clip-poly-md  lg:clip-poly bg-stone-900">
+<div class="">
     <div class="blog-item container mx-auto">
         <a href="{{item.get_absolute_url}}">
             {% if item.photo %}
@@ -195,3 +196,4 @@
 
 </div>
 {% endfor %}
+    </div>
