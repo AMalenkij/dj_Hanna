@@ -1,5 +1,6 @@
 {% block header %}
 <header class="relative flex items-center justify-center overflow-hidden">
+    <!--bg video -->
     {% if request.resolver_match.url_name == 'home' %}
     <video
             src="/static/home/img/dark_forest.mp4"
@@ -10,31 +11,29 @@
             muted=""
             playsinline=""
     ></video>
-
     {% endif %}
-    <nav class="relative z-30 container mx-auto  text-white flex justify-between m-5">
-
+    <nav class="relative z-30 container mx-auto  text-white lg:flex lg:justify-between m-5">
+        <!-- breadcrumb -->
         <div class="">
-            <nav class=" py-3 w-full">
+            <nav class="py-3 flex justify-center">
                 {% include "breadcrumb.html" %}
             </nav>
         </div>
 
-
+        <!-- logo -->
         {% if request.resolver_match.url_name == 'home' %}
-        <div class="mt-8">
+        <div class="lg:mt-8">
             <a class="" href="/">
                 <img src="/static/home/img/HANNA_LOGO.png" alt="Logo" width="52"
                      class="mx-auto">
-                <img src="/static/home/img/HANNA.png" class="d-inline-block align-text-top img-fluid" alt="HANNA"
+                <img src="/static/home/img/HANNA.png" class="mx-auto d-inline-block align-text-top img-fluid" alt="HANNA"
                      width="200" height="24">
             </a>
         </div>
         {% endif %}
 
-
-        <div class="flex justify-end mt-5 space-x-2 text-gray-700">
-
+        <!-- icon -->
+        <div class="flex justify-end mt-5 space-x-2 text-gray-700 lg:visible invisible">
 
             <!-- Facebook -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-10 h-10">

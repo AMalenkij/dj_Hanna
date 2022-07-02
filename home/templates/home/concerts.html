@@ -2,9 +2,17 @@
 {% block content %}
 
 {% include 'header.html' %}
+<style> .special_bg {
+    background-size: cover;
+    overflow: hidden;
+    height: 1000px;
+    justify-content: center;
+    align-items: center;
+}
+</style>
 
-
-<img class="w-full object-cover h-fit absolute z-10 min-w-full max-w-none"
+<!--<img class="w-full object-cover h-fit absolute z-10 min-w-full max-w-none" -->
+<img class="special_bg  absolute z-10 object-cover"
      src="/static/home/img/concert_hero.jpg"/>
 
 <div class="mt-96 z-50 m-10 container mx-auto">
