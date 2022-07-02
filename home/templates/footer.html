@@ -1,77 +1,78 @@
 <div class="bg-black">
-<!-- Paginator -->
-<div class="container mx-auto mb-5">
-    {% if page_obj.has_other_pages %}
-    <div class="flex items-center justify-center py-10 lg:px-0 sm:px-6 px-4">
-        <div class="w-full  flex items-center justify-between ">
-            <div class="flex items-center pt-3 text-gray-600 hover:text-indigo-700 cursor-pointer">
-                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.1665 4H12.8332" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round"/>
-                    <path d="M1.1665 4L4.49984 7.33333" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round"/>
-                    <path d="M1.1665 4.00002L4.49984 0.666687" stroke="currentColor" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                {% if page_obj.has_previous %}
-                <!--Active btn Previous-->
-                <a class="text-sm ml-3 font-medium leading-none" href="?page={{ page_obj.previous_page_number }}">Previous</a>
-                {% else %}
-                <!--Disable btn Previous-->
-                <a class="text-sm ml-3 font-medium text-red-900 leading-none">Previous</a>
-                {% endif %}
-            </div>
+    <!-- Paginator -->
+    <div class="container mx-auto mb-5">
+        {% if page_obj.has_other_pages %}
+        <div class="flex items-center justify-center py-10 lg:px-0 sm:px-6 px-4">
+            <div class="w-full  flex items-center justify-between ">
+                <div class="flex items-center pt-3 text-gray-600 hover:text-indigo-700 cursor-pointer">
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.1665 4H12.8332" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M1.1665 4L4.49984 7.33333" stroke="currentColor" stroke-width="1.25"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M1.1665 4.00002L4.49984 0.666687" stroke="currentColor" stroke-width="1.25"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    {% if page_obj.has_previous %}
+                    <!--Active btn Previous-->
+                    <a class="text-sm ml-3 font-medium leading-none" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                    {% else %}
+                    <!--Disable btn Previous-->
+                    <a class="text-sm ml-3 font-medium text-red-900 leading-none">Previous</a>
+                    {% endif %}
+                </div>
 
 
-            <div class="sm:flex hidden">
-                {% for p in paginator.page_range %}
-                {% if page_obj.number == p %}
-                <!--Active page -->
-                <p class="text-sm font-medium leading-none text-indigo-700 border-t border-indigo-400 pt-3 mr-4 px-2">{{ p }}</p>
-                {% elif p >= page_obj.numper|add:-2 and page_obj.numper|add:+2 %}
-                {% else %}
-                <!--btn page -->
-                <a class="text-sm font-medium leading-none cursor-pointer text-gray-600 hover:text-indigo-700 border-t border-transparent hover:border-indigo-400 pt-3 mr-4 px-2"
-                   href='?page={{ p }}'>{{ p }}</a>
+                <div class="sm:flex hidden">
+                    {% for p in paginator.page_range %}
+                    {% if page_obj.number == p %}
+                    <!--Active page -->
+                    <p class="text-sm font-medium leading-none text-indigo-700 border-t border-indigo-400 pt-3 mr-4 px-2">
+                        {{ p }}</p>
+                    {% elif p >= page_obj.numper|add:-2 and page_obj.numper|add:+2 %}
+                    {% else %}
+                    <!--btn page -->
+                    <a class="text-sm font-medium leading-none cursor-pointer text-gray-600 hover:text-indigo-700 border-t border-transparent hover:border-indigo-400 pt-3 mr-4 px-2"
+                       href='?page={{ p }}'>{{ p }}</a>
 
-                {% endif %}
-                {% endfor %}
+                    {% endif %}
+                    {% endfor %}
 
-            </div>
-            <div class="flex items-center pt-3 text-gray-600 hover:text-indigo-700 cursor-pointer">
-                {% if page_obj.has_next %}
-                <!--Active btn next-->
-                <a class="text-sm font-medium leading-none mr-3" href="?page={{ page_obj.next_page_number }}">Next</a>
-                {% else %}
-                <!--Disable btn next-->
-                <a class="text-sm text-red-900 font-medium leading-none mr-3">Next</a>
-                {% endif %}
-                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.1665 4H12.8332" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round"/>
-                    <path d="M9.5 7.33333L12.8333 4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round"/>
-                    <path d="M9.5 0.666687L12.8333 4.00002" stroke="currentColor" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                </div>
+                <div class="flex items-center pt-3 text-gray-600 hover:text-indigo-700 cursor-pointer">
+                    {% if page_obj.has_next %}
+                    <!--Active btn next-->
+                    <a class="text-sm font-medium leading-none mr-3"
+                       href="?page={{ page_obj.next_page_number }}">Next</a>
+                    {% else %}
+                    <!--Disable btn next-->
+                    <a class="text-sm text-red-900 font-medium leading-none mr-3">Next</a>
+                    {% endif %}
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.1665 4H12.8332" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M9.5 7.33333L12.8333 4" stroke="currentColor" stroke-width="1.25"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M9.5 0.666687L12.8333 4.00002" stroke="currentColor" stroke-width="1.25"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
             </div>
         </div>
+        {% endif %}
     </div>
-    {% endif %}
-</div>
 
-
-<!-- Footer -->
-<footer class="container mx-auto">
-    <div class="flex justify-between ">
-        <div class="flex space-x-4">
-            <img class="justify-start" width="60" height="60" src="/static/home/img/HANNA_LOGO.png"/>
-            <img class="justify-start" width="260" height="12" src="/static/home/img/HANNA.png"/>
+    <!-- Footer -->
+    <footer class="lg:container lg:mx-auto">
+        <div class="lg:flex lg:justify-between">
+        <!-- breadcrumb -->
+        <div class=" lg:justify-start flex justify-center">
+            {% include "breadcrumb.html" %}
         </div>
         <!--Icons-->
-        <div class="flex justify-end mt-5 space-x-2 text-gray-700">
-
-
+        <div class="flex lg:justify-end justify-center my-5 space-x-2 text-gray-700">
             <!-- Facebook -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-10 h-10">
                 <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
@@ -100,21 +101,26 @@
                 <path fill="currentColor"
                       d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/>
             </svg>
-
-
         </div>
-    </div>
-    <div class="container flex justify-between">
-       {% include "breadcrumb.html" %}
-    </div>
-    <div class="bg-black">
-        <a href="#" title="Scroll to the top of the page">
-            <img style="width:47px; height:47px;" alt="Chevron pointing upwards icon - scroll to top"
-                 class="mx-auto m-5"
-                 src="/static/home/img/nav-ico/scroll-to-top-btn.svg"/>
-        </a>
-        <p class="text-center m-3">© 2022 HANNA</p>
-        <p class="text-center">Design Anton Malenkij</p>
-    </div>
-</footer>
-    </div>
+</div>
+        <!-- Logo -->
+        <div class=" lg:justify-between lg:-mt-12 grid justify-center">
+            <div class="flex space-x-4">
+                <img class="lg:h-24  h-12 " src="/static/home/img/HANNA_LOGO.png"/>
+                <img class="lg:w-64 w-32" src="/static/home/img/HANNA.png"/>
+            </div>
+        </div>
+
+
+    </footer>
+<!-- copyright -->
+        <div class="bg-black">
+            <a href="#" title="Scroll to the top of the page">
+                <img style="width:47px; height:47px;" alt="Chevron pointing upwards icon - scroll to top"
+                     class="mx-auto m-5"
+                     src="/static/home/img/nav-ico/scroll-to-top-btn.svg"/>
+            </a>
+            <p class="text-center m-3">© 2022 HANNA</p>
+            <p class="text-center">Design Anton Malenkij</p>
+        </div>
+</div>
