@@ -20,6 +20,14 @@
             display: block;
         }
      */
+
+   .clip-poly-md {
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+    }
+
+     .clip-poly {
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
+    }
     .blog-item a {
         display: flex;
         padding: 30px;
@@ -157,8 +165,8 @@
 </style>
 {% for item in news %}
 
-<div class="container mx-auto bg-stone-900">
-    <div class="blog-item ">
+<div class="clip-poly-md  lg:clip-poly bg-stone-900">
+    <div class="blog-item container mx-auto">
         <a href="{{item.get_absolute_url}}">
             {% if item.photo %}
             <img class="w-64" src="{{item.photo.url}}">
