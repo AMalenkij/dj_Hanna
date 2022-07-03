@@ -1,12 +1,12 @@
 {% block header %}
-<header class="relative flex items-center justify-center overflow-hidden">
+<header class="relative flex items-center justify-center">
     <!--bg video -->
     {% if request.resolver_match.url_name == 'home' %}
     <video
             src="https://hanna-heroku-dj.s3.eu-north-1.amazonaws.com/static/home/img/dark_forest.webm"
             type="webm"
             loop
-            class="clip w-full object-cover absolute z-10 min-w-full max-w-none "
+            class="clip w-full h-full object-cover absolute z-0 min-w-full max-w-none "
             autoplay=""
             muted=""
             playsinline=""
@@ -24,7 +24,7 @@
         {% if request.resolver_match.url_name == 'home' %}
         <div class="lg:mt-8">
             <a class="" href="/">
-                <img src="/static/home/img/HANNA_LOGO.png" alt="Logo" width="52"
+                <img src="/static/home/img/HANNA_LOGO.png" alt="Logo" width="92"
                      class="mx-auto">
                 <img src="/static/home/img/HANNA.png" class="mx-auto d-inline-block align-text-top img-fluid"
                      alt="HANNA"
