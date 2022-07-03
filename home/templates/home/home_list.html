@@ -2,27 +2,9 @@
     @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
     @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&subset=latin-ext');
 
-    /*
-    * {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-*/
-    /*
-        img {
-            width: 100%;
-            vertical-align: middle;
-
-        }
-
-        .blog-item img {
-            display: block;
-        }
-     */
 
    .clip-poly-md {
-        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+        clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 97%);
     }
 
      .clip-poly {
@@ -75,7 +57,7 @@
     .blog-item .content .title .blog-date {
         font-size: 12px;
         margin-left: 20px;
-        color: #333;
+        /* color: #333; */
         font-family: 'Lato', sans-serif;
     }
 
@@ -163,15 +145,14 @@
 
 
 </style>
-<div class="lg:-mt-6 -mt-8  z-10 clip-poly-md  lg:clip-poly bg-stone-900 pt-5">
+<div class="lg:-mt-6 -mt-14 z-10 clip-poly-md  lg:clip-poly bg-stone-900 pt-5">
 {% for item in news %}
 <div class="">
     <div class="blog-item container mx-auto">
-        <a href="{{item.get_absolute_url}}">
+        <a href="{{ item.get_absolute_url }}">
             {% if item.photo %}
-            <img class="w-64" src="{{item.photo.url}}">
+            <img class="w-64" src="{{ item.photo.url }}">
             {% endif %}
-
             <div class="icon">
                 <div>
                 </div>
@@ -181,18 +162,15 @@
                     {{ item.title }}
                     <span class="blog-date">{{ item.created_at|date:"Y.m.d" }}</span>
                 </div>
-                <div class="rounded"></div>
+                <div class="rounded "></div>
 
-                <p>{{ item.intro }}</p>
+                <p class="text-white">{{ item.intro }}</p>
             </div>
-
             <div class="item-arrow">
                 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
             </div>
         </a>
     </div>
-
-
 </div>
 {% endfor %}
     </div>

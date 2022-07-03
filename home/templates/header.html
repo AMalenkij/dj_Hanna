@@ -1,12 +1,12 @@
 {% block header %}
-<header class="relative flex items-center justify-center overflow-hidden">
+<header class="relative flex items-center justify-center overflow-hidden lg:h-2/5">
     <!--bg video -->
     {% if request.resolver_match.url_name == 'home' %}
     <video
             src="https://hanna-heroku-dj.s3.eu-north-1.amazonaws.com/static/home/img/dark_forest.webm"
             type="webm"
             loop
-            class="clip w-full h-96 object-cover absolute z-10 min-w-full max-w-none "
+            class="clip w-full object-cover absolute z-10 min-w-full max-w-none "
             autoplay=""
             muted=""
             playsinline=""
