@@ -21,7 +21,7 @@ def index_3(request):
 
 
 class NewsList(ListView):
-    paginate_by = 4
+    paginate_by = 5
     model = News
     template_name = 'home/news.html'
     context_object_name = 'news'
@@ -32,7 +32,7 @@ class NewsList(ListView):
 
 
 class HomeList(NewsList):
-    paginate_by = 3
+    paginate_by = 4
     template_name = 'home/home.html'
     extra_context = {'title': 'Home'}
 

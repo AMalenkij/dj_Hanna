@@ -1,18 +1,32 @@
 {% extends 'base.html' %}
 {% block content %}
-
-
-<div class="mb-96 ">
+<style> .special_bg {
+    background-size: cover;
+    overflow: hidden;
+    height: 1000px;
+    justify-content: center;
+    align-items: center;
+}
+</style>
+<div class="relative mb-96">
+    <div class="absolute w-full">
 {% include 'header.html' %}</div>
-<img class="w-full object-cover h-fit absolute z-10  min-w-full max-w-none"
-     src="/static/home/img/concert_hero.jpg"/>
+<img class="special_bg object-cover absolute z-10"
+     src="/static/home/img/hero_contacts.jpg"/>
+    </div>
 <!-- Form contact -->
 <section class="text-gray-700 body-font relative mt-96">
     <div class="absolute inset-0 bg-gray-300 ">
         <div style="width: 100%">
-            <iframe scrolling="no" marginheight="0" marginwidth="0"
+            <iframe
+                    scrolling="no"
+                    marginheight="0"
+                    marginwidth="0"
                     src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=gdansk+()&amp;t=p&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                    width="100%" height="600" frameborder="0" style="filter: grayscale(1) contrast(1.2) opacity(0.4);">>
+                    width="100%"
+                    height="600"
+                    frameborder="0"
+                    style="filter: grayscale(1) contrast(1.2) opacity(0.4);">>
             </iframe>
         </div>
     </div>
