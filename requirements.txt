@@ -9,3 +9,6 @@ python-decouple
 #aws S3
 boto3
 django-storages
+
+#multilang
+django-modeltranslation
