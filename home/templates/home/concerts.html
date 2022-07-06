@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load i18n %}
 <style> .special_bg {
     background-size: cover;
     overflow: hidden;
@@ -16,7 +17,7 @@
 </div>
 <!-- concert col -->
 <div class="relative z-50 mt-96  ">
-    <div class=" text-5xl mx-auto container mb-6 "> Concerts  </div>
+    <div class=" text-5xl mx-auto container mb-6 ">{% trans 'Concerts' %}</div>
     {% for item in concerts %}
     <div class="flex container mx-auto mb-5">
         <!-- date and time -->

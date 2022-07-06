@@ -13,6 +13,14 @@ class NewsAdmin(TranslationAdmin):
     prepopulated_fields = {'slug': ('title',)}
 
 
+class ConcertsAdmin(TranslationAdmin):
+    list_display = ('title', 'date', 'location', 'place', 'is_published')
+
+
+class PhotoAdmin(TranslationAdmin):
+    list_display = ('title', 'date', 'is_published')
+
+
 admin.site.register(News, NewsAdmin)
-admin.site.register(Concerts)
-admin.site.register(Photo)
+admin.site.register(Concerts, ConcertsAdmin)
+admin.site.register(Photo, PhotoAdmin)
