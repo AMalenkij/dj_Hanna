@@ -22,42 +22,43 @@ msgstr ""
 
 #: home/templates/breadcrumb.html:10
 msgid "Home"
-msgstr ""
+msgstr "Stona Głown"
 
 #: home/templates/breadcrumb.html:18
 msgid "News"
-msgstr ""
+msgstr "Wiadomość"
 
 #: home/templates/breadcrumb.html:26 home/templates/home/concerts.html:20
 msgid "Concerts"
-msgstr ""
+msgstr "Koncerty"
 
 #: home/templates/breadcrumb.html:34
 msgid "Contacts"
-msgstr ""
+msgstr "Łączność"
 
 #: home/templates/breadcrumb.html:42
 msgid "About"
-msgstr ""
+msgstr "o nas"
 
 #: home/templates/home/about.html:64
 msgid "Working in collaboration"
-msgstr ""
+msgstr "Praca we współpracy"
 
 #: home/templates/home/about.html:66
 msgid ""
 "We’ve built in-depth relationships directly with some of the best market-"
 "leading media companies worldwide"
-msgstr ""
+msgstr "Zbudowaliśmy dogłębne relacje bezpośrednio z jednymi z najlepszych na rynku-"
+"wiodące firmy medialne na całym świecie"
 
 #: home/templates/home/about.html:230
 msgid "Gallery"
-msgstr ""
+msgstr "Galeri"
 
 #: home/templates/home/about.html:247
 msgid "Live music"
-msgstr ""
+msgstr "Muzyka na żywo"
 
 #: home/templates/home/about.html:249
 msgid "buy tickets"
-msgstr ""
+msgstr "Kup bilety"
