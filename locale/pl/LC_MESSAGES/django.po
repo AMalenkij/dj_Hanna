@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-05 21:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
+"%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
+"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#: home/templates/breadcrumb.html:10
+msgid "Home"
+msgstr "Stona Głown"
+
+#: home/templates/breadcrumb.html:18
+msgid "News"
+msgstr "Wiadomość"
+
+#: home/templates/breadcrumb.html:26 home/templates/home/concerts.html:20
+msgid "Concerts"
+msgstr "Koncerty"
+
+#: home/templates/breadcrumb.html:34
+msgid "Contacts"
+msgstr "Łączność"
+
+#: home/templates/breadcrumb.html:42
+msgid "About"
+msgstr "o nas"
+
+#: home/templates/home/about.html:64
+msgid "Working in collaboration"
+msgstr "Praca we współpracy"
+
+#: home/templates/home/about.html:66
+msgid ""
+"We’ve built in-depth relationships directly with some of the best market-"
+"leading media companies worldwide"
+msgstr "Zbudowaliśmy dogłębne relacje bezpośrednio z jednymi z najlepszych na rynku-"
+"wiodące firmy medialne na całym świecie"
+
+#: home/templates/home/about.html:230
+msgid "Gallery"
+msgstr "Galeri"
+
+#: home/templates/home/about.html:247
+msgid "Live music"
+msgstr "Muzyka na żywo"
+
+#: home/templates/home/about.html:249
+msgid "buy tickets"
+msgstr "Kup bilety"

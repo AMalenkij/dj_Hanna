@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load i18n %}
 <div class="relative container mx-auto  ">
-<div class="absolute w-full">
-{% include 'header.html' %}</div></div>
+    <div class="absolute w-full">
+        {% include 'header.html' %}
+    </div>
+</div>
 <!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
@@ -58,25 +61,27 @@
 <!-- Whe you can be listening music -->
 <div class="lg:container mx-auto lg:mt-20 mt-10 ">
     <div class="container mx-auto text-center ">
-        <div class="text-5xl text-white"> Working in collaboration</div>
+        <div class="text-5xl text-white">{% trans 'Working in collaboration' %}</div>
         <div class="h-1 w-16 bg-violet-500 mx-auto mt-4 rounded-xl"></div>
-        <div class="text-2xl p-10 text-white">We’ve built in-depth relationships directly with some of the best
-            market-leading
-            media companies
-            worldwide
+        <div class="text-2xl p-10 text-white">{% trans 'We’ve built in-depth relationships directly with some of the best market-leading media companies worldwide' %}
         </div>
     </div>
     <div class="ml-10 mt-20 lg:mb-20 lg:flex grid grid-cols-3 lg:gap-x-10 gap-x-5">
-        <div class="h-20 w-32 lg:w-64 hover:opacity-80"><img src="/static/home/img/logo-card/spotify.svg"
-                                                             alt="spotify"/></div>
-        <div class="h-20 w-32 lg:w-64 hover:opacity-80"><img src="/static/home/img/logo-card/apple-music.svg"
-                                                             alt="apple-music"/></div>
-        <div class="h-20 w-32 lg:w-64 hover:opacity-80"><img src="/static/home/img/logo-card/amazon-Music.svg"
-                                                             alt="amazon-Music"/></div>
-        <div class="h-20 w-32 lg:w-64 hover:opacity-80"><img src="/static/home/img/logo-card/deezer.svg" alt="deezer"/>
+        <div class="h-20 w-32 lg:w-64 hover:opacity-80">
+            <img src="/static/home/img/logo-card/spotify.svg"
+                 alt="spotify"/></div>
+        <div class="h-20 w-32 lg:w-64 hover:opacity-80">
+            <img src="/static/home/img/logo-card/apple-music.svg"
+                 alt="apple-music"/></div>
+        <div class="h-20 w-32 lg:w-64 hover:opacity-80">
+            <img src="/static/home/img/logo-card/amazon-Music.svg"
+                 alt="amazon-Music"/></div>
+        <div class="h-20 w-32 lg:w-64 hover:opacity-80">
+            <img src="/static/home/img/logo-card/deezer.svg" alt="deezer"/>
         </div>
-        <div class="h-20 w-32 lg:w-64 hover:opacity-80"><img src="/static/home/img/logo-card/YouTube_Music.svg"
-                                                             alt="YouTube_Music"/></div>
+        <div class="h-20 w-32 lg:w-64 hover:opacity-80">
+            <img src="/static/home/img/logo-card/YouTube_Music.svg"
+                 alt="YouTube_Music"/></div>
     </div>
 </div>
 <!-- Content bloc about band -->
@@ -222,37 +227,15 @@
         }
     </style>
     <div class="w-64 mx-auto mb-14">
-        <p class="text-center  text-white text-5xl"> Gallery</p>
+        <p class="text-center  text-white text-5xl">{% trans 'Gallery' %}</p>
         <div class="h-1 w-8 bg-violet-500 mx-auto mt-4 rounded-xl"></div>
     </div>
     <div class="gallery-container bg-black mx-auto mb-44 mb-20 ">
-        <div class="gallery-item" data-index="1">
-            <img src="/static/home/img/band_Hanna.jpg">
+        {% for item in about %}
+        <div class="gallery-item" data-index="{{ item.id }}">
+            <img src="{{ item.photo.url }}">
         </div>
-        <div class="gallery-item" data-index="2">
-            <img src="https://images.pexels.com/photos/5969/wood-nature-forest-bridge.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
-        </div>
-        <div class="gallery-item" data-index="3">
-            <img src="https://images.pexels.com/photos/531321/pexels-photo-531321.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
-        </div>
-        <div class="gallery-item" data-index="4">
-            <img src="https://images.pexels.com/photos/373920/pexels-photo-373920.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260">
-        </div>
-        <div class="gallery-item" data-index="5">
-            <img src="https://images.pexels.com/photos/164241/pexels-photo-164241.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260">
-        </div>
-        <div class="gallery-item" data-index="6">
-            <img src="https://images.pexels.com/photos/417054/pexels-photo-417054.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-        </div>
-        <div class="gallery-item" data-index="7">
-            <img src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-        </div>
-        <div class="gallery-item" data-index="8">
-            <img src="https://images.pexels.com/photos/38326/pexels-photo-38326.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-        </div>
-        <div class="gallery-item" data-index="9">
-            <img src="https://images.pexels.com/photos/266691/pexels-photo-266691.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-        </div>
+        {% endfor %}
     </div>
     <script src="/static/home/scripts/script.js"></script>
 
@@ -261,9 +244,9 @@
             <div class="absolute top-0 right-0 bg-gradient-to-tr from-teal-600 to-blue-500 w-full h-full clip-poly-Rectangle-b rounded-xl shadow-2xl"></div>
             <div class="relative  h-full w-96 mx-auto pt-10 text-center">
                 <img class="mx-auto" width="80" height="80" src="/static/home/img/HANNA_LOGO.png">
-                <div class="text-3xl mt-9 mb-5  text-white ">Live music</div>
+                <div class="text-3xl mt-9 mb-5  text-white "> {% trans 'Live music' %}</div>
                 <a href="#" class="text-white  hover:text-violet-800/50 transition duration-500 font-bold text-2xl">
-                    bay tickets
+                    {% trans 'buy tickets' %}
                 </a>
                 <div class="h-1 w-16 bg-violet-500 mx-auto mt-2 rounded-xl"></div>
             </div>
