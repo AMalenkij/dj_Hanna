@@ -151,8 +151,6 @@
 <!-- nav menu -->
 
 <header class="relative">
-
-
     <!--bg video -->
     {% if request.resolver_match.url_name == 'home' %}
     <video
@@ -269,14 +267,12 @@
         <!-- logo -->
         {% if request.resolver_match.url_name == 'home' %}
         <div class="lg:mt-8 lg:ml-24">
-            <a class="" href="/">
                 <img src="/static/home/img/svg/logo_hanna.svg" alt="Logo" width="92" class="mx-auto fill-white">
                 <img src="/static/home/img/HANNA.png"
                      class="mx-auto lg:pb-10 "
                      alt="HANNA"
                      width="200"
                      height="24">
-            </a>
         </div>
         {% endif %}
         <!-- icon language  -->
