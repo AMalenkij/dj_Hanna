@@ -1,5 +1,156 @@
 {% block header %}
-<header class="relative flex items-center justify-center">
+{% load i18n %}
+<!--  Hamburger -->
+<style>
+    #menuToggle {
+        display: block;
+        position: relative;
+        top: 54px;
+        left: 48px;
+
+        z-index: 1;
+
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #menuToggle a {
+        text-decoration: none;
+        color: #232323;
+
+        transition: color 0.3s ease;
+    }
+
+    #menuToggle a:hover {
+        color: tomato;
+    }
+
+
+    #menuToggle input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+
+        cursor: pointer;
+
+        opacity: 0; /* hide this */
+        z-index: 2; /* and place it over the hamburger */
+
+        -webkit-touch-callout: none;
+    }
+
+    /*
+     * Just a quick hamburger
+     */
+    #menuToggle span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+
+        background: #cdcdcd;
+        border-radius: 3px;
+
+        z-index: 1;
+
+        transform-origin: 4px 0px;
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    /*
+     * Transform all the slices of hamburger
+     * into a crossmark.
+     */
+    #menuToggle input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #232323;
+    }
+
+    /*
+     * But let's hide the middle one.
+     */
+    #menuToggle input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+     * Ohyeah and the last one should go the other direction
+     */
+    #menuToggle input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+    /*
+     * Make this absolute positioned
+     * at the top left of the screen
+     */
+    #menu {
+        position: absolute;
+        width: 100vw;
+        height: 120vh;
+        margin: -100px 0 0 -50px;
+        padding: 50px;
+        padding-top: 125px;
+
+        background: #ededed;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+
+    #menu li {
+        padding: 10px 0;
+        font-size: 22px;
+    }
+
+    #menuToggle input:checked ~ ul {
+        transform: none;
+    }
+</style>
+<!--  svg-lang -->
+<style>
+    .svg-uk {
+        background-image: url('/static/home/img/svg/ukraine.svg');
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .svg-pl {
+        background-image: url('/static/home/img/svg/poland.svg');
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .svg-en {
+        background-image: url('/static/home/img/svg/united-kingdom.svg');
+        width: 2rem;
+        height: 2rem;
+    }
+</style>
+<!-- nav menu -->
+
+<header class="relative">
     <!--bg video -->
     {% if request.resolver_match.url_name == 'home' %}
     <video
@@ -12,9 +163,101 @@
             playsinline=""
     ></video>
     {% endif %}
-    <nav class="relative z-30 container mx-auto  text-white lg:flex lg:justify-between m-5">
+    <nav class="relative z-30 container mx-auto  text-white lg:flex lg:justify-between ">
+        <!-- Hamburger -->
+        <nav role="navigation" class="lg:invisible visible">
+            <div id="menuToggle">
+                <input type="checkbox"/>
+                <!--Spans to act as a hamburger. -->
+                <span></span>
+                <span></span>
+                <span></span>
+                <!--  nav menu      -->
+                <ul id="menu">
+                    <li><a
+                            {% if request.resolver_match.url_name == 'home' %}
+                        class="text-gray-500"
+                        {% else %}
+                        href="{% url 'home' %}" class="text-blue-600 hover:text-blue-700"
+                        {% endif %}
+                        >{% trans 'Home' %}</a></li>
+
+                    <li><a
+                            {% if request.resolver_match.url_name == 'news' %}
+                        class="text-gray-500"
+                        {% else %}
+                        href="{% url 'news' %}" class="text-blue-600 hover:text-blue-700"
+                        {% endif %}
+                        >{% trans 'News' %}</a></li>
+
+                    <li><a
+                            {% if request.resolver_match.url_name == 'concerts' %}
+                        class="text-gray-500"
+                        {% else %}
+                        href="{% url 'concerts' %}" class="text-blue-600 hover:text-blue-700"
+                        {% endif %}
+                        >{% trans 'Concerts' %}</a></li>
+
+                    <li><a
+                            {% if request.resolver_match.url_name == 'contacts' %}
+                        class="text-gray-500"
+                        {% else %}
+                        href="{% url 'contacts' %}" class="text-blue-600 hover:text-blue-700"
+                        {% endif %}
+                        >{% trans 'Contacts' %}</a></li>
+
+                    <li><a
+                            {% if request.resolver_match.url_name == 'about' %}
+                        class="text-gray-500"
+                        {% else %}
+                        href="{% url 'about' %}" class="text-blue-600 hover:text-blue-700"
+                        {% endif %}
+                        >{% trans 'About' %}</a></li>
+                    <li>
+
+                        <p class=" text-black text-lg mb-4 border-b-2 border-stone-900">Languages</p>
+                        <form action="{% url 'set_language' %}" method="post"
+                              class="relative text-black text-sm ml-4 pb-4" style="flex-direction: column;">
+                            {% csrf_token %}
+                            <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
+                            <input name="language" type="hidden" value="uk"/>
+                            <input style="opacity: 1; margin-right: 3rem;  width: 2rem; height: 2rem;" class="svg-uk"
+                                   type="submit" value=""/>
+                            <input style="opacity: 1; 	padding-left: 3rem; padding-right: 4rem;" type="submit"
+                                   value="Ukrainian"/>
+                        </form>
+                    </li>
+                    <li>
+                        <form action="{% url 'set_language' %}" method="post"
+                              class="relative text-black text-sm ml-4 pb-4">
+                            {% csrf_token %}
+                            <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
+                            <input name="language" type="hidden" value="pl"/>
+                            <input style="opacity: 1; margin-right: 3rem;  width: 2rem; height: 2rem;" class="svg-pl"
+                                   type="submit" value=""/>
+                            <input style="opacity: 1; 	padding-left: 3rem; padding-right: 4rem;" type="submit"
+                                   value="Poland"/>
+                        </form>
+                    </li>
+                    <li>
+                        <form action="{% url 'set_language' %}" method="post"
+                              class="relative text-black text-sm ml-4 pb-4">
+                            {% csrf_token %}
+                            <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
+                            <input name="language" type="hidden" value="en"/>
+                            <input style="opacity: 1; margin-right: 3rem;  width: 2rem; height: 2rem;" class="svg-en"
+                                   type="submit" value=""/>
+                            <input style="opacity: 1; 	padding-left: 3rem; padding-right: 4rem;"
+                                   class="absolute left-10" type="submit" value="English"/>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
         <!-- breadcrumb -->
-        <div class="">
+        <div class="lg:visible invisible absolute">
             <nav class="py-3 flex justify-center">
                 {% include "breadcrumb.html" %}
             </nav>
@@ -22,22 +265,236 @@
 
         <!-- logo -->
         {% if request.resolver_match.url_name == 'home' %}
-        <div class="lg:mt-8">
-            <a class="" href="/">
-                <img src="/static/home/img/HANNA_LOGO.png" alt="Logo" width="92"
-                     class="mx-auto">
-                <img src="/static/home/img/HANNA.png" class="mx-auto lg:pb-10 "
+        <div class="lg:mt-8 lg:ml-24">
+                <img src="/static/home/img/svg/logo_hanna.svg" alt="Logo" width="92" class="mx-auto fill-white">
+                <img src="/static/home/img/HANNA.png"
+                     class="mx-auto lg:pb-10 "
                      alt="HANNA"
-                     width="200" height="24">
-            </a>
+                     width="200"
+                     height="24">
         </div>
         {% endif %}
+        <!-- icon language  -->
+        <div class="lg:visible invisible justify-end ">
+            <style>
 
-        <!-- icon -->
-        <div class="lg:visible invisible justify-end mt-5 ">
-            {% include "icon.html" %}
+                .select-menu .select-btn {
+                    display: flex;
+                    height: 55px;
+                    padding: 20px;
+                    font-weight: 400;
+                    align-items: center;
+                    cursor: pointer;
+                    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
+
+                }
+
+                .select-menu .options {
+                    position: absolute;
+                    width: 140px;
+                    overflow-y: auto;
+                    max-height: 200px;
+                    padding: 10px;
+                    margin-top: 10px;
+                    border-radius: 8px;
+                    background: #fff;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    animation-name: fadeInDown;
+                    -webkit-animation-name: fadeInDown;
+                    animation-duration: 0.35s;
+                    animation-fill-mode: both;
+                    -webkit-animation-duration: 0.35s;
+                    -webkit-animation-fill-mode: both;
+                    opacity: 0;
+
+                }
+
+                .select-menu .options .option {
+                    display: flex;
+                    height: 55px;
+                    cursor: pointer;
+                    padding: 0 16px;
+                    border-radius: 8px;
+                    align-items: center;
+                    background: #fff;
+
+                }
+
+                .select-menu .options .option:hover {
+                    background: #f2f2f2;
+                }
+
+                .select-menu .options .option i {
+                    font-size: 25px;
+                    margin-right: 8px;
+
+                }
+
+                .select-menu .options .option .option-text {
+                    font-size: 12px;
+                    color: #333;
+
+
+                }
+
+                .select-btn i {
+                    font-size: 25px;
+                    transition: 0.3s;
+
+                }
+
+
+                .select-menu.active .options {
+                    display: block;
+                    opacity: 0;
+                    z-index: 10;
+                    animation-name: fadeInUp;
+                    -webkit-animation-name: fadeInUp;
+                    animation-duration: 0.4s;
+                    animation-fill-mode: both;
+                    -webkit-animation-duration: 0.4s;
+                    -webkit-animation-fill-mode: both;
+
+                }
+
+
+                @keyframes fadeInUp {
+                    from {
+                        transform: translate3d(0, 30px, 0);
+                    }
+                    to {
+                        transform: translate3d(0, 0, 0);
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+                @keyframes fadeInDown {
+                    from {
+                        transform: translate3d(0, 0, 0);
+                        opacity: 0;
+
+                    }
+                    to {
+                        transform: translate3d(0, 20px, 0);
+                        opacity: 0;
+                    }
+                }
+
+            </style>
+            <div class="flex">
+                <div class=" ">
+                    <div class="select-menu  z-40">
+                        <div class="select-btn text-white">
+                            <!--  language -->
+                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8">
+                                <path fill="var(--ci-primary-color, currentColor)"
+                                      d="M320,24H16V328H192V496H496V192H320ZM148.305,96,98.093,239.3H132l8.166-23.3H192v80H48V56H288V192H221.332L187.7,96Zm36.317,88H151.378L168,136.562ZM464,224V464H224V224Z"/>
+                                <path fill="var(--ci-primary-color, currentColor)"
+                                      d="M317.432,368.48A136.761,136.761,0,0,0,327.521,382.6q-17.4,9.384-39.521,9.4v32c24.141,0,45.71-6.408,64-18.824C370.29,417.592,391.859,424,416,424V392q-22.075,0-39.52-9.407a136.574,136.574,0,0,0,10.088-14.113A166.212,166.212,0,0,0,406.662,320H424V288H368V264H336v24H280v32h17.338A166.212,166.212,0,0,0,317.432,368.48ZM373.53,320a133.013,133.013,0,0,1-14.1,31.52A104.39,104.39,0,0,1,352,361.968a103.546,103.546,0,0,1-6.93-9.651A132.384,132.384,0,0,1,330.466,320Z"/>
+                            </svg>
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                        <ul class="options">
+                            <!-- Ukrainian -->
+                            <li class="option">
+                                <form action="{% url 'set_language' %}" method="post"
+                                      class="flex text-black space-x-1 text-sm -ml-3">
+                                    {% csrf_token %}
+                                    <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
+                                    <input name="language" type="hidden" value="uk"/>
+                                    <input class="svg-uk h-8 w-8" type="submit" value=""/>
+                                    <input type="submit" value="Ukrainian"/>
+                                </form>
+                            </li>
+                            <!-- Poland -->
+                            <li class="option">
+                                <form action="{% url 'set_language' %}" method="post"
+                                      class="flex text-black space-x-1 text-sm -ml-3">
+                                    {% csrf_token %}
+                                    <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
+                                    <input name="language" type="hidden" value="pl"/>
+                                    <input class="svg-pl h-8 w-8" type="submit" value=""/>
+                                    <input type="submit" value="Poland"/>
+                                </form>
+                            </li>
+                            <!-- English -->
+                            <li class="option">
+                                <form action="{% url 'set_language' %}" method="post"
+                                      class="flex text-black space-x-1 text-sm -ml-3">
+                                    {% csrf_token %}
+                                    <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
+                                    <input name="language" type="hidden" value="en"/>
+                                    <input class="svg-en h-8 w-8" type="submit" value=""/>
+                                    <input type="submit" value="English"/>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- dark light mode -->
+                <label class="lg:relative absolute lg:top-0 lg:right-0  top-12 right-12 inline-block w-[60px] h-[34px] lg:m-3 visible ">
+                    <input type="checkbox" class="opacity-0 w-0 h-0 peer">
+                    <span class="
+                    absolute
+                    cursor-pointer
+                    top-0 left-0
+                    right-0
+                    bottom-0
+                    bg-amber-300
+                    transition-all
+                    duration-500
+                    before:absolute
+                    before:content-['']
+                    before:h-[26px]
+                    before:w-[26px]
+                    before:left-[4px]
+                    before:bottom-[4px]
+                    before:bg-white
+                    before:transition-all
+                    before:duration-500
+                    after:absolute
+                    after:content-['&#9728;&#65039;']
+                    after:left-[7px]
+                    after:text-xl
+                    after:bottom-[3px]
+                    after:transition-all
+                    after:duration-500
+                    rounded-[34px]
+                    before:rounded-[50%]
+                    peer-checked:bg-sky-700
+                    peer-focus:shadow-lg
+                    peer-checked:before:translate-x-[26px]
+                    peer-checked:before:bg-black
+                    peer-checked:after:content-['&#127769;']
+                    peer-checked:after:translate-x-[26px]
+                    peer-checked:after:opacity-100
+                    peer-checked:after:rotate-[360deg]
+                 "></span>
+                </label>
+            </div>
+            <script>
+                const optionMenu = document.querySelector(".select-menu"),
+                    selectBtn = optionMenu.querySelector(".select-btn"),
+                    options = optionMenu.querySelectorAll(".option"),
+                    sBtn_text = optionMenu.querySelector(".sBtn-text");
+
+                selectBtn.addEventListener("click", () =>
+                    optionMenu.classList.toggle("active")
+                );
+
+                options.forEach((option) => {
+                    option.addEventListener("click", () => {
+                        let selectedOption = option.querySelector(".option-text").innerText;
+                        sBtn_text.innerText = selectedOption;
+
+                        optionMenu.classList.remove("active");
+                    });
+                });
+
+            </script>
         </div>
-
     </nav>
 </header>
 {% endblock header %}
