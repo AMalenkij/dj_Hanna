@@ -1,6 +1,7 @@
-from .base import *
 import django_on_heroku
 from decouple import config
+
+from .base import *
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -34,6 +35,14 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
 
 STATIC_URL = 'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
 MEDIA_URL = 'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
+
+# https://myaccount.google.com/lesssecureapps
+# Email setting
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'EMAIL'
+EMAIL_HOST_PASSWORD = 'EMAIL_PASSWORD'
+EMAIL_USE_TLS = True
 
 # Heroku logs
 LOGGING = {
