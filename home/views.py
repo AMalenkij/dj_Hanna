@@ -2,6 +2,7 @@ from django.core.mail import send_mail
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render
 from django.views.generic import ListView
+from decouple import config
 
 from .models import Concerts
 from .models import News
@@ -33,7 +34,7 @@ def contact(request):
             'Subject here',  # Subject
             message,  # message
             message_email,  # from email
-            ['hannabandgd@gmail.com'],  # to email
+            [config('EMAIL')],  # to email
             fail_silently=False,
         )
         return render(request, 'home/contact.html', {'message_email': message_email})
