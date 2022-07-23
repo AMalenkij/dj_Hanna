@@ -31,7 +31,7 @@ def contact(request):
 
         # send an email
         send_mail(
-            'Subject here',  # Subject
+            'web-hanna' + message_email,  # Subject
             message,  # message
             message_email,  # from email
             [config('EMAIL')],  # to email
