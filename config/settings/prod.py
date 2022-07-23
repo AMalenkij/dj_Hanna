@@ -36,8 +36,6 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
 STATIC_URL = 'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
 MEDIA_URL = 'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
 
-# https://accounts.google.com/DisplayUnlockCaptcha
-# https://myaccount.google.com/lesssecureapps
 # Email setting
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'

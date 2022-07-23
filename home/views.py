@@ -1,8 +1,8 @@
+from decouple import config
 from django.core.mail import send_mail
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render
 from django.views.generic import ListView
-from decouple import config
 
 from .models import Concerts
 from .models import News
@@ -31,10 +31,10 @@ def contact(request):
 
         # send an email
         send_mail(
-            'web-hanna' + message_email,  # Subject
+            'web-hanna__' + message_email,  # Subject
             message,  # message
             message_email,  # from email
-            [config('EMAIL')],  # to email
+            [config('EMAIL'), message_email],  # to email
             fail_silently=False,
         )
         return render(request, 'home/contact.html', {'message_email': message_email})
