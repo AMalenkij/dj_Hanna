@@ -433,10 +433,11 @@
                     </div>
                 </div>
 
-                <!-- dark light mode -->
-                <label class="lg:relative absolute lg:top-0 lg:right-0  top-12 right-12 inline-block w-[60px] h-[34px] lg:m-3 visible ">
-                    <input type="checkbox" class="opacity-0 w-0 h-0 peer">
-                    <span class="
+<!-- dark light mode -->
+<label class="theme-switch lg:relative absolute lg:top-0 lg:right-0  top-12 right-12 inline-block w-[60px] h-[34px] lg:m-3 visible"
+       for="checkbox">
+    <input type="checkbox" class="opacity-0 w-0 h-0 peer" id="checkbox">
+    <div class="    slider round
                     absolute
                     cursor-pointer
                     top-0 left-0
@@ -471,8 +472,30 @@
                     peer-checked:after:translate-x-[26px]
                     peer-checked:after:opacity-100
                     peer-checked:after:rotate-[360deg]
-                 "></span>
-                </label>
+                 "></div>
+</label>
+<style>
+:root {
+  --primary-color: #69e62a;
+  --secondary-color: #536390;
+  --font-color: #424242;
+  --bg-color: #644c4c;
+  --heading-color: #292922;
+}
+
+[data-theme=dark] {
+  --primary-color: #9A97F3;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #1a2516;
+  --heading-color: #818cab;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+</style>
             </div>
             <script>
                 const optionMenu = document.querySelector(".select-menu"),
@@ -497,4 +520,5 @@
         </div>
     </nav>
 </header>
+<script src="/static/home/js/dark_mode.js"></script>
 {% endblock header %}
