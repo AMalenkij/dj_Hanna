@@ -28,13 +28,15 @@ def contact(request):
     if request.method == "POST":
         message_email = request.POST['message-email']
         message = request.POST['message']
+        slice_object = slice(0, 40)
+        subject = message[slice_object]
 
         # send an email
         send_mail(
-            'web-hanna__' + message_email,  # Subject
+            subject + "...",  # Subject
             message,  # message
-            config('EMAIL'),  # from email
-            [message_email],  # to email
+            message_email, config('EMAIL'),  # from email
+            [config('EMAIL')],  # to email
             fail_silently=False,
         )
         return render(request, 'home/contact.html', {'message_email': message_email})
