@@ -21,7 +21,7 @@ class AboutList(ListView):
 
 def contact(request):
     context = {
-        'title': 'Cotact',
+        'title': 'Contact',
     }
 
     if request.method == "POST":
@@ -36,7 +36,6 @@ def contact(request):
             ['hannabandgd@gmail.com'],  # to email
             fail_silently=False,
         )
-
         return render(request, 'home/contact.html', {'message_email': message_email})
     else:
         return render(request, 'home/contact.html', context)
