@@ -33,8 +33,8 @@ def contact(request):
         send_mail(
             'web-hanna__' + message_email,  # Subject
             message,  # message
-            message_email,  # from email
-            [config('EMAIL'), message_email],  # to email
+            config('EMAIL'),  # from email
+            [message_email],  # to email
             fail_silently=False,
         )
         return render(request, 'home/contact.html', {'message_email': message_email})
