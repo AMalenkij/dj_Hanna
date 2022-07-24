@@ -33,9 +33,9 @@ def contact(request):
 
         # send an email
         send_mail(
-            subject + "...",  # Subject
+            message_email + ':' + subject + "...",  # Subject
             message,  # message
-            message_email, config('EMAIL'),  # from email
+            message_email,  # from email
             [config('EMAIL')],  # to email
             fail_silently=False,
         )
