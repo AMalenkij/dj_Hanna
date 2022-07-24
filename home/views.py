@@ -28,12 +28,12 @@ def contact(request):
     if request.method == "POST":
         message_email = request.POST['message-email']
         message = request.POST['message']
-        slice_object = slice(0, 40)
-        subject = message[slice_object]
+        # slice_object = slice(0, 40)
+        # subject = message[slice_object]
 
         # send an email
         send_mail(
-            message_email + ':' + subject + "...",  # Subject
+            message_email,  # Subject
             message,  # message
             message_email,  # from email
             [config('EMAIL')],  # to email
