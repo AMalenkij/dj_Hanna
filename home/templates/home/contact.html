@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load i18n %}
 <style> .special_bg {
     background-size: cover;
     overflow: hidden;
@@ -15,7 +16,19 @@
     <img class="special_bg object-cover absolute z-10"
          src="/static/home/img/hero_contacts.jpg"/>
 </div>
+
 <!-- Form contact -->
+{% if message_name %}
+<!-- if message send -->
+<div class="lg:container mx-auto lg:mt-20 mt-10 ">
+    <div class="container mx-auto text-center ">
+        <div class="text-5xl text-white">{% trans 'Your message has been sent' %}</div>
+        <div class="h-1 w-16 bg-violet-500 mx-auto mt-4 rounded-xl"></div>
+        <div class="text-2xl p-10 text-white">{% trans "We will get back to you as soon as possible" %}
+        </div>
+    </div>
+</div>
+{% else %}
 <section class="text-gray-700 body-font relative mt-96">
     <div class="absolute inset-0 bg-gray-300 ">
         <div class="w-full">
@@ -60,4 +73,5 @@
         </div>
     </div>
 </section>
+{% endif %}
 {% endblock content %}
