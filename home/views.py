@@ -1,3 +1,5 @@
+from decouple import config
+from django.core.mail import send_mail
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render
 from django.views.generic import ListView
@@ -5,15 +7,6 @@ from django.views.generic import ListView
 from .models import Concerts
 from .models import News
 from .models import Photo
-
-
-# def index(request):
-#    photo = Photo
-#    context = {
-#        'title': 'About',
-#        'photo': photo,
-#    }
-#    return render(request, 'home/about.html', context)
 
 
 class AboutList(ListView):
@@ -27,11 +20,26 @@ class AboutList(ListView):
         return Photo.objects.filter(is_published=True)
 
 
-def index_3(request):
+def contact(request):
     context = {
-        'title': 'Cotacts',
+        'title': 'Contact',
     }
-    return render(request, 'home/contacts.html', context)
+
+    if request.method == "POST":
+        message_email = request.POST['message-email']
+        message = request.POST['message']
+
+        # send an email
+        send_mail(
+            message_email,  # Subject
+            message,  # message
+            message_email,  # from email
+            [config('EMAIL')],  # to email
+            fail_silently=False,
+        )
+        return render(request, 'home/contact.html', {'message_email': message_email})
+    else:
+        return render(request, 'home/contact.html', context)
 
 
 class NewsList(ListView):

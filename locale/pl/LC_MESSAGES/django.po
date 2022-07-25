@@ -22,11 +22,11 @@ msgstr ""
 
 #: home/templates/breadcrumb.html:10
 msgid "Home"
-msgstr "Stona Głown"
+msgstr "Strona główna"
 
 #: home/templates/breadcrumb.html:18
 msgid "News"
-msgstr "Wiadomość"
+msgstr "Aktualności"
 
 #: home/templates/breadcrumb.html:26 home/templates/home/concerts.html:20
 msgid "Concerts"
@@ -38,7 +38,7 @@ msgstr "Łączność"
 
 #: home/templates/breadcrumb.html:42
 msgid "About"
-msgstr "o nas"
+msgstr "O nas"
 
 #: home/templates/home/about.html:64
 msgid "Working in collaboration"

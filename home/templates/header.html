@@ -199,12 +199,12 @@
                         >{% trans 'Concerts' %}</a></li>
 
                     <li><a
-                            {% if request.resolver_match.url_name == 'contacts' %}
+                            {% if request.resolver_match.url_name == 'contact' %}
                         class="text-gray-500"
                         {% else %}
-                        href="{% url 'contacts' %}" class="text-blue-600 hover:text-blue-700"
+                        href="{% url 'contact' %}" class="text-blue-600 hover:text-blue-700"
                         {% endif %}
-                        >{% trans 'Contacts' %}</a></li>
+                        >{% trans 'Contact' %}</a></li>
 
                     <li><a
                             {% if request.resolver_match.url_name == 'about' %}
