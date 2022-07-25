@@ -18,7 +18,7 @@
             playsinline=""
     ></video>
     {% endif %}
-    <nav class="relative z-30 container mx-auto  text-white lg:flex lg:justify-between ">
+    <nav class="relative z-30 container mx-auto lg:flex lg:justify-between ">
         <!-- Hamburger -->
         <nav role="navigation" class="lg:invisible visible">
             <div id="menuToggle">
@@ -31,28 +31,28 @@
                 <ul id="menu">
                     <li><a
                             {% if request.resolver_match.url_name == 'home' %}
-                        class="text-gray-500"
+                        class="nav-link-disabled"
                         {% else %}
-                        href="{% url 'home' %}" class="text-blue-600 hover:text-blue-700"
+                        href="{% url 'home' %}" class="nav-link"
                         {% endif %}
                         >{% trans 'Home' %}</a></li>
                     <li><a
                             {% if request.resolver_match.url_name == 'news' %}
-                        class="text-gray-500"
+                        class="nav-link-disabled"
                         {% else %}
-                        href="{% url 'news' %}" class="text-blue-600 hover:text-blue-700"
+                        href="{% url 'news' %}" class="nav-link"
                         {% endif %}
                         >{% trans 'News' %}</a></li>
                     <li><a
                             {% if request.resolver_match.url_name == 'concerts' %}
-                        class="text-gray-500"
+                        class="nav-link-disabled"
                         {% else %}
-                        href="{% url 'concerts' %}" class="text-blue-600 hover:text-blue-700"
+                        href="{% url 'concerts' %}" class="nav-link"
                         {% endif %}
                         >{% trans 'Concerts' %}</a></li>
                     <li><a
                             {% if request.resolver_match.url_name == 'contact' %}
-                        class="text-gray-500"
+                        class="nav-link-disabled"
                         {% else %}
                         href="{% url 'contact' %}" class="text-blue-600 hover:text-blue-700"
                         {% endif %}
@@ -60,9 +60,9 @@
 
                     <li><a
                             {% if request.resolver_match.url_name == 'about' %}
-                        class="text-gray-500"
+                        class="nav-link-disabled"
                         {% else %}
-                        href="{% url 'about' %}" class="text-blue-600 hover:text-blue-700"
+                        href="{% url 'about' %}" class="nav-link"
                         {% endif %}
                         >{% trans 'About' %}</a></li>
                     <li>
@@ -117,7 +117,7 @@
         <div class="lg:mt-8 lg:ml-24 h-64">
             <!--                <img src="../static/home/img/svg/logo_hanna.svg" alt="Logo" width="92" class="mx-auto fill-white">-->
             <svg id="hanna-logo" width="92" class="mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.000000 631.000000">
-                <g id="hanna-logo" transform="translate(0.000000,631.000000) scale(0.100000,-0.100000)"
+                <g transform="translate(0.000000,631.000000) scale(0.100000,-0.100000)"
                    stroke="none">
                     <path d="M1250 5245 l-985 -985 93 -93 92 -92 -95 -95 -95 -95 100 -100 100
 -100 -87 -88 -88 -87 178 -177 177 -178 -202 -202 -203 -203 88 -88 87 -87
@@ -183,7 +183,7 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
         <div class="lg:visible invisible justify-end">
             <div class="flex">
                 <div class="select-menu  z-40 ">
-                    <div class="select-btn text-white ">
+                    <div class="select-btn">
                         <!--  language -->
                         <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8">
                             <path fill="var(--ci-primary-color, currentColor)"

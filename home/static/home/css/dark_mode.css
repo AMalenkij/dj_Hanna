@@ -6,7 +6,7 @@
     --font-color: #000000;
     --bg-color: #fff;
 
-    --bg-semi-color: #fff;
+    --bg-semi-color: #b2b2b2;
     --font-semi-color: #18181b;
 
     /* from-teal-600 to-blue-500  */
@@ -17,8 +17,10 @@
     --bg-semi-gradient-color-from: #1d4ed8;
     --bg-semi-gradient-color-to: #14b8a6;
 
-    /*svg*/
-    --svg-color: #000000;
+    /* navigation */
+    --nav-link-disabled: #7c7a7a;
+    --nav-link: #000000;
+    --nav-link-hover: #c91c1c;
 }
 
 [data-theme=dark] {
@@ -30,7 +32,7 @@
     --bg-color: #000;
 
     --bg-semi-color: #18181b;
-    --font-semi-color: #fff;
+    --font-semi-color: #b2b2b2;
 
     /* from-teal-800 to-blue-700  */
     --bg-gradient-color-from: #115e59;
@@ -40,17 +42,17 @@
     --bg-semi-gradient-color-from: #1e3a8a;
     --bg-semi-gradient-color-to: #0f766e;
 
-    /*svg*/
-    --svg-color: #ffffff;
+    /* navigation */
+    --nav-link-disabled: #7c7a7a;
+    --nav-link: #fff;
+    --nav-link-hover: #c91c1c;
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--font-color);
 }
-#hanna-logo {
-  fill: var(--font-color);
-}
+
 .dark-mode {
     background-color: var(--bg-color);
     color: var(--font-color);
@@ -61,10 +63,36 @@ body {
     color: var(--font-semi-color);
 }
 
+/* card at page about*/
 .dark-gradient-mode {
     --tw-gradient-stops: var(--bg-semi-gradient-color-from), var(--bg-semi-gradient-color-to);
 }
 
 .dark-semi-gradient-mode {
     --tw-gradient-stops: var(--bg-semi-gradient-color-from), var(--bg-semi-gradient-color-to);
+}
+
+/* icon  footer*/
+#chevron {
+    stroke: var(--font-color);
+}
+
+/* icon logo */
+#hanna-logo {
+    fill: var(--font-color);
+}
+.svg-icon {
+    fill: var(--font-color);
+}
+
+.nav-link-disabled {
+    color: var(--nav-link-disabled);
+}
+
+.nav-link {
+    color: var(--nav-link);
+}
+
+.nav-link:hover {
+    color: var(--nav-link-hover);
 }

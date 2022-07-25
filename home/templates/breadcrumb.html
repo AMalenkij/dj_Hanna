@@ -3,41 +3,41 @@
             <ol class="flex">
                 <li><a
                        {% if request.resolver_match.url_name == 'home' %}
-                       class="text-gray-500"
+                       class="nav-link-disabled"
                        {% else %}
-                       href="{% url 'home' %}" class="text-blue-600 hover:text-blue-700"
+                       href="{% url 'home' %}" class="nav-link"
                        {% endif %}
                 >{% trans 'Home' %}</a></li>
-                <li><span class="text-gray-500 mx-2">|</span></li>
+                <li><span class="nav-link-disabled mx-2">|</span></li>
                 <li><a
                         {% if request.resolver_match.url_name == 'news' %}
-                       class="text-gray-500"
+                       class="nav-link-disabled"
                        {% else %}
-                       href="{% url 'news' %}" class="text-blue-600 hover:text-blue-700"
+                       href="{% url 'news' %}" class="nav-link"
                        {% endif %}
                 >{% trans 'News' %}</a></li>
-                <li><span class="text-gray-500 mx-2">|</span></li>
+                <li><span class="nav-link-disabled mx-2">|</span></li>
                 <li><a
                 {% if request.resolver_match.url_name == 'concerts' %}
-                       class="text-gray-500"
+                       class="nav-link-disabled"
                        {% else %}
-                       href="{% url 'concerts' %}" class="text-blue-600 hover:text-blue-700"
+                       href="{% url 'concerts' %}" class="nav-link"
                        {% endif %}
                 >{% trans 'Concerts' %}</a></li>
-                <li><span class="text-gray-500 mx-2">|</span></li>
+                <li><span class="nav-link-disabled mx-2">|</span></li>
                 <li><a
                         {% if request.resolver_match.url_name == 'contact' %}
-                       class="text-gray-500"
+                       class="nav-link-disabled"
                        {% else %}
-                       href="{% url 'contact' %}" class="text-blue-600 hover:text-blue-700"
+                       href="{% url 'contact' %}" class="nav-link"
                        {% endif %}
                 >{% trans 'Contact' %}</a></li>
-                <li><span class="text-gray-500 mx-2">|</span></li>
+                <li><span class="nav-link-disabled mx-2">|</span></li>
                 <li><a
                  {% if request.resolver_match.url_name == 'about' %}
-                       class="text-gray-500"
+                       class="nav-link-disabled"
                        {% else %}
-                       href="{% url 'about' %}" class="text-blue-600 hover:text-blue-700"
+                       href="{% url 'about' %}" class="nav-link"
                        {% endif %}
                 >{% trans 'About' %}</a></li>
             </ol>
