@@ -1,0 +1,70 @@
+:root {
+    --heading-color: #292922;
+    --primary-color: #69e62a;
+    --secondary-color: #536390;
+
+    --font-color: #000000;
+    --bg-color: #fff;
+
+    --bg-semi-color: #fff;
+    --font-semi-color: #18181b;
+
+    /* from-teal-600 to-blue-500  */
+    --bg-gradient-color-from: #0d9488;
+    --bg-gradient-color-to: #3b82f6;
+
+    /* from-blue-700 to-teal-500 */
+    --bg-semi-gradient-color-from: #1d4ed8;
+    --bg-semi-gradient-color-to: #14b8a6;
+
+    /*svg*/
+    --svg-color: #000000;
+}
+
+[data-theme=dark] {
+    --heading-color: #818cab;
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+
+    --font-color: #fff;
+    --bg-color: #000;
+
+    --bg-semi-color: #18181b;
+    --font-semi-color: #fff;
+
+    /* from-teal-800 to-blue-700  */
+    --bg-gradient-color-from: #115e59;
+    --bg-gradient-color-to: #1d4ed8;
+
+    /* from-blue-900 to-teal-700 */
+    --bg-semi-gradient-color-from: #1e3a8a;
+    --bg-semi-gradient-color-to: #0f766e;
+
+    /*svg*/
+    --svg-color: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+#hanna-logo {
+  fill: var(--font-color);
+}
+.dark-mode {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+.semi-dark-mode {
+    background-color: var(--bg-semi-color);
+    color: var(--font-semi-color);
+}
+
+.dark-gradient-mode {
+    --tw-gradient-stops: var(--bg-semi-gradient-color-from), var(--bg-semi-gradient-color-to);
+}
+
+.dark-semi-gradient-mode {
+    --tw-gradient-stops: var(--bg-semi-gradient-color-from), var(--bg-semi-gradient-color-to);
+}
