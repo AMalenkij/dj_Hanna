@@ -3,12 +3,12 @@
 {% include 'header.html' %}
 
 <!-- css style -->
-<link rel="stylesheet" href="../static/home/css/detail.css">
+<link rel="stylesheet" href="../static/home/css/news_list.css">
 
 <section class="container mx-auto mt-6 blog-item mb-12 dark-mode">
     <div>
         {% if photo %}
-        <img class="pb-4" src="{{photo.url}}">
+        <img class="pb-4 max-h-screen" src="{{photo.url}}">
         {% endif %}
         <div class="content">
             <div class="title">
@@ -16,7 +16,7 @@
                 <span class="blog-date">{{ created_at|date:"Y.m.d" }}</span>
             </div>
             <div class="h-2 w-full border-gradient mt-2 mb-2 rounded-xl"></div>
-<!--            <div class="rounded "></div>-->
+            <!--            <div class="rounded "></div>-->
             <p>{{ content | linebreaks }}</p>
         </div>
     </div>

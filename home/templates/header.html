@@ -1,5 +1,6 @@
 {% block header %}
 {% load i18n %}
+
 <!-- main css -->
 <link rel="stylesheet" href="../static/home/css/main.css">
 <!-- dark mode -->
@@ -7,17 +8,6 @@
 
 <!-- nav menu -->
 <header class="relative">
-    <!--bg video -->
-    {% if request.resolver_match.url_name == 'home' %}
-    <video
-            src="https://hanna-heroku-dj.s3.eu-north-1.amazonaws.com/static/home/img/dark_forest.webm"
-            loop
-            class="clip w-full h-full object-cover absolute z-0 min-w-full max-w-none hero-video"
-            autoplay=""
-            muted=""
-            playsinline=""
-    ></video>
-    {% endif %}
     <nav class="relative z-30 container mx-auto lg:flex lg:justify-between ">
         <!-- Hamburger -->
         <nav role="navigation" class="lg:invisible visible">
@@ -115,7 +105,6 @@
         <!-- logo -->
         {% if request.resolver_match.url_name == 'home' %}
         <div class="lg:mt-8 lg:ml-24 h-64">
-            <!--                <img src="../static/home/img/svg/logo_hanna.svg" alt="Logo" width="92" class="mx-auto fill-white">-->
             <svg id="hanna-logo" width="92" class="mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.000000 631.000000">
                 <g transform="translate(0.000000,631.000000) scale(0.100000,-0.100000)"
                    stroke="none">
@@ -174,11 +163,9 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
 3 0 42 -37 88 -83z"/>
                 </g>
             </svg>
-
-            <div class="lg:pb-10  text-6xl flex justify-center">HANNA</div>
+            <div class="lg:pb-10 flex justify-center"><h2>HANNA</h2></div>
         </div>
         {% endif %}
-
         <!-- icon language  -->
         <div class="lg:visible invisible justify-end">
             <div class="flex">
@@ -233,7 +220,8 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
                 <label class="theme-switch lg:relative absolute lg:top-0 lg:right-0  top-12 right-12 inline-block w-[60px] h-[34px] lg:m-3 visible"
                        for="checkbox">
                     <input type="checkbox" class="opacity-0 w-0 h-0 peer" id="checkbox">
-                    <div class="    slider round
+                    <div class="
+                    slider round
                     absolute
                     cursor-pointer
                     top-0 left-0

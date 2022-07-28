@@ -47,8 +47,8 @@
 }
 
 .raise {
-    --color: #ffa260;
-    --hover: #e5ff60;
+    --color: #2296F3;
+    --hover: #8239EC;
 }
 
 button {
@@ -58,7 +58,7 @@ button {
 
 button:hover, button:focus {
     border-color: var(--hover);
-    color: #fff;
+    color: var(--hover);
 }
 
 button {
