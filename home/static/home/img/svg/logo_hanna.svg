@@ -1,6 +1,6 @@
-<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.000000 631.000000">
+<svg fill="currentColor, --font-color" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.000000 631.000000">
 
-    <g fill="currentColor" transform="translate(0.000000,631.000000) scale(0.100000,-0.100000)"
+    <g transform="translate(0.000000,631.000000) scale(0.100000,-0.100000)"
         stroke="none">
         <path d="M1250 5245 l-985 -985 93 -93 92 -92 -95 -95 -95 -95 100 -100 100
 -100 -87 -88 -88 -87 178 -177 177 -178 -202 -202 -203 -203 88 -88 87 -87

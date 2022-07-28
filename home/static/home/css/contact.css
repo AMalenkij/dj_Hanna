@@ -1,0 +1,15 @@
+/*.special_bg {*/
+/*    background-size: cover;*/
+/*    overflow: hidden;*/
+/*    height: 1000px;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+.special_bg {
+    background-image: url("/static/home/img/hero_contacts.jpg");
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}

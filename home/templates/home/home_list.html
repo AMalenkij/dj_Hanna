@@ -1,7 +1,7 @@
 <!-- css style -->
 <link rel="stylesheet" href="../static/home/css/news_list.css">
 
-<div class=" z-20  semi-dark-mode pt-10">
+<div class=" z-20  semi-dark-mode pt-12 pb-2">
     {% for item in news %}
     <div class="blog-item container mx-auto">
         <a href="{{ item.get_absolute_url }}">
@@ -15,7 +15,7 @@
                     {{ item.title }}
                     <span class="blog-date">{{ item.created_at|date:"Y.m.d" }}</span>
                 </div>
-                <div class="rounded "></div>
+                <div class="h-1 w-16 border-gradient mt-2 mb-2 rounded-xl"></div>
                 <p class="">{{ item.intro }}</p>
             </div>
             <div class="item-arrow">

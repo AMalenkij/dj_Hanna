@@ -5,17 +5,18 @@
 <!-- css style -->
 <link rel="stylesheet" href="../static/home/css/detail.css">
 
-<section class="container mx-auto mt-10 blog-item mb-20 dark-mode">
+<section class="container mx-auto mt-6 blog-item mb-12 dark-mode">
     <div>
         {% if photo %}
-        <img class="" src="{{photo.url}}">
+        <img class="pb-4" src="{{photo.url}}">
         {% endif %}
         <div class="content">
             <div class="title">
                 {{ title }}
                 <span class="blog-date">{{ created_at|date:"Y.m.d" }}</span>
             </div>
-            <div class="rounded text-justify"></div>
+            <div class="h-2 w-full border-gradient mt-2 mb-2 rounded-xl"></div>
+<!--            <div class="rounded "></div>-->
             <p>{{ content | linebreaks }}</p>
         </div>
     </div>

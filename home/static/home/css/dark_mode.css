@@ -6,7 +6,7 @@
     --font-color: #000000;
     --bg-color: #fff;
 
-    --bg-semi-color: #b2b2b2;
+    --bg-semi-color: #e0e5ec;
     --font-semi-color: #18181b;
 
     /* from-teal-600 to-blue-500  */
@@ -17,10 +17,27 @@
     --bg-semi-gradient-color-from: #1d4ed8;
     --bg-semi-gradient-color-to: #14b8a6;
 
+    /* gradient hero */
+    --bg-hero-gradient-color-from: rgba(255, 255, 255, 0.7);
+    --bg-hero-gradient-color-to: rgba(255, 255, 255, 0.0);
+
     /* navigation */
     --nav-link-disabled: #7c7a7a;
     --nav-link: #000000;
     --nav-link-hover: #c91c1c;
+
+    /* filters  */
+    --brightness: brightness(2);
+    --contrast: contrast(.5);
+    --grayscale: grayscale(0);
+    --hue-rotate: hue-rotate(180deg);
+
+    /* google map filter */
+    --map-filrer: invert(0%);
+
+    /* border */
+    --border-color: #8239EC;
+    --border-semi-color: #2296F3;
 }
 
 [data-theme=dark] {
@@ -32,7 +49,7 @@
     --bg-color: #000;
 
     --bg-semi-color: #18181b;
-    --font-semi-color: #b2b2b2;
+    --font-semi-color: #e0e5ec;
 
     /* from-teal-800 to-blue-700  */
     --bg-gradient-color-from: #115e59;
@@ -42,10 +59,17 @@
     --bg-semi-gradient-color-from: #1e3a8a;
     --bg-semi-gradient-color-to: #0f766e;
 
+    /* gradient hero */
+    --bg-hero-gradient-color-from: rgba(0, 0, 0, 1);
+    --bg-hero-gradient-color-to: rgba(0, 0, 0, 0.0);
+
     /* navigation */
-    --nav-link-disabled: #7c7a7a;
+    --nav-link-disabled: #7a7a7a;
     --nav-link: #fff;
     --nav-link-hover: #c91c1c;
+
+    /* google map filter */
+    --map-filrer: invert(100%);
 }
 
 body {
@@ -63,7 +87,16 @@ body {
     color: var(--font-semi-color);
 }
 
-/* card at page about*/
+/* gradient hero */
+.dark-hero-gradient-mode {
+    position: absolute;
+    /*width: 100vw;*/
+    width: 100%;
+    /* убрать от сюда это дерьмо */
+    background-image: linear-gradient(to bottom, var(--bg-hero-gradient-color-from), var(--bg-hero-gradient-color-to));
+}
+
+/* gradient card at page about */
 .dark-gradient-mode {
     --tw-gradient-stops: var(--bg-semi-gradient-color-from), var(--bg-semi-gradient-color-to);
 }
@@ -71,6 +104,7 @@ body {
 .dark-semi-gradient-mode {
     --tw-gradient-stops: var(--bg-semi-gradient-color-from), var(--bg-semi-gradient-color-to);
 }
+
 
 /* icon  footer*/
 #chevron {
@@ -81,6 +115,7 @@ body {
 #hanna-logo {
     fill: var(--font-color);
 }
+
 .svg-icon {
     fill: var(--font-color);
 }
@@ -95,4 +130,14 @@ body {
 
 .nav-link:hover {
     color: var(--nav-link-hover);
+}
+
+.dark-filter-map {
+    filter: var(--map-filrer);
+}
+
+.border-gradient {
+    background-color: #FF3CAC;
+    background-image: linear-gradient(270deg, #FF3CAC 0%, #784BA0 15%, #2B86C5 100%);
+
 }
