@@ -14,14 +14,14 @@
 <!-- include header -->
 <!-- gradient -->
 <div class="dark-hero-gradient-mode z-50 h-28">
-<div class="relative container mx-auto  ">
-    <div class="absolute w-full ">
-        {% include 'header.html' %}
+    <div class="relative container mx-auto  ">
+        <div class="absolute w-full ">
+            {% include 'header.html' %}
+        </div>
     </div>
 </div>
-</div>
 <!-- img with parallax -->
-<div class="">
+<div class="semi-dark-mode">
     <div class="parallax flex-col clip-poly-b-md  clip-poly-b text-white">
         <svg width="220" fill="#fff" height="220" class="mx-auto" viewBox="0 0 430.000000 631.000000">
             <g transform="translate(0.000000,631.000000) scale(0.100000,-0.100000)"
@@ -88,7 +88,8 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
         <div class="container mx-auto text-center ">
             <div class="text-5xl">{% trans 'Listen on your platform' %}</div>
             <div class="h-1 w-16 border-gradient mx-auto mt-4 rounded-xl"></div>
-            <div class="text-2xl p-10">{% trans "Suscribe so you don't miss the release of new songs. We wish you a pleasant experience" %}
+            <div class="text-2xl p-10">{% trans "Suscribe so you don't miss the release of new songs. We wish you a
+                pleasant experience" %}
             </div>
         </div>
         <div class="ml-10 mt-20 lg:mb-20 lg:flex grid lg:grid-cols-3 grid-cols-2 lg:gap-x-10 gap-x-1 ">
@@ -161,11 +162,11 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
         <div class="h-96 w-4/5 mx-auto relative bg-gradient-to-tl dark-semi-gradient-mode rounded-xl shadow-2xl">
             <div class="absolute top-0 right-0 bg-gradient-to-tr dark-gradient-mode w-full h-full clip-poly-Rectangle-b rounded-xl shadow-2xl"></div>
             <div class="absolute  h-full w-full  pt-10 text-center">
-<!-- <img class="mx-auto hanna-logo" width="80" height="80" src="../static/home/img/svg/logo_hanna.svg">-->
-                        <svg id="hanna-logo" width="80" height="80" class="mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.000000 631.000000">
-            <g transform="translate(0.000000,631.000000) scale(0.100000,-0.100000)"
-               stroke="none">
-                <path d="M1250 5245 l-985 -985 93 -93 92 -92 -95 -95 -95 -95 100 -100 100
+                <svg id="hanna-logo" width="80" height="80" class="mx-auto" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 430.000000 631.000000">
+                    <g transform="translate(0.000000,631.000000) scale(0.100000,-0.100000)"
+                       stroke="none">
+                        <path d="M1250 5245 l-985 -985 93 -93 92 -92 -95 -95 -95 -95 100 -100 100
 -100 -87 -88 -88 -87 178 -177 177 -178 -202 -202 -203 -203 88 -88 87 -87
 -95 -95 -95 -95 100 -100 100 -100 -88 -88 -87 -87 975 -975 975 -975 977 977
 978 978 -90 90 c-50 50 -90 95 -90 100 0 5 38 48 85 95 l85 85 -90 90 -90 90
@@ -218,10 +219,10 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
 777 782 777 3 0 38 -33 78 -73z m190 -190 l82 -82 -948 -948 -947 -947 -950
 950 -950 950 73 72 72 73 865 -865 865 -865 873 873 c479 479 874 872 877 872
 3 0 42 -37 88 -83z"/>
-            </g>
-        </svg>
-                <div class="text-3xl mt-9 mb-5"> {% trans 'Live music' %}</div>
-                  <button class="raise">{% trans 'buy tickets' %}</button>
+                    </g>
+                </svg>
+                <div class="text-3xl mt-2 mb-9"> {% trans 'Live music' %}</div>
+                <button class="raise">{% trans 'buy tickets' %}</button>
 
 
             </div>

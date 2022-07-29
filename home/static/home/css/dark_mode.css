@@ -9,13 +9,13 @@
     --bg-semi-color: #e0e5ec;
     --font-semi-color: #18181b;
 
-    /* from-teal-600 to-blue-500  */
-    --bg-gradient-color-from: #0d9488;
-    --bg-gradient-color-to: #3b82f6;
+    /* gradient card   */
+    --bg-gradient-color-from: #fdfbfb;
+    --bg-gradient-color-to: #ebedee;
 
-    /* from-blue-700 to-teal-500 */
-    --bg-semi-gradient-color-from: #1d4ed8;
-    --bg-semi-gradient-color-to: #14b8a6;
+    /* gradient card  */
+    --bg-semi-gradient-color-from: #f5f7fa;
+    --bg-semi-gradient-color-to: #c3cfe2;
 
     /* gradient hero */
     --bg-hero-gradient-color-from: rgba(255, 255, 255, 0.7);
@@ -52,12 +52,12 @@
     --font-semi-color: #e0e5ec;
 
     /* from-teal-800 to-blue-700  */
-    --bg-gradient-color-from: #115e59;
-    --bg-gradient-color-to: #1d4ed8;
+    --bg-gradient-color-from: #868f96;
+    --bg-gradient-color-to: #596164;
 
     /* from-blue-900 to-teal-700 */
-    --bg-semi-gradient-color-from: #1e3a8a;
-    --bg-semi-gradient-color-to: #0f766e;
+    --bg-semi-gradient-color-from: #29323c;
+    --bg-semi-gradient-color-to: #485563;
 
     /* gradient hero */
     --bg-hero-gradient-color-from: rgba(0, 0, 0, 1);
@@ -138,6 +138,6 @@ body {
 
 .border-gradient {
     background-color: #FF3CAC;
-    background-image: linear-gradient(270deg, #FF3CAC 0%, #784BA0 15%, #2B86C5 100%);
+    background-image: linear-gradient(270deg, #FF3CAC 0%, #784BA0 35%, #2B86C5 100%);
 
 }
