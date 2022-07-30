@@ -1,0 +1,117 @@
+.navbar-wrap .menu {
+    display: none;
+}
+
+.hamb {
+    display: flex;
+    /*align-items: center;*/
+}
+
+.hamb-field {
+    z-index: 100;
+    margin-top: 48px;
+    margin-left: 48px;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 6px auto;
+    transition: 0.3s;
+}
+
+.popup {
+    position: fixed;
+    top: 75px;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 50;
+    display: flex;
+    transition: 0.3s;
+}
+
+.popup.open {
+    left: 0;
+    top: 0;
+    /*height: 100vh;*/
+}
+
+.popup .menu {
+
+    width: 100%;
+    /*height: 100vh;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 7rem;
+    padding-left: 2rem;
+    /*padding: 50px 0;*/
+    /*overflow: auto;*/
+}
+
+.popup .menu > li {
+    width: 100%;
+}
+
+.popup .menu > li > a {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.popup .menu > li > a:hover {
+    /*background-color: rgba(122, 82, 179, 0.1);*/
+}
+
+.hamb-field.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamb-field.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamb-field.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+body.noscroll {
+    overflow: hidden;
+}
+
+
+/* hamburger svg language */
+.svg-uk {
+    background-image: url('../img/svg/ukraine.svg');
+}
+
+.svg-pl {
+    background-image: url('../img/svg/poland.svg');
+}
+
+.svg-en {
+    background-image: url('../img/svg/united-kingdom.svg');
+}
+
+.language-icon {
+    /* size icons  */
+    width: 2rem;
+    height: 2rem;
+
+    margin-left: 2rem;
+    margin-bottom: 0.2rem;
+}
+
+.language-text {
+    padding-left: 0.5rem;
+    padding-right: 4rem;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem; /* 20px */
+}

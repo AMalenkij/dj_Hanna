@@ -1,0 +1,7 @@
+.special_bg {
+    background: url("/static/home/img/hero_contact.jpg") no-repeat center center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
