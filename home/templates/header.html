@@ -11,7 +11,7 @@
     <nav class="relative z-30 container mx-auto lg:flex lg:justify-between lg:mb-0 mb-4">
         <!-- Hamburger -->
         <nav role="navigation" class="lg:invisible visible">
-            <div id="menuToggle">
+            <div id="menu-toggle">
                 <input type="checkbox"/>
                 <!-- Spans to act as a hamburger -->
                 <span></span>
@@ -44,7 +44,7 @@
                             {% if request.resolver_match.url_name == 'contact' %}
                         class="nav-link-disabled"
                         {% else %}
-                        href="{% url 'contact' %}" class="text-blue-600 hover:text-blue-700"
+                        href="{% url 'contact' %}" class="nav-link"
                         {% endif %}
                         >{% trans 'Contact' %}</a></li>
 
@@ -57,9 +57,9 @@
                         >{% trans 'About' %}</a></li>
                     <li>
 
-                        <p class=" text-black text-lg mb-4 border-b-2 border-stone-900">Languages</p>
+                        <p class="text-lg mb-4 border-b-2 border-stone-900">Languages</p>
                         <form action="{% url 'set_language' %}" method="post"
-                              class="relative text-black text-sm ml-4 pb-4" style="flex-direction: column;">
+                              class="relative text-sm ml-4 pb-4" style="flex-direction: column;">
                             {% csrf_token %}
                             <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
                             <input name="language" type="hidden" value="uk"/>
@@ -71,7 +71,7 @@
                     </li>
                     <li>
                         <form action="{% url 'set_language' %}" method="post"
-                              class="relative text-black text-sm ml-4 pb-4">
+                              class="relative text-sm ml-4 pb-4">
                             {% csrf_token %}
                             <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
                             <input name="language" type="hidden" value="pl"/>
@@ -83,7 +83,7 @@
                     </li>
                     <li>
                         <form action="{% url 'set_language' %}" method="post"
-                              class="relative text-black text-sm ml-4 pb-4">
+                              class="relative text-sm ml-4 pb-4">
                             {% csrf_token %}
                             <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
                             <input name="language" type="hidden" value="en"/>
@@ -184,7 +184,7 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
                         <!-- Ukrainian -->
                         <li class="option">
                             <form action="{% url 'set_language' %}" method="post"
-                                  class="flex text-black space-x-1 text-sm -ml-3">
+                                  class="flex space-x-1 text-sm -ml-3">
                                 {% csrf_token %}
                                 <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
                                 <input name="language" type="hidden" value="uk"/>
@@ -195,7 +195,7 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
                         <!-- Poland -->
                         <li class="option">
                             <form action="{% url 'set_language' %}" method="post"
-                                  class="flex text-black space-x-1 text-sm -ml-3">
+                                  class="flex space-x-1 text-sm -ml-3">
                                 {% csrf_token %}
                                 <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
                                 <input name="language" type="hidden" value="pl"/>
@@ -206,7 +206,7 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
                         <!-- English -->
                         <li class="option">
                             <form action="{% url 'set_language' %}" method="post"
-                                  class="flex text-black space-x-1 text-sm -ml-3">
+                                  class="flex space-x-1 text-sm -ml-3">
                                 {% csrf_token %}
                                 <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
                                 <input name="language" type="hidden" value="en"/>

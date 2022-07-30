@@ -77,6 +77,16 @@ body {
     color: var(--font-color);
 }
 
+/* color hamburger */
+#menu-toggle span {
+    background-color: var(--font-color);
+}
+
+#menu {
+    background-color: var(--bg-color);
+
+}
+
 .dark-mode {
     background-color: var(--bg-color);
     color: var(--font-color);
