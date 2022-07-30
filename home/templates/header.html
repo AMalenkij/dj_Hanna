@@ -1,13 +1,8 @@
-{% block header %}
 {% load i18n %}
-<!-- main css -->
-<link rel="stylesheet" href="../static/home/css/main.css">
-<!-- dark mode -->
-<link rel="stylesheet" href="../static/home/css/dark_mode.css">
 
 <!-- nav menu -->
 <header class="relative">
-    <nav class="relative z-30 container mx-auto lg:flex lg:justify-between lg:mb-0 -mb-4">
+    <nav class=" z-30 container mx-auto lg:flex lg:justify-between lg:mb-0 -mb-4">
            {% include "hamburger.html" %}
         <!-- breadcrumb -->
         <div class="lg:visible invisible absolute">
@@ -15,7 +10,7 @@
                 {% include "breadcrumb.html" %}
             </nav>
         </div>
-        <!-- logo -->
+        <!-- logo in page home -->
         {% if request.resolver_match.url_name == 'home' %}
         <div class="lg:mt-8 lg:ml-24 lg:h-64">
             <svg id="hanna-logo" width="92" class="mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.000000 631.000000">
@@ -82,7 +77,7 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
         <!-- icon language  -->
         <div class="lg:visible invisible justify-end">
             <div class="flex">
-                <div class="select-menu  z-40 ">
+                <div class="select-menu z-40 ">
                     <div class="select-btn">
                         <!--  language -->
                         <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8">
@@ -93,7 +88,7 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
                         </svg>
                         <i class="bx bx-chevron-down"></i>
                     </div>
-                    <ul class="options">
+                    <ul class="options text-black">
                         <!-- Ukrainian -->
                         <li class="option">
                             <form action="{% url 'set_language' %}" method="post"
@@ -175,9 +170,3 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
         </div>
     </nav>
 </header>
-
-<!-- dark mode -->
-<script src="../static/home/js/dark_mode.js"></script>
-<!-- Dropdown btn -->
-<script src="../static/home/js/dropdown_btn.js"></script>
-{% endblock header %}

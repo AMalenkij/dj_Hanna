@@ -8,9 +8,6 @@
 <!-- css btn -->
 <link rel="stylesheet" href="../static/home/css/btn.css">
 
-<!-- Tailwind -->
-<script src="https://cdn.tailwindcss.com"></script>
-
 <!-- include header -->
 <!-- gradient -->
 <div class="dark-hero-gradient-mode z-50 h-28">
@@ -22,7 +19,7 @@
 </div>
 <!-- img with parallax -->
 <div class="semi-dark-mode">
-    <div class="parallax flex-col clip-poly-b-md  clip-poly-b text-white">
+    <div class="parallax flex-col clip-poly-b-md  lg:clip-poly-b text-white">
         <svg width="220" fill="#fff" height="220" class="mx-auto" viewBox="0 0 430.000000 631.000000">
             <g transform="translate(0.000000,631.000000) scale(0.100000,-0.100000)"
                stroke="none">
@@ -88,8 +85,7 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
         <div class="container mx-auto text-center ">
             <div class="text-5xl">{% trans 'Listen on your platform' %}</div>
             <div class="h-1 w-16 border-gradient mx-auto mt-4 rounded-xl"></div>
-            <div class="text-2xl p-10">{% trans "Suscribe so you don't miss the release of new songs. We wish you a
-                pleasant experience" %}
+            <div class="text-2xl p-10">{% trans "Suscribe so you don't miss the release of new songs. We wish you a pleasant experience" %}
             </div>
         </div>
         <div class="ml-10 mt-20 lg:mb-20 lg:flex grid lg:grid-cols-3 grid-cols-2 lg:gap-x-10 gap-x-1 ">
@@ -111,7 +107,7 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
         </div>
     </div>
     <!-- Content bloc about band -->
-    <div class="lg:clip-poly clip-poly-md lg:mt-20 mb-20 dark-mode">
+    <div class="lg:clip-poly clip-poly-md lg:mt-20  dark-mode">
         <div class="container mx-auto lg:flex lg:flex-row p-10 lg:space-x-44">
             <div class="lg:w-3/5 mb-36 text-2xl">
                 <h2 class="text-center mt-32 text-4xl">Zespół HANNA</h2>
@@ -136,7 +132,7 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
                 <iframe style="border-radius:12px"
                         src="https://open.spotify.com/embed/album/4KKhcDjF3rAtpYqkGTWagd?utm_source=generator"
                         width="100%"
-                        height="380"
+                        height="360"
                         frameBorder="0"
                         allowfullscreen=""
                         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
@@ -145,7 +141,7 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
     </div>
 </div>
 
-<!-- card -->
+<!-- gallery -->
 <div class="semi-dark-mode">
     <div class="w-64 mx-auto mb-14">
         <p class="text-center text-5xl">{% trans 'Gallery' %}</p>
@@ -158,6 +154,7 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
         </div>
         {% endfor %}
     </div>
+    <!-- card -->
     <div class="w-screen h-64">
         <div class="h-96 w-4/5 mx-auto relative bg-gradient-to-tl dark-semi-gradient-mode rounded-xl shadow-2xl">
             <div class="absolute top-0 right-0 bg-gradient-to-tr dark-gradient-mode w-full h-full clip-poly-Rectangle-b rounded-xl shadow-2xl"></div>
@@ -223,13 +220,11 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
                 </svg>
                 <div class="text-3xl mt-2 mb-9"> {% trans 'Live music' %}</div>
                 <button class="raise">{% trans 'buy tickets' %}</button>
-
-
             </div>
         </div>
     </div>
 </div>
 <div class="-mt-20 w-full h-64"></div>
 <!-- gallery -->
-<script src="../static/home/scripts/script.js"></script>
+<script src="../static/home/css/gallery.js"></script>
 {% endblock content %}

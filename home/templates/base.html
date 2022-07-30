@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/static/home/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/static/home/favicon/img/favicon-32x32.png">
@@ -18,23 +17,35 @@
     <!-- reset CSS -->
     <link rel="stylesheet" href="../static/home/css/reset.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../static/home/css/styles.css">
-
-    <!-- font   Poiret  -->
+    <!-- font Poiret  -->
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+    <!-- dark mode -->
+    <link rel="stylesheet" href="../static/home/css/dark_mode.css">
+
+    <!-- main css -->
+    <link rel="stylesheet" href="../static/home/css/main.css">
+
+    <!-- hamburger  css -->
+    <link rel="stylesheet" href="../static/home/css/hamburger.css">
 
     <!-- cdn.tailwindcss -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <title>HANNA | {{ title }}</title>
+
 </head>
 <body>
-{% block header %}
-{% endblock header %}
+
 {% block content %}
 {% endblock content %}
-{% block footer %}
-{% endblock footer %}
 {% include 'footer.html' %}
+
+<!-- dark mode -->
+<script src="../static/home/js/dark_mode.js"></script>
+<!-- Dropdown btn -->
+<script src="../static/home/js/dropdown_btn.js"></script>
+<!-- hamburger btn -->
+<script src="../static/home/js/hamburger.js"></script>
 </body>
 </html>

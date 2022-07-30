@@ -1,41 +1,41 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load i18n %}
+<!-- css concerts -->
 <link rel="stylesheet" href="../../static/home/css/concerts.css">
 
 <div class="special_bg relative">
     <div class="dark-hero-gradient-mode h-40">
-
-    {% include 'header.html' %}
-        </div>
+        {% include 'header.html' %}
+    </div>
 </div>
-    <div class="mt-5">
-        <div class=" text-5xl mx-auto container mb-6 ">{% trans 'Concerts' %}</div>
-        {% for item in concerts %}
-        <div class="flex container mx-auto mb-5">
-            <!-- date and time -->
-            <div class="lg:flex basis-1/6 lg:gap-x-10 grid gap-y-1 text-center mr-3">
-                <div class="text-5xl">{{ item.date|date:"d" }}</div>
-                <div class="gap-y-1 grid ">
-                    <div class="basis-1/4 text-xl">{{ item.date|date:"M" }}</div>
-                    <div class="basis-1/4">{{ item.date|date:"Y" }}</div>
-                </div>
-                <div class="basis-1/4">{{ item.time|time:"H:i" }}</div>
+<div class="mt-5">
+    <div class=" text-5xl mx-auto container mb-6 ">{% trans 'Concerts' %}</div>
+    {% for item in concerts %}
+    <div class="flex container mx-auto mb-5">
+        <!-- date and time -->
+        <div class="lg:flex basis-1/6 lg:gap-x-10 grid gap-y-1 text-center mr-3">
+            <div class="text-5xl">{{ item.date|date:"d" }}</div>
+            <div class="gap-y-1 grid ">
+                <div class="basis-1/4 text-xl">{{ item.date|date:"M" }}</div>
+                <div class="basis-1/4">{{ item.date|date:"Y" }}</div>
             </div>
+            <div class="basis-1/4">{{ item.time|time:"H:i" }}</div>
+        </div>
 
-            <!-- title, place and location -->
-            <div class="lg:flex lf:gap-x-20 lg:basis-1/2 grid gap-y-1">
-                <div class="lg:basis-1/3 text-2xl lg:text-xl">{{ item.title }}</div>
-                <div class="">
-                    <div class="font-bold">{{ item.place }}</div>
-                    <div class="">{{ item.location }}</div>
-                </div>
+        <!-- title, place and location -->
+        <div class="lg:flex lf:gap-x-20 lg:basis-1/2 grid gap-y-1">
+            <div class="lg:basis-1/3 text-2xl lg:text-xl">{{ item.title }}</div>
+            <div class="">
+                <div class="font-bold">{{ item.place }}</div>
+                <div class="">{{ item.location }}</div>
             </div>
         </div>
     </div>
-    <div class="h-1 w-24 border-gradient mx-auto mt-2 mb-4 rounded-xl"></div>
+</div>
+<div class="h-1 w-24 border-gradient mx-auto mt-2 mb-4 rounded-xl"></div>
 
-    {% endfor %}
+{% endfor %}
 </div>
 
 {% endblock content %}
