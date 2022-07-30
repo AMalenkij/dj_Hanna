@@ -114,22 +114,5 @@ nav {
     }
 }
 
-/* header svg language */
-.svg-uk {
-    background-image: url('../img/svg/ukraine.svg');
-    width: 2rem;
-    height: 2rem;
-}
 
-.svg-pl {
-    background-image: url('../img/svg/poland.svg');
-    width: 2rem;
-    height: 2rem;
-}
-
-.svg-en {
-    background-image: url('../img/svg/united-kingdom.svg');
-    width: 2rem;
-    height: 2rem;
-}
 

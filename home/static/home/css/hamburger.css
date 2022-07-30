@@ -1,113 +1,117 @@
-/* header Hamburger */
-#menu-toggle {
-    display: block;
-    position: relative;
-    top: 54px;
-    left: 48px;
-    z-index: 1;
-    -webkit-user-select: none;
-    user-select: none;
+.navbar-wrap .menu {
+    display: none;
 }
 
-#menu-toggle a {
-    text-decoration: none;
-    transition: color 0.3s ease;
+.hamb {
+    display: flex;
+    /*align-items: center;*/
 }
 
-#menu-toggle a:hover {
-    color: tomato;
-}
-
-#menu-toggle input {
-    display: block;
-    width: 40px;
-    height: 32px;
-    position: absolute;
-    top: -7px;
-    left: -5px;
-
+.hamb-field {
+    z-index: 100;
+    margin-top: 48px;
+    margin-left: 48px;
     cursor: pointer;
-
-    opacity: 0; /* hide this */
-    z-index: 2; /* and place it over the hamburger */
-
-    -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
-#menu-toggle span {
+.bar {
     display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-    border-radius: 3px;
-    z-index: 1;
-    transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-    opacity 0.55s ease;
+    width: 30px;
+    height: 3px;
+    margin: 6px auto;
+    transition: 0.3s;
 }
 
-#menu-toggle span:first-child {
-    transform-origin: 0% 0%;
+.popup {
+    position: fixed;
+    top: 75px;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 50;
+    display: flex;
+    transition: 0.3s;
 }
 
-#menu-toggle span:nth-last-child(2) {
-    transform-origin: 0% 100%;
+.popup.open {
+    left: 0;
+    top: 0;
+    /*height: 100vh;*/
 }
 
-/*
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menu-toggle input:checked ~ span {
-    opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
+.popup .menu {
+
+    width: 100%;
+    /*height: 100vh;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 7rem;
+    padding-left: 2rem;
+    /*padding: 50px 0;*/
+    /*overflow: auto;*/
 }
 
-/*
- * But let's hide the middle one.
- */
-#menu-toggle input:checked ~ span:nth-last-child(3) {
+.popup .menu > li {
+    width: 100%;
+}
+
+.popup .menu > li > a {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.popup .menu > li > a:hover {
+    /*background-color: rgba(122, 82, 179, 0.1);*/
+}
+
+.hamb-field.active .bar:nth-child(2) {
     opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menu-toggle input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(0, -1px);
+.hamb-field.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu {
-    position: absolute;
-    width: 100vw;
-    height: 120vh;
-    margin: -9rem 0 0 -3.5rem;
-    padding: 3.5rem;
-    padding-top: 10rem;
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
-
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+.hamb-field.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
-#menu li {
-    padding: 10px 0;
-    font-size: 22px;
+body.noscroll {
+    overflow: hidden;
 }
 
-#menu-toggle input:checked ~ ul {
-    transform: none;
+
+/* hamburger svg language */
+.svg-uk {
+    background-image: url('../img/svg/ukraine.svg');
+}
+
+.svg-pl {
+    background-image: url('../img/svg/poland.svg');
+}
+
+.svg-en {
+    background-image: url('../img/svg/united-kingdom.svg');
+}
+
+.language-icon {
+    /* size icons  */
+    width: 2rem;
+    height: 2rem;
+
+    margin-left: 2rem;
+    margin-bottom: 0.2rem;
+}
+
+.language-text {
+    padding-left: 0.5rem;
+    padding-right: 4rem;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem; /* 20px */
 }

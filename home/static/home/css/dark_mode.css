@@ -78,11 +78,11 @@ body {
 }
 
 /* color hamburger */
-#menu-toggle span {
+.bar {
     background-color: var(--font-color);
 }
 
-#menu {
+.menu {
     background-color: var(--bg-color);
 
 }
