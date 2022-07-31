@@ -78,7 +78,6 @@ nav {
 
 }
 
-
 .select-menu.active .options {
     display: block;
     opacity: 0;
@@ -114,6 +113,4 @@ nav {
         opacity: 0;
     }
 }
-
-
 
