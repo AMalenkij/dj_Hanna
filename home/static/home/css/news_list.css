@@ -82,4 +82,8 @@
         padding: 30px;
     }
 
+    .blog-item .title .blog-date {
+    font-size: 14px;
+}
+
 }

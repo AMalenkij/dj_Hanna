@@ -96,7 +96,7 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
                                 <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
                                 <input name="language" type="hidden" value="uk"/>
                                 <input class="svg-uk h-8 w-8" type="submit" value=""/>
-                                <input type="submit" value="Ukrainian"/>
+                                <input type="submit" value={% trans 'Ukrainian' %}>
                             </form>
                         </li>
                         <!-- Poland -->
@@ -106,8 +106,8 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
                                 {% csrf_token %}
                                 <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
                                 <input name="language" type="hidden" value="pl"/>
-                                <input class="svg-pl h-8 w-8" type="submit" value=""/>
-                                <input type="submit" value="Poland"/>
+                                <input class="svg-pl h-8 w-8" type="submit" value="">
+                                <input type="submit" value={% trans 'Poland' %}>
                             </form>
                         </li>
                         <!-- English -->
@@ -118,7 +118,7 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
                                 <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
                                 <input name="language" type="hidden" value="en"/>
                                 <input class="svg-en h-8 w-8" type="submit" value=""/>
-                                <input type="submit" value="English"/>
+                                <input type="submit" value={% trans 'English' %}>
                             </form>
                         </li>
                     </ul>

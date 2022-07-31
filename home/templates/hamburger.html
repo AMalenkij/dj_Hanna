@@ -1,7 +1,7 @@
 {% load i18n %}
 
 <!-- hamburger  css -->
-<link rel="stylesheet" href="../static/home/css/hamburger.css">
+<link rel="stylesheet" href="/static/home/css/hamburger.css">
 
 <nav role="navigation" class="lg:invisible visible">
     <div class="navbar-wrap">
@@ -60,7 +60,7 @@
                     <input class="language-icon svg-uk"
                            type="submit" value=""/>
                     <input class="language-text" type="submit"
-                           value="Ukrainian"/>
+                           value={% trans 'Ukrainian' %}>
                 </form>
             </li>
             <li>
@@ -71,7 +71,7 @@
                     <input name="language" type="hidden" value="pl"/>
                     <input class="svg-pl language-icon"
                            type="submit" value=""/>
-                    <input class="language-text" type="submit" value="Poland"/>
+                    <input class="language-text" type="submit" value={% trans 'Poland' %}>
                 </form>
             </li>
             <li>
@@ -82,7 +82,7 @@
                     <input name="language" type="hidden" value="en"/>
                     <input class="svg-en language-icon"
                            type="submit" value=""/>
-                    <input class="language-text" type="submit" value="English"/>
+                    <input class="language-text" type="submit" value={% trans 'English' %}>
                 </form>
             </li>
         </ul>

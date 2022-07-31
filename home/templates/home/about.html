@@ -3,10 +3,10 @@
 {% load i18n %}
 
 <!-- css style -->
-<link rel="stylesheet" href="../static/home/css/about.css">
+<link rel="stylesheet" href="/static/home/css/about.css">
 
 <!-- css btn -->
-<link rel="stylesheet" href="../static/home/css/btn.css">
+<link rel="stylesheet" href="/static/home/css/btn.css">
 
 <!-- include header -->
 <!-- gradient -->
@@ -90,19 +90,19 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
         </div>
         <div class="ml-10 mt-20 lg:mb-20 lg:flex grid lg:grid-cols-3 grid-cols-2 lg:gap-x-10 gap-x-1 ">
             <div class="h-20 w-32 lg:w-64 hover:opacity-80">
-                <img src="../static/home/img/logo-card/spotify.svg"
+                <img src="/static/home/img/logo-card/spotify.svg"
                      alt="spotify"/></div>
             <div class="h-20 w-32 lg:w-64 hover:opacity-80">
-                <img src="../static/home/img/logo-card/apple-music.svg"
+                <img src="/static/home/img/logo-card/apple-music.svg"
                      alt="apple-music"/></div>
             <div class="h-20 w-32 lg:w-64 hover:opacity-80">
-                <img src="../static/home/img/logo-card/amazon-Music.svg"
+                <img src="/static/home/img/logo-card/amazon-Music.svg"
                      alt="amazon-Music"/></div>
             <div class="h-20 w-32 lg:w-64 hover:opacity-80">
-                <img src="../static/home/img/logo-card/deezer.svg" alt="deezer"/>
+                <img src="/static/home/img/logo-card/deezer.svg" alt="deezer"/>
             </div>
             <div class="h-20 w-32 lg:w-64 hover:opacity-80">
-                <img src="../static/home/img/logo-card/YouTube_Music.svg"
+                <img src="/static/home/img/logo-card/YouTube_Music.svg"
                      alt="YouTube_Music"/></div>
         </div>
     </div>
@@ -112,7 +112,7 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
             <div class="lg:w-3/5 mb-36 text-2xl">
                 <h2 class="text-center mt-32 text-4xl">Zespół HANNA</h2>
                 <div class="h-1 w-16 border-gradient mx-auto mt-2 mb-10 rounded-xl"></div>
-                <p>Zespół HANNA: Polsko-ukraińska grupa muzyczna założona przez wokalistkę i kompozytorkę Hanne
+                <p>{% trans 'Zespół HANNA: Polsko-ukraińska grupa muzyczna założona przez wokalistkę i kompozytorkę Hanne
                     Tekuczewe.
                     Zrzeszająca w swoich szeregach muzyków dwóch narodów. Tworzona przez nas muzyka przeplata
                     melancholijne
@@ -125,7 +125,7 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
 
                     Zespół debiutował w 2020 r pod czas 44 Jarmarock FEST w Gdańsku , a w październiku 2021 świat
                     zobaczył
-                    pierwszy singl zespołu"Modlitwa"
+                    pierwszy singl zespołu"Modlitwa"' %}
                 </p>
             </div>
             <div class="lg:w-1/4 lg:mt-44 mb-32">
@@ -226,5 +226,5 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
 </div>
 <div class="-mt-20 w-full h-64"></div>
 <!-- gallery -->
-<script src="../static/home/js/gallery.js"></script>
+<script src="/static/home/js/gallery.js"></script>
 {% endblock content %}

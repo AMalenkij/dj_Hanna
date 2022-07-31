@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 21:57+0000\n"
+"POT-Creation-Date: 2022-07-31 12:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,45 +20,81 @@ msgstr ""
 "%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
 "%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: home/templates/breadcrumb.html:10
+#: home/templates/breadcrumb.html:10 home/templates/hamburger.html:22
 msgid "Home"
 msgstr "Strona główna"
 
-#: home/templates/breadcrumb.html:18
+#: home/templates/breadcrumb.html:18 home/templates/hamburger.html:29
 msgid "News"
 msgstr "Aktualności"
 
-#: home/templates/breadcrumb.html:26 home/templates/home/concerts.html:20
+#: home/templates/breadcrumb.html:26 home/templates/hamburger.html:36
+#: home/templates/home/concerts.html:13
 msgid "Concerts"
 msgstr "Koncerty"
 
-#: home/templates/breadcrumb.html:34
-msgid "Contacts"
+#: home/templates/breadcrumb.html:34 home/templates/hamburger.html:43
+msgid "Contact"
 msgstr "Łączność"
 
-#: home/templates/breadcrumb.html:42
+#: home/templates/breadcrumb.html:42 home/templates/hamburger.html:51
 msgid "About"
 msgstr "O nas"
 
-#: home/templates/home/about.html:64
-msgid "Working in collaboration"
-msgstr "Praca we współpracy"
+#: home/templates/footer.html:20 home/templates/footer.html:23
+msgid "Previous"
+msgstr ""
 
-#: home/templates/home/about.html:66
+#: home/templates/footer.html:49 home/templates/footer.html:52
+msgid "Next"
+msgstr ""
+
+#: home/templates/hamburger.html:63 home/templates/header.html:99
+msgid "Ukrainian"
+msgstr ""
+
+#: home/templates/hamburger.html:74 home/templates/header.html:110
+msgid "Poland"
+msgstr ""
+
+#: home/templates/hamburger.html:85 home/templates/header.html:121
+msgid "English"
+msgstr ""
+
+#: home/templates/home/about.html:86
+msgid "Listen on your platform"
+msgstr ""
+
+#: home/templates/home/about.html:88
 msgid ""
-"We’ve built in-depth relationships directly with some of the best market-"
-"leading media companies worldwide"
-msgstr "Zbudowaliśmy dogłębne relacje bezpośrednio z jednymi z najlepszych na rynku-"
-"wiodące firmy medialne na całym świecie"
+"Suscribe so you don't miss the release of new songs. We wish you a pleasant "
+"experience"
+msgstr ""
 
-#: home/templates/home/about.html:230
+#: home/templates/home/about.html:147
 msgid "Gallery"
 msgstr "Galeri"
 
-#: home/templates/home/about.html:247
+#: home/templates/home/about.html:221
 msgid "Live music"
 msgstr "Muzyka na żywo"
 
-#: home/templates/home/about.html:249
+#: home/templates/home/about.html:222
 msgid "buy tickets"
 msgstr "Kup bilety"
+
+#: home/templates/home/contact.html:20
+msgid "Your message has been sent"
+msgstr ""
+
+#: home/templates/home/contact.html:22
+msgid "We will get back to you as soon as possible"
+msgstr ""
+
+#: home/templates/home/contact.html:47
+msgid "Feedback"
+msgstr ""
+
+#: home/templates/home/contact.html:63
+msgid "Send"
+msgstr ""
