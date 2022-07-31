@@ -78,7 +78,7 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
 3 0 42 -37 88 -83z"/>
             </g>
         </svg>
-        <div class="lg:pb-10 flex justify-center text-white"><h2>HANNA</h2></div>
+        <div class="lg:pb-10 flex justify-center text-white logo">HANNA</div>
     </div>
     <!-- Whe you can be listening music -->
     <div class="lg:container mx-auto lg:mt-20 mt-10 ">
@@ -219,7 +219,7 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
                     </g>
                 </svg>
                 <div class="text-3xl mt-2 mb-9"> {% trans 'Live music' %}</div>
-                <button class="raise">{% trans 'buy tickets' %}</button>
+                <a href="{% url 'concerts' %}" > <button class="raise">{% trans 'buy tickets' %}</button></a>
             </div>
         </div>
     </div>

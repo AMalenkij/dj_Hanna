@@ -3,14 +3,9 @@ body {
     scroll-padding: 0;
 }
 
-h2 {
-    font-size: 4.5rem; /* 72px */
+.logo {
+    font-size: 4.5rem;
     line-height: 1;
-}
-
-nav {
-    font-size: 1.25rem; /* 20px */
-    line-height: 1.75rem; /* 28px */
 }
 
 /*icon language*/
