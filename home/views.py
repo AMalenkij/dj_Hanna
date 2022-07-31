@@ -1,3 +1,5 @@
+from datetime import date
+
 from decouple import config
 from django.core.mail import send_mail
 from django.shortcuts import get_object_or_404
@@ -60,11 +62,15 @@ class HomeList(NewsList):
 
 
 class ConcertsList(ListView):
+    default = date.today
     context_object_name = 'concerts'
     model = Concerts
-    paginate_by = 10
+    # paginate_by = 10
     template_name = 'home/concerts.html'
     extra_context = {'title': 'Concerts'}
+
+    def get_queryset(self):
+        return Concerts.objects.filter(is_published=True)
 
 
 def show_post(reqest, post_slug):
