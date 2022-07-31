@@ -36,6 +36,7 @@ class Concerts(models.Model):
     class Meta:
         verbose_name = 'Concert'
         verbose_name_plural = 'Concerts'
+        ordering = ['-time']
 
     def __str__(self):
         return self.title
