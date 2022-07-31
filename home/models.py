@@ -33,9 +33,13 @@ class Concerts(models.Model):
     link = models.URLField(max_length=200)
     is_published = models.BooleanField(default=True)
 
+    def past(self):
+        return Concerts.filter(is_published=False)
+
     class Meta:
         verbose_name = 'Concert'
         verbose_name_plural = 'Concerts'
+        ordering = ['-date']
 
     def __str__(self):
         return self.title

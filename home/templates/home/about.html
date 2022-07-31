@@ -1,259 +1,216 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load i18n %}
-<div class="relative container mx-auto  ">
-    <div class="absolute w-full">
-        {% include 'header.html' %}
+
+<!-- css style -->
+<link rel="stylesheet" href="/static/home/css/about.css">
+
+<!-- css btn -->
+<link rel="stylesheet" href="/static/home/css/btn.css">
+
+<!-- include header -->
+<!-- gradient -->
+<div class="dark-hero-gradient-mode z-50 h-28">
+    <div class="relative container mx-auto  ">
+        <div class="absolute w-full ">
+            {% include 'header.html' %}
+        </div>
     </div>
 </div>
-<!-- Tailwind -->
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-    body {
-        background-color: rgb(28 25 23);
-    }
-
-    .clip-poly-b {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
-    }
-
-    .clip-poly-b-md {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
-    }
-
-    .clip-poly {
-        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
-    }
-
-    .clip-poly-md {
-        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
-    }
-
-    .clip-poly-Rectangle-b {
-        clip-path: polygon(85% 0, 100% 0, 100% 100%, 15% 100%);
-    }
-
-    .clip-poly-Rectangle-b-mb {
-        clip-path: polygon(85% 0, 100% 0, 100% 100%, 15% 100%);
-    }
-
-    .parallax {
-        background: url(/static/home/img/band_Hanna.jpg) no-repeat center center fixed;
-        background-size: cover;
-        height: 100%;
-        overflow: hidden;
-        height: 1200px;
-        background-attachment: fixed;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        width: 100%;
-    }
-</style>
 <!-- img with parallax -->
-<div>
-    <div class="parallax flex-col clip-poly-b-md  clip-poly-b">
-        <img class="mx-auto" width="120" height="120" src="/static/home/img/svg/logo_hanna.svg"/>
-        <img class="" width="200" height="24" src="/static/home/img/HANNA.png"/>
+<div class="semi-dark-mode">
+    <div class="parallax flex-col clip-poly-b-md  lg:clip-poly-b text-white">
+        <svg width="220" fill="#fff" height="220" class="mx-auto" viewBox="0 0 430.000000 631.000000">
+            <g transform="translate(0.000000,631.000000) scale(0.100000,-0.100000)"
+               stroke="none">
+                <path d="M1250 5245 l-985 -985 93 -93 92 -92 -95 -95 -95 -95 100 -100 100
+-100 -87 -88 -88 -87 178 -177 177 -178 -202 -202 -203 -203 88 -88 87 -87
+-95 -95 -95 -95 100 -100 100 -100 -88 -88 -87 -87 975 -975 975 -975 977 977
+978 978 -90 90 c-50 50 -90 95 -90 100 0 5 38 48 85 95 l85 85 -90 90 -90 90
+92 92 93 93 -175 175 -175 175 210 210 210 210 -90 90 -90 90 90 90 90 90 -93
+93 -92 92 90 90 c49 49 90 94 90 100 0 10 -1960 1975 -1970 1975 -3 0 -448
+-443 -990 -985z m2900 -990 c0 -6 -34 -44 -75 -85 l-75 -75 -883 883 -882 882
+-877 -877 -878 -878 -75 75 -75 75 957 957 958 958 952 -952 c524 -524 953
+-958 953 -963z m-190 -190 c0 -6 -32 -42 -70 -80 l-70 -70 -783 783 -782 782
+-787 -787 -788 -788 -85 85 -85 85 862 862 863 863 862 -862 c475 -475 863
+-868 863 -873z m-365 -375 l-195 -195 -605 605 -605 605 -578 -578 -577 -577
+-163 162 -162 163 772 772 773 773 767 -767 768 -768 -195 -195z m-302 -302
+l-78 -78 -517 517 -518 518 -485 -485 -485 -485 -75 75 -75 75 562 562 563
+563 592 -592 593 -593 -77 -77z m-608 392 l500 -500 -70 -70 c-38 -38 -75 -70
+-81 -70 -6 0 -196 186 -421 414 l-411 413 -396 -396 -396 -396 -85 85 -85 85
+467 467 c258 258 470 468 473 468 3 0 230 -225 505 -500z m-2117 177 l82 -82
+-80 -80 -80 -80 -85 85 -85 85 77 77 c43 43 80 78 83 78 3 0 42 -37 88 -83z
+m3510 0 l72 -72 -75 -75 -75 -74 -75 74 -75 75 72 72 c40 40 75 73 78 73 3 0
+38 -33 78 -73z m-1473 -457 l400 -400 -380 -380 -380 -380 -402 402 -403 403
+377 377 c208 208 380 378 383 378 3 0 185 -180 405 -400z m1293 277 l72 -72
+-195 -195 -195 -195 -75 75 -75 75 192 192 c106 106 195 193 198 193 3 0 38
+-33 78 -73z m-3053 -97 l160 -160 -80 -80 -80 -80 -162 162 -163 163 77 77
+c43 43 80 78 83 78 3 0 77 -72 165 -160z m3130 -370 l-195 -195 -82 83 -83 82
+195 195 195 195 82 -82 83 -83 -195 -195z m-3320 180 l160 -160 -73 -72 -72
+-73 -162 162 -163 163 70 70 c38 38 72 70 75 70 3 0 77 -72 165 -160z m453
+-73 l72 -72 -80 -80 -80 -80 -75 75 -75 75 77 77 c43 43 80 78 83 78 3 0 38
+-33 78 -73z m2370 -60 l72 -72 -78 -78 -77 -77 -75 75 -74 75 74 75 c41 41 77
+75 80 75 3 0 38 -33 78 -73z m-2186 -124 c43 -43 78 -82 78 -88 0 -6 -34 -44
+-75 -85 l-75 -75 -85 85 -85 85 77 77 c43 43 80 78 83 78 2 0 40 -35 82 -77z
+m-374 -6 l72 -72 -73 -73 -72 -72 -75 75 -74 75 69 70 c38 38 72 70 75 70 3 0
+38 -33 78 -73z m2372 -202 l-75 -75 -75 75 -75 75 75 75 75 75 75 -75 75 -75
+-75 -75z m383 -17 l-78 -78 -82 82 -83 83 77 77 78 78 82 -82 83 -83 -77 -77z
+m-3045 -215 l-188 -188 -75 75 -75 75 187 187 188 188 75 -75 75 -75 -187
+-187z m480 244 l82 -82 -73 -73 -72 -72 -85 85 -85 85 70 70 c38 38 72 70 75
+70 3 0 42 -37 88 -83z m722 -342 l415 -415 395 395 395 395 75 -75 75 -75
+-475 -475 -475 -475 -492 492 -493 493 77 77 c43 43 80 78 83 78 3 0 192 -187
+420 -415z m2177 -22 l-77 -78 -160 160 -160 160 77 77 78 78 160 -160 160
+-160 -78 -77z m-522 307 l79 -80 -69 -70 c-38 -38 -74 -70 -80 -70 -5 0 -45
+35 -87 77 l-78 78 72 72 c40 40 75 73 78 73 3 0 41 -36 85 -80z m-2550 -120
+l80 -80 -188 -187 -187 -188 -85 85 -85 85 182 182 c101 101 187 183 193 183
+6 0 46 -36 90 -80z m797 -447 l508 -508 490 490 490 490 82 -83 83 -82 -563
+-563 -562 -562 -592 592 -593 593 70 70 c38 38 72 70 75 70 3 0 233 -228 512
+-507z m2005 315 c84 -84 153 -157 153 -163 0 -6 -32 -42 -70 -80 l-70 -70
+-155 155 c-85 85 -155 159 -155 165 0 10 130 145 140 145 2 0 73 -69 157 -152z
+m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
+187 187 188 188 600 -600 600 -600 578 577z m-2301 336 c43 -43 78 -82 78 -88
+0 -6 -33 -43 -73 -83 l-72 -72 -85 85 -85 85 75 75 c41 41 77 75 80 75 2 0 40
+-35 82 -77z m3486 -6 l72 -72 -75 -75 -75 -74 -70 69 c-38 38 -70 74 -70 79 0
+11 130 146 140 146 3 0 38 -33 78 -73z m-180 -180 l72 -72 -858 -858 -857
+-857 -850 850 -850 850 78 77 77 78 775 -775 775 -775 778 778 c427 427 779
+777 782 777 3 0 38 -33 78 -73z m190 -190 l82 -82 -948 -948 -947 -947 -950
+950 -950 950 73 72 72 73 865 -865 865 -865 873 873 c479 479 874 872 877 872
+3 0 42 -37 88 -83z"/>
+            </g>
+        </svg>
+        <div class="lg:pb-10 flex justify-center text-white logo">HANNA</div>
+    </div>
+    <!-- Whe you can be listening music -->
+    <div class="lg:container mx-auto lg:mt-20 mt-10 ">
+        <div class="container mx-auto text-center ">
+            <div class="text-5xl">{% trans 'Listen on your platform' %}</div>
+            <div class="h-1 w-16 border-gradient mx-auto mt-4 rounded-xl"></div>
+            <div class="text-2xl p-10">{% trans "Suscribe so you don't miss the release of new songs. We wish you a pleasant experience" %}
+            </div>
+        </div>
+        <div class="ml-10 mt-20 lg:mb-20 lg:flex grid lg:grid-cols-3 grid-cols-2 lg:gap-x-10 gap-x-1 ">
+            <div class="h-20 w-32 lg:w-64 hover:opacity-80">
+                <img src="/static/home/img/logo-card/spotify.svg"
+                     alt="spotify"/></div>
+            <div class="h-20 w-32 lg:w-64 hover:opacity-80">
+                <img src="/static/home/img/logo-card/apple-music.svg"
+                     alt="apple-music"/></div>
+            <div class="h-20 w-32 lg:w-64 hover:opacity-80">
+                <img src="/static/home/img/logo-card/amazon-Music.svg"
+                     alt="amazon-Music"/></div>
+            <div class="h-20 w-32 lg:w-64 hover:opacity-80">
+                <img src="/static/home/img/logo-card/deezer.svg" alt="deezer"/>
+            </div>
+            <div class="h-20 w-32 lg:w-64 hover:opacity-80">
+                <img src="/static/home/img/logo-card/YouTube_Music.svg"
+                     alt="YouTube_Music"/></div>
+        </div>
+    </div>
+    <!-- Content bloc about band -->
+    <div class="lg:clip-poly clip-poly-md lg:mt-20  dark-mode">
+        <div class="container mx-auto lg:flex lg:flex-row p-10 lg:space-x-44">
+            <div class="lg:w-3/5 mb-36 text-2xl">
+                <h2 class="text-center mt-32 text-4xl">{% trans 'Band Hanna' %}</h2>
+                <div class="h-1 w-16 border-gradient mx-auto mt-2 mb-10 rounded-xl"></div>
+                <p>{% trans 'Zespół HANNA: Polsko-ukraińska grupa muzyczna założona przez wokalistkę i kompozytorkę Hanne Tekuczewe. Zrzeszająca w swoich szeregach muzyków dwóch narodów. Tworzona przez nas muzyka przeplata melancholijne melodie, motywy etniczne, elektroniczne brzmienia, wszystko to podkreślone solidną dawką przesterowanych gitar, potężnym wokalem oraz tekstami pisanymi z głębin duszy. Naszymi utworami chcemy przekazać piękną opowieść o mroku, szczęściu, miłości, powadzę, ubraną w romantyczny i nie powtarzalny wschodnio europejski klimat, przy którym nikt nie przejdzie obojętnie. Zespół debiutował w 2020 r pod czas 44 Jarmarock FEST w Gdańsku , a w październiku 2021 świat zobaczył pierwszy singl zespołu"Modlitwa"'%}</p>
+            </div>
+            <div class="lg:w-1/4 lg:mt-44 mb-32">
+                <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/album/4KKhcDjF3rAtpYqkGTWagd?utm_source=generator"
+                        width="100%"
+                        height="360"
+                        frameBorder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+        </div>
     </div>
 </div>
-<!-- Whe you can be listening music -->
-<div class="lg:container mx-auto lg:mt-20 mt-10 ">
-    <div class="container mx-auto text-center ">
-        <div class="text-5xl text-white">{% trans 'Listen on your platform' %}</div>
-        <div class="h-1 w-16 bg-violet-500 mx-auto mt-4 rounded-xl"></div>
-        <div class="text-2xl p-10 text-white">{% trans "Suscribe so you don't miss the release of new songs. We wish you a pleasant experience" %}
-        </div>
-    </div>
-    <div class="ml-10 mt-20 lg:mb-20 lg:flex grid lg:grid-cols-3 grid-cols-2 lg:gap-x-10 gap-x-1">
-        <div class="h-20 w-32 lg:w-64 hover:opacity-80">
-            <img src="/static/home/img/logo-card/spotify.svg"
-                 alt="spotify"/></div>
-        <div class="h-20 w-32 lg:w-64 hover:opacity-80">
-            <img src="/static/home/img/logo-card/apple-music.svg"
-                 alt="apple-music"/></div>
-        <div class="h-20 w-32 lg:w-64 hover:opacity-80">
-            <img src="/static/home/img/logo-card/amazon-Music.svg"
-                 alt="amazon-Music"/></div>
-        <div class="h-20 w-32 lg:w-64 hover:opacity-80">
-            <img src="/static/home/img/logo-card/deezer.svg" alt="deezer"/>
-        </div>
-        <div class="h-20 w-32 lg:w-64 hover:opacity-80">
-            <img src="/static/home/img/logo-card/YouTube_Music.svg"
-                 alt="YouTube_Music"/></div>
-    </div>
-</div>
-<!-- Content bloc about band -->
-<div class="lg:clip-poly clip-poly-md lg:mt-20 mb-20 bg-black">
-    <div class="container mx-auto lg:flex lg:flex-row p-10 lg:space-x-44">
-        <div class="lg:w-3/5 mb-36 text-xl text-white">
-            <h2 class="text-center mt-32 text-4xl text-white">Zespół HANNA</h2>
-            <div class="h-1 w-16 bg-violet-500 mx-auto mt-2 mb-10 rounded-xl"></div>
-            <p>Zespół HANNA: Polsko-ukraińska grupa muzyczna założona przez wokalistkę i kompozytorkę Hanne Tekuczewe.
-                Zrzeszająca w swoich szeregach muzyków dwóch narodów. Tworzona przez nas muzyka przeplata melancholijne
-                melodie, motywy etniczne, elektroniczne brzmienia, wszystko to podkreślone solidną dawką przesterowanych
-                gitar, potężnym wokalem oraz tekstami pisanymi z głębin duszy. Naszymi utworami chcemy przekazać piękną
-                opowieść o mroku, szczęściu, miłości, powadzę, ubraną w romantyczny i nie powtarzalny wschodnio
-                europejski klimat, przy którym nikt nie przejdzie obojętnie.
 
-                Zespół debiutował w 2020 r pod czas 44 Jarmarock FEST w Gdańsku , a w październiku 2021 świat zobaczył
-                pierwszy singl zespołu"Modlitwa"
-            </p>
-        </div>
-        <div class="lg:w-1/4 lg:mt-44 mb-32">
-            <iframe style="border-radius:12px"
-                    src="https://open.spotify.com/embed/album/4KKhcDjF3rAtpYqkGTWagd?utm_source=generator" width="100%"
-                    height="380"
-                    frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-        </div>
-    </div>
-</div>
-<!-- card -->
-<div>
-    <!-- gallery -->
-    <style>
-
-        .gallery-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            /* background-color: #fff; */
-            box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
-            width: 80%;
-            /* margin: 0 auto; */
-            padding: 10px;
-        }
-
-        .gallery-item {
-            flex-basis: 32.7%;
-            margin-bottom: 6px;
-            opacity: .85;
-            cursor: pointer;
-        }
-
-        .gallery-item:hover {
-            opacity: 1;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .gallery-content {
-            font-size: .8em;
-        }
-
-        .lightbox {
-            position: fixed;
-            display: none;
-            background-color: rgba(0, 0, 0, 0.8);
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            top: 0;
-            left: 0;
-        }
-
-        .lightbox-content {
-            position: relative;
-            width: 70%;
-            height: 70%;
-            margin: 5% auto;
-
-        }
-
-        .lightbox-content img {
-            border-radius: 7px;
-            box-shadow: 0 0 3px 0 rgba(225, 225, 225, .25);
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .lightbox-prev,
-        .lightbox-next {
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: #fff;
-            padding: 7px;
-            top: 45%;
-            cursor: pointer;
-        }
-
-        .lightbox-prev {
-            left: 0;
-        }
-
-        .lightbox-next {
-            right: 0;
-        }
-
-        .lightbox-prev:hover,
-        .lightbox-next:hover {
-            opacity: .8;
-        }
-
-        @media (max-width: 767px) {
-            .gallery-container {
-                width: 100%;
-            }
-
-            .gallery-item {
-                flex-basis: 49.80%;
-                margin-bottom: 3px;
-            }
-
-            .lightbox-content {
-                width: 80%;
-                height: 60%;
-                margin: 15% auto;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .gallery-item {
-                flex-basis: 100%;
-                margin-bottom: 1px;
-            }
-
-            .lightbox-content {
-                width: 90%;
-                margin: 20% auto;
-            }
-        }
-    </style>
+<!-- gallery -->
+<div class="semi-dark-mode">
     <div class="w-64 mx-auto mb-14">
-        <p class="text-center  text-white text-5xl">{% trans 'Gallery' %}</p>
-        <div class="h-1 w-8 bg-violet-500 mx-auto mt-4 rounded-xl"></div>
+        <p class="text-center text-5xl">{% trans 'Gallery' %}</p>
+        <div class="h-1 w-8 border-gradient mx-auto mt-4 rounded-xl"></div>
     </div>
-    <div class="gallery-container bg-black mx-auto mb-44 mb-20 ">
+    <div class="gallery-container mx-auto mb-44 mb-20 dark-mode">
         {% for item in about %}
         <div class="gallery-item" data-index="{{ item.id }}">
             <img src="{{ item.photo.url }}">
         </div>
         {% endfor %}
     </div>
-
-
-    <div class="w-screen h-64 bg-stone-900">
-        <div class="h-96 w-4/5 mx-auto relative bg-gradient-to-tl from-blue-700 to-teal-500 rounded-xl shadow-2xl">
-            <div class="absolute top-0 right-0 bg-gradient-to-tr from-teal-600 to-blue-500 w-full h-full clip-poly-Rectangle-b rounded-xl shadow-2xl"></div>
+    <!-- card -->
+    <div class="w-screen h-64">
+        <div class="h-96 w-4/5 mx-auto relative bg-gradient-to-tl dark-semi-gradient-mode rounded-xl shadow-2xl">
+            <div class="absolute top-0 right-0 bg-gradient-to-tr dark-gradient-mode w-full h-full clip-poly-Rectangle-b rounded-xl shadow-2xl"></div>
             <div class="absolute  h-full w-full  pt-10 text-center">
-                <img class="mx-auto" width="80" height="80" src="/static/home/img/HANNA_LOGO.png">
-                <div class="text-3xl mt-9 mb-5  text-white "> {% trans 'Live music' %}</div>
-                <a href="#" class="text-white  hover:text-violet-800/50 transition duration-500 font-bold text-2xl">
-                    {% trans 'buy tickets' %}
-                </a>
-                <div class="h-1 w-16 bg-violet-500 mx-auto mt-2 rounded-xl"></div>
+                <svg id="hanna-logo" width="80" height="80" class="mx-auto" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 430.000000 631.000000">
+                    <g transform="translate(0.000000,631.000000) scale(0.100000,-0.100000)"
+                       stroke="none">
+                        <path d="M1250 5245 l-985 -985 93 -93 92 -92 -95 -95 -95 -95 100 -100 100
+-100 -87 -88 -88 -87 178 -177 177 -178 -202 -202 -203 -203 88 -88 87 -87
+-95 -95 -95 -95 100 -100 100 -100 -88 -88 -87 -87 975 -975 975 -975 977 977
+978 978 -90 90 c-50 50 -90 95 -90 100 0 5 38 48 85 95 l85 85 -90 90 -90 90
+92 92 93 93 -175 175 -175 175 210 210 210 210 -90 90 -90 90 90 90 90 90 -93
+93 -92 92 90 90 c49 49 90 94 90 100 0 10 -1960 1975 -1970 1975 -3 0 -448
+-443 -990 -985z m2900 -990 c0 -6 -34 -44 -75 -85 l-75 -75 -883 883 -882 882
+-877 -877 -878 -878 -75 75 -75 75 957 957 958 958 952 -952 c524 -524 953
+-958 953 -963z m-190 -190 c0 -6 -32 -42 -70 -80 l-70 -70 -783 783 -782 782
+-787 -787 -788 -788 -85 85 -85 85 862 862 863 863 862 -862 c475 -475 863
+-868 863 -873z m-365 -375 l-195 -195 -605 605 -605 605 -578 -578 -577 -577
+-163 162 -162 163 772 772 773 773 767 -767 768 -768 -195 -195z m-302 -302
+l-78 -78 -517 517 -518 518 -485 -485 -485 -485 -75 75 -75 75 562 562 563
+563 592 -592 593 -593 -77 -77z m-608 392 l500 -500 -70 -70 c-38 -38 -75 -70
+-81 -70 -6 0 -196 186 -421 414 l-411 413 -396 -396 -396 -396 -85 85 -85 85
+467 467 c258 258 470 468 473 468 3 0 230 -225 505 -500z m-2117 177 l82 -82
+-80 -80 -80 -80 -85 85 -85 85 77 77 c43 43 80 78 83 78 3 0 42 -37 88 -83z
+m3510 0 l72 -72 -75 -75 -75 -74 -75 74 -75 75 72 72 c40 40 75 73 78 73 3 0
+38 -33 78 -73z m-1473 -457 l400 -400 -380 -380 -380 -380 -402 402 -403 403
+377 377 c208 208 380 378 383 378 3 0 185 -180 405 -400z m1293 277 l72 -72
+-195 -195 -195 -195 -75 75 -75 75 192 192 c106 106 195 193 198 193 3 0 38
+-33 78 -73z m-3053 -97 l160 -160 -80 -80 -80 -80 -162 162 -163 163 77 77
+c43 43 80 78 83 78 3 0 77 -72 165 -160z m3130 -370 l-195 -195 -82 83 -83 82
+195 195 195 195 82 -82 83 -83 -195 -195z m-3320 180 l160 -160 -73 -72 -72
+-73 -162 162 -163 163 70 70 c38 38 72 70 75 70 3 0 77 -72 165 -160z m453
+-73 l72 -72 -80 -80 -80 -80 -75 75 -75 75 77 77 c43 43 80 78 83 78 3 0 38
+-33 78 -73z m2370 -60 l72 -72 -78 -78 -77 -77 -75 75 -74 75 74 75 c41 41 77
+75 80 75 3 0 38 -33 78 -73z m-2186 -124 c43 -43 78 -82 78 -88 0 -6 -34 -44
+-75 -85 l-75 -75 -85 85 -85 85 77 77 c43 43 80 78 83 78 2 0 40 -35 82 -77z
+m-374 -6 l72 -72 -73 -73 -72 -72 -75 75 -74 75 69 70 c38 38 72 70 75 70 3 0
+38 -33 78 -73z m2372 -202 l-75 -75 -75 75 -75 75 75 75 75 75 75 -75 75 -75
+-75 -75z m383 -17 l-78 -78 -82 82 -83 83 77 77 78 78 82 -82 83 -83 -77 -77z
+m-3045 -215 l-188 -188 -75 75 -75 75 187 187 188 188 75 -75 75 -75 -187
+-187z m480 244 l82 -82 -73 -73 -72 -72 -85 85 -85 85 70 70 c38 38 72 70 75
+70 3 0 42 -37 88 -83z m722 -342 l415 -415 395 395 395 395 75 -75 75 -75
+-475 -475 -475 -475 -492 492 -493 493 77 77 c43 43 80 78 83 78 3 0 192 -187
+420 -415z m2177 -22 l-77 -78 -160 160 -160 160 77 77 78 78 160 -160 160
+-160 -78 -77z m-522 307 l79 -80 -69 -70 c-38 -38 -74 -70 -80 -70 -5 0 -45
+35 -87 77 l-78 78 72 72 c40 40 75 73 78 73 3 0 41 -36 85 -80z m-2550 -120
+l80 -80 -188 -187 -187 -188 -85 85 -85 85 182 182 c101 101 187 183 193 183
+6 0 46 -36 90 -80z m797 -447 l508 -508 490 490 490 490 82 -83 83 -82 -563
+-563 -562 -562 -592 592 -593 593 70 70 c38 38 72 70 75 70 3 0 233 -228 512
+-507z m2005 315 c84 -84 153 -157 153 -163 0 -6 -32 -42 -70 -80 l-70 -70
+-155 155 c-85 85 -155 159 -155 165 0 10 130 145 140 145 2 0 73 -69 157 -152z
+m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
+187 187 188 188 600 -600 600 -600 578 577z m-2301 336 c43 -43 78 -82 78 -88
+0 -6 -33 -43 -73 -83 l-72 -72 -85 85 -85 85 75 75 c41 41 77 75 80 75 2 0 40
+-35 82 -77z m3486 -6 l72 -72 -75 -75 -75 -74 -70 69 c-38 38 -70 74 -70 79 0
+11 130 146 140 146 3 0 38 -33 78 -73z m-180 -180 l72 -72 -858 -858 -857
+-857 -850 850 -850 850 78 77 77 78 775 -775 775 -775 778 778 c427 427 779
+777 782 777 3 0 38 -33 78 -73z m190 -190 l82 -82 -948 -948 -947 -947 -950
+950 -950 950 73 72 72 73 865 -865 865 -865 873 873 c479 479 874 872 877 872
+3 0 42 -37 88 -83z"/>
+                    </g>
+                </svg>
+                <div class="text-3xl mt-2 mb-9"> {% trans 'Live music' %}</div>
+                <a href="{% url 'concerts' %}" > <button class="raise">{% trans 'buy tickets' %}</button></a>
             </div>
         </div>
     </div>
 </div>
-<div class="-mt-20 w-full h-64 bg-black"></div>
+<div class="-mt-20 w-full h-64"></div>
 <!-- gallery -->
-<script src="/static/home/scripts/script.js"></script>
+<script src="/static/home/js/gallery.js"></script>
 {% endblock content %}

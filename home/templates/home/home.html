@@ -1,22 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 
-
-
-
-
+<!--css home-->
+<link rel="stylesheet" href="/static/home/css/home.css">
 
 <div class=" -mb-14 lg:-mb-8 ">
-{% include 'header.html' %}
-    </div>
-<style>
-    .clip-poly-md {
-        clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 100%);
-    }
-    .clip-poly {
-        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-    }
-</style>
+    {% include 'header.html' %}
+</div>
+
 <div class=" clip-poly-md  lg:clip-poly">
     {% include 'home/home_list.html' %}
 </div>

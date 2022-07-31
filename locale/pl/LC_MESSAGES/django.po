@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 21:57+0000\n"
+"POT-Creation-Date: 2022-07-31 23:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,45 +20,109 @@ msgstr ""
 "%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
 "%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: home/templates/breadcrumb.html:10
+#: home/templates/breadcrumb.html:10 home/templates/hamburger.html:22
 msgid "Home"
 msgstr "Strona główna"
 
-#: home/templates/breadcrumb.html:18
+#: home/templates/breadcrumb.html:18 home/templates/hamburger.html:29
 msgid "News"
 msgstr "Aktualności"
 
-#: home/templates/breadcrumb.html:26 home/templates/home/concerts.html:20
+#: home/templates/breadcrumb.html:26 home/templates/hamburger.html:36
+#: home/templates/home/concerts.html:14
 msgid "Concerts"
 msgstr "Koncerty"
 
-#: home/templates/breadcrumb.html:34
-msgid "Contacts"
-msgstr "Łączność"
+#: home/templates/breadcrumb.html:34 home/templates/hamburger.html:43
+msgid "Contact"
+msgstr "Kontakt"
 
-#: home/templates/breadcrumb.html:42
+#: home/templates/breadcrumb.html:42 home/templates/hamburger.html:51
 msgid "About"
 msgstr "O nas"
 
-#: home/templates/home/about.html:64
-msgid "Working in collaboration"
-msgstr "Praca we współpracy"
+#: home/templates/footer.html:20 home/templates/footer.html:23
+msgid "Previous"
+msgstr "Wstecz"
 
-#: home/templates/home/about.html:66
+#: home/templates/footer.html:49 home/templates/footer.html:52
+msgid "Next"
+msgstr "Dalej"
+
+#: home/templates/hamburger.html:63 home/templates/header.html:99
+msgid "Ukrainian"
+msgstr "Ukraiński"
+
+#: home/templates/hamburger.html:74 home/templates/header.html:110
+msgid "Poland"
+msgstr "Polska"
+
+#: home/templates/hamburger.html:85 home/templates/header.html:121
+msgid "English"
+msgstr "Angielski"
+
+#: home/templates/home/about.html:86
+msgid "Listen on your platform"
+msgstr "Słuchaj na ulubionej platformie"
+
+#: home/templates/home/about.html:88
 msgid ""
-"We’ve built in-depth relationships directly with some of the best market-"
-"leading media companies worldwide"
-msgstr "Zbudowaliśmy dogłębne relacje bezpośrednio z jednymi z najlepszych na rynku-"
-"wiodące firmy medialne na całym świecie"
+"Suscribe so you don't miss the release of new songs. We wish you a pleasant "
+"experience"
+msgstr ""
+"Subskrybuj, aby nie przegapić wydania nowych utworów. Życzymy miłego "
+"doświadczenia"
 
-#: home/templates/home/about.html:230
+#: home/templates/home/about.html:113
+msgid "Band Hanna"
+msgstr "Zespół HANNA"
+
+#: home/templates/home/about.html:115
+msgid ""
+"Zespół HANNA: Polsko-ukraińska grupa muzyczna założona przez wokalistkę i "
+"kompozytorkę Hanne Tekuczewe. Zrzeszająca w swoich szeregach muzyków dwóch "
+"narodów. Tworzona przez nas muzyka przeplata melancholijne melodie, motywy "
+"etniczne, elektroniczne brzmienia, wszystko to podkreślone solidną dawką "
+"przesterowanych gitar, potężnym wokalem oraz tekstami pisanymi z głębin "
+"duszy. Naszymi utworami chcemy przekazać piękną opowieść o mroku, szczęściu, "
+"miłości, powadzę, ubraną w romantyczny i nie powtarzalny wschodnio "
+"europejski klimat, przy którym nikt nie przejdzie obojętnie. Zespół "
+"debiutował w 2020 r pod czas 44 Jarmarock FEST w Gdańsku , a w październiku "
+"2021 świat zobaczył pierwszy singl zespołu\"Modlitwa\""
+msgstr ""
+
+#: home/templates/home/about.html:133
 msgid "Gallery"
 msgstr "Galeri"
 
-#: home/templates/home/about.html:247
+#: home/templates/home/about.html:207
 msgid "Live music"
 msgstr "Muzyka na żywo"
 
-#: home/templates/home/about.html:249
+#: home/templates/home/about.html:208
 msgid "buy tickets"
 msgstr "Kup bilety"
+
+#: home/templates/home/contact.html:20
+msgid "Your message has been sent"
+msgstr "Twoja wiadomość została wysłana"
+
+#: home/templates/home/contact.html:22
+msgid "We will get back to you as soon as possible"
+msgstr "dezwiemy się tak szybko, jak to możliwe"
+
+#: home/templates/home/contact.html:47
+msgid "Feedback"
+msgstr "Informacja zwrotna"
+
+#: home/templates/home/contact.html:52
+msgid "Email"
+msgstr ""
+
+#: home/templates/home/contact.html:55
+msgid "Message"
+msgstr "Wiadomość"
+
+#: home/templates/home/contact.html:59
+msgid "Send"
+msgstr "Wysłać"

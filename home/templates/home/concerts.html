@@ -1,22 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load i18n %}
-<style> .special_bg {
-    background-size: cover;
-    overflow: hidden;
-    height: 1000px;
-    justify-content: center;
-    align-items: center;
-}
-</style>
-<div class="relative w-full right-0 top-0 mb-10" style="height: 60vh;">
-    {% include 'header.html' %}
-    <!--<img class="w-full object-cover h-fit absolute z-10 min-w-full max-w-none" -->
-    <img class="special_bg  absolute right-0 top-0 z-10 object-cover"
-         src="/static/home/img/concert_hero.jpg"/>
+
+<!-- css concerts -->
+<link rel="stylesheet" href="/static/home/css/concerts.css">
+
+<div class="special_bg relative">
+    <div class="dark-hero-gradient-mode h-40">
+        {% include 'header.html' %}
+    </div>
 </div>
-<!-- concert col -->
-<div class="relative z-50 mt-96  ">
+<div class="mt-5">
     <div class=" text-5xl mx-auto container mb-6 ">{% trans 'Concerts' %}</div>
     {% for item in concerts %}
     <div class="flex container mx-auto mb-5">
@@ -40,9 +34,7 @@
         </div>
     </div>
 </div>
-<div class="h-1 w-24 bg-violet-500 mx-auto mt-2 mb-4 rounded-xl "></div>
+<div class="h-1 w-24 border-gradient mx-auto mt-2 mb-4 rounded-xl"></div>
 
 {% endfor %}
-</div>
-
 {% endblock content %}

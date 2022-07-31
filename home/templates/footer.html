@@ -1,10 +1,11 @@
-<div class="bg-black">
+{% load i18n %}
+<div class="dark-mode text-xl">
     <!-- Paginator -->
     <div class="container mx-auto mb-5">
         {% if page_obj.has_other_pages %}
         <div class="flex items-center justify-center py-10 lg:px-0 sm:px-6 px-4">
             <div class="w-full  flex items-center justify-between ">
-                <div class="flex items-center pt-3 text-gray-600 hover:text-indigo-700 cursor-pointer">
+                <div class="flex items-center pt-3 nav-link cursor-pointer">
                     <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.1665 4H12.8332" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"
                               stroke-linejoin="round"/>
@@ -16,10 +17,10 @@
                     </svg>
                     {% if page_obj.has_previous %}
                     <!--Active btn Previous-->
-                    <a class="text-sm ml-3 font-medium leading-none" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                    <a class=" ml-3 font-medium leading-none" href="?page={{ page_obj.previous_page_number }}">{% trans 'Previous' %}</a>
                     {% else %}
                     <!--Disable btn Previous-->
-                    <a class="text-sm ml-3 font-medium text-red-900 leading-none">Previous</a>
+                    <a class=" ml-3 font-medium nav-link-disabled leading-none">{% trans 'Previous' %}</a>
                     {% endif %}
                 </div>
 
@@ -28,26 +29,27 @@
                     {% for p in paginator.page_range %}
                     {% if page_obj.number == p %}
                     <!--Active page -->
-                    <p class="text-sm font-medium leading-none text-indigo-700 border-t border-indigo-400 pt-3 mr-4 px-2">
+                    <p class=" font-medium leading-none nav-link-disabled border-t-4 border-indigo-400 pt-3 mr-4 px-2">
                         {{ p }}</p>
+
                     {% elif p >= page_obj.numper|add:-2 and page_obj.numper|add:+2 %}
                     {% else %}
                     <!--btn page -->
-                    <a class="text-sm font-medium leading-none cursor-pointer text-gray-600 hover:text-indigo-700 border-t border-transparent hover:border-indigo-400 pt-3 mr-4 px-2"
+                    <a class=" font-medium leading-none cursor-pointer nav-link border-t-4 border-transparent hover:border-indigo-400 pt-3 mr-4 px-2"
                        href='?page={{ p }}'>{{ p }}</a>
 
                     {% endif %}
                     {% endfor %}
 
                 </div>
-                <div class="flex items-center pt-3 text-gray-600 hover:text-indigo-700 cursor-pointer">
+                <div class="flex items-center pt-3 nav-link cursor-pointer">
                     {% if page_obj.has_next %}
                     <!--Active btn next-->
-                    <a class="text-sm font-medium leading-none mr-3"
-                       href="?page={{ page_obj.next_page_number }}">Next</a>
+                    <a class=" font-medium leading-none mr-3"
+                       href="?page={{ page_obj.next_page_number }}">{% trans 'Next' %}</a>
                     {% else %}
                     <!--Disable btn next-->
-                    <a class="text-sm text-red-900 font-medium leading-none mr-3">Next</a>
+                    <a class=" nav-link-disabled font-medium leading-none mr-3">{% trans 'Next' %}</a>
                     {% endif %}
                     <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.1665 4H12.8332" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"
@@ -67,34 +69,99 @@
     <!-- Footer -->
     <footer class="lg:container lg:mx-auto">
         <div class="lg:flex lg:justify-between">
-        <!-- breadcrumb -->
-        <div class=" lg:justify-start flex justify-center lg:mb-0 mb-6">
-            {% include "breadcrumb.html" %}
-        </div>
-        <!--Icons-->
-        <div class="flex lg:justify-end justify-center space-x-2 lg:mb-6 mb-8">
+            <!-- breadcrumb -->
+            <div class=" lg:justify-start flex justify-center lg:mb-0 mb-6">
+                {% include "breadcrumb.html" %}
+            </div>
+            <!--Icons-->
+            <div class="flex lg:justify-end justify-center space-x-2 lg:mb-6 mb-6">
 
-            {% include "icon.html" %}
+                {% include "icon.html" %}
 
-        </div>
-</div>
-        <!-- Logo -->
-        <div class=" lg:justify-between lg:-mt-12 grid justify-center">
-            <div class="flex space-x-4">
-                <img class="lg:h-24  h-12 " src="/static/home/img/svg/logo_hanna.svg"/>
-                <img class="lg:w-64 w-32" src="/static/home/img/HANNA.png"/>
             </div>
         </div>
+        <!-- Logo -->
+        <div class=" lg:justify-between lg:-mt-12 grid justify-center">
+            <div class="flex lg:space-x-4 space-x-1 lg:mt-2">
+                <svg id="hanna-logo" class="lg:h-20  h-10 " xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 430.000000 631.000000">
 
-    </footer>
-<!-- copyright -->
-        <div class="bg-black">
-            <a href="#" title="Scroll to the top of the page">
-                <img style="width:47px; height:47px;" alt="Chevron pointing upwards icon - scroll to top"
-                     class="mx-auto m-5"
-                     src="/static/home/img/nav-ico/scroll-to-top-btn.svg"/>
-            </a>
-            <p class="text-center m-3">© 2022 HANNA</p>
-            <p class="text-center">Design Anton Malenkij</p>
+                    <g transform="translate(0.000000,631.000000) scale(0.100000,-0.100000)"
+                       stroke="none">
+                        <path d="M1250 5245 l-985 -985 93 -93 92 -92 -95 -95 -95 -95 100 -100 100
+-100 -87 -88 -88 -87 178 -177 177 -178 -202 -202 -203 -203 88 -88 87 -87
+-95 -95 -95 -95 100 -100 100 -100 -88 -88 -87 -87 975 -975 975 -975 977 977
+978 978 -90 90 c-50 50 -90 95 -90 100 0 5 38 48 85 95 l85 85 -90 90 -90 90
+92 92 93 93 -175 175 -175 175 210 210 210 210 -90 90 -90 90 90 90 90 90 -93
+93 -92 92 90 90 c49 49 90 94 90 100 0 10 -1960 1975 -1970 1975 -3 0 -448
+-443 -990 -985z m2900 -990 c0 -6 -34 -44 -75 -85 l-75 -75 -883 883 -882 882
+-877 -877 -878 -878 -75 75 -75 75 957 957 958 958 952 -952 c524 -524 953
+-958 953 -963z m-190 -190 c0 -6 -32 -42 -70 -80 l-70 -70 -783 783 -782 782
+-787 -787 -788 -788 -85 85 -85 85 862 862 863 863 862 -862 c475 -475 863
+-868 863 -873z m-365 -375 l-195 -195 -605 605 -605 605 -578 -578 -577 -577
+-163 162 -162 163 772 772 773 773 767 -767 768 -768 -195 -195z m-302 -302
+l-78 -78 -517 517 -518 518 -485 -485 -485 -485 -75 75 -75 75 562 562 563
+563 592 -592 593 -593 -77 -77z m-608 392 l500 -500 -70 -70 c-38 -38 -75 -70
+-81 -70 -6 0 -196 186 -421 414 l-411 413 -396 -396 -396 -396 -85 85 -85 85
+467 467 c258 258 470 468 473 468 3 0 230 -225 505 -500z m-2117 177 l82 -82
+-80 -80 -80 -80 -85 85 -85 85 77 77 c43 43 80 78 83 78 3 0 42 -37 88 -83z
+m3510 0 l72 -72 -75 -75 -75 -74 -75 74 -75 75 72 72 c40 40 75 73 78 73 3 0
+38 -33 78 -73z m-1473 -457 l400 -400 -380 -380 -380 -380 -402 402 -403 403
+377 377 c208 208 380 378 383 378 3 0 185 -180 405 -400z m1293 277 l72 -72
+-195 -195 -195 -195 -75 75 -75 75 192 192 c106 106 195 193 198 193 3 0 38
+-33 78 -73z m-3053 -97 l160 -160 -80 -80 -80 -80 -162 162 -163 163 77 77
+c43 43 80 78 83 78 3 0 77 -72 165 -160z m3130 -370 l-195 -195 -82 83 -83 82
+195 195 195 195 82 -82 83 -83 -195 -195z m-3320 180 l160 -160 -73 -72 -72
+-73 -162 162 -163 163 70 70 c38 38 72 70 75 70 3 0 77 -72 165 -160z m453
+-73 l72 -72 -80 -80 -80 -80 -75 75 -75 75 77 77 c43 43 80 78 83 78 3 0 38
+-33 78 -73z m2370 -60 l72 -72 -78 -78 -77 -77 -75 75 -74 75 74 75 c41 41 77
+75 80 75 3 0 38 -33 78 -73z m-2186 -124 c43 -43 78 -82 78 -88 0 -6 -34 -44
+-75 -85 l-75 -75 -85 85 -85 85 77 77 c43 43 80 78 83 78 2 0 40 -35 82 -77z
+m-374 -6 l72 -72 -73 -73 -72 -72 -75 75 -74 75 69 70 c38 38 72 70 75 70 3 0
+38 -33 78 -73z m2372 -202 l-75 -75 -75 75 -75 75 75 75 75 75 75 -75 75 -75
+-75 -75z m383 -17 l-78 -78 -82 82 -83 83 77 77 78 78 82 -82 83 -83 -77 -77z
+m-3045 -215 l-188 -188 -75 75 -75 75 187 187 188 188 75 -75 75 -75 -187
+-187z m480 244 l82 -82 -73 -73 -72 -72 -85 85 -85 85 70 70 c38 38 72 70 75
+70 3 0 42 -37 88 -83z m722 -342 l415 -415 395 395 395 395 75 -75 75 -75
+-475 -475 -475 -475 -492 492 -493 493 77 77 c43 43 80 78 83 78 3 0 192 -187
+420 -415z m2177 -22 l-77 -78 -160 160 -160 160 77 77 78 78 160 -160 160
+-160 -78 -77z m-522 307 l79 -80 -69 -70 c-38 -38 -74 -70 -80 -70 -5 0 -45
+35 -87 77 l-78 78 72 72 c40 40 75 73 78 73 3 0 41 -36 85 -80z m-2550 -120
+l80 -80 -188 -187 -187 -188 -85 85 -85 85 182 182 c101 101 187 183 193 183
+6 0 46 -36 90 -80z m797 -447 l508 -508 490 490 490 490 82 -83 83 -82 -563
+-563 -562 -562 -592 592 -593 593 70 70 c38 38 72 70 75 70 3 0 233 -228 512
+-507z m2005 315 c84 -84 153 -157 153 -163 0 -6 -32 -42 -70 -80 l-70 -70
+-155 155 c-85 85 -155 159 -155 165 0 10 130 145 140 145 2 0 73 -69 157 -152z
+m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
+187 187 188 188 600 -600 600 -600 578 577z m-2301 336 c43 -43 78 -82 78 -88
+0 -6 -33 -43 -73 -83 l-72 -72 -85 85 -85 85 75 75 c41 41 77 75 80 75 2 0 40
+-35 82 -77z m3486 -6 l72 -72 -75 -75 -75 -74 -70 69 c-38 38 -70 74 -70 79 0
+11 130 146 140 146 3 0 38 -33 78 -73z m-180 -180 l72 -72 -858 -858 -857
+-857 -850 850 -850 850 78 77 77 78 775 -775 775 -775 778 778 c427 427 779
+777 782 777 3 0 38 -33 78 -73z m190 -190 l82 -82 -948 -948 -947 -947 -950
+950 -950 950 73 72 72 73 865 -865 865 -865 873 873 c479 479 874 872 877 872
+3 0 42 -37 88 -83z"/>
+                    </g>
+                </svg>
+                <div class="lg:pb-10 flex justify-center lg:text-7xl text-4xl">HANNA</div>
+            </div>
         </div>
+    </footer>
+    <!-- copyright -->
+    <a href="#" title="Scroll to the top of the page">
+        <svg class="mx-auto m-5" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient x1="3.982%" y1="20.941%" x2="100%" y2="86.878%" id="a">
+                    <stop stop-color="#8239EC" offset="0%"/>
+                    <stop stop-color="#2296F3" offset="100%"/>
+                </linearGradient>
+            </defs>
+            <g stroke-width="2" fill="none" fill-rule="evenodd">
+                <circle stroke="url(#a)" cx="25" cy="25" r="24"/>
+                <path id="chevron"  stroke-linecap="round" stroke-linejoin="round" d="M19 28l6.5-7h0l6.5 7"/>
+            </g>
+        </svg>
+    </a>
+    <p class="text-center m-3 text-sm">©2022 HANNA</p>
+    <p class="text-center text-sm">Design Anton Malenkij</p>
 </div>
