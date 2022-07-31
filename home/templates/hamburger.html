@@ -1,89 +1,93 @@
 {% load i18n %}
+
+<!-- hamburger  css -->
+<link rel="stylesheet" href="../static/home/css/hamburger.css">
+
 <nav role="navigation" class="lg:invisible visible">
-          <div class="navbar-wrap">
-          <div class="hamb">
+    <div class="navbar-wrap">
+        <div class="hamb">
             <div class="hamb-field" id="hamb">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-          </div>
-          <ul class="menu" id="menu">
-                    <li><a
-                            {% if request.resolver_match.url_name == 'home' %}
-                        class="nav-link-disabled"
-                        {% else %}
-                        href="{% url 'home' %}" class="nav-link"
-                        {% endif %}
-                        >{% trans 'Home' %}</a></li>
-                    <li><a
-                            {% if request.resolver_match.url_name == 'news' %}
-                        class="nav-link-disabled"
-                        {% else %}
-                        href="{% url 'news' %}" class="nav-link"
-                        {% endif %}
-                        >{% trans 'News' %}</a></li>
-                    <li><a
-                            {% if request.resolver_match.url_name == 'concerts' %}
-                        class="nav-link-disabled"
-                        {% else %}
-                        href="{% url 'concerts' %}" class="nav-link"
-                        {% endif %}
-                        >{% trans 'Concerts' %}</a></li>
-                    <li><a
-                            {% if request.resolver_match.url_name == 'contact' %}
-                        class="nav-link-disabled"
-                        {% else %}
-                        href="{% url 'contact' %}" class="nav-link"
-                        {% endif %}
-                        >{% trans 'Contact' %}</a></li>
-
-                    <li><a
-                            {% if request.resolver_match.url_name == 'about' %}
-                        class="nav-link-disabled"
-                        {% else %}
-                        href="{% url 'about' %}" class="nav-link"
-                        {% endif %}
-                        >{% trans 'About' %}</a></li>
-                    <li>
-
-                        <p class="text-lg mb-4 border-b-2 ml-4 border-stone-900">Languages</p>
-                        <form action="{% url 'set_language' %}" method="post"
-                              class="flex" >
-                            {% csrf_token %}
-                            <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
-                            <input name="language" type="hidden" value="uk"/>
-                            <input class="language-icon svg-uk"
-                                   type="submit" value=""/>
-                            <input class="language-text" type="submit"
-                                   value="Ukrainian"/>
-                        </form>
-                    </li>
-                    <li>
-                        <form action="{% url 'set_language' %}" method="post"
-                              class="flex">
-                            {% csrf_token %}
-                            <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
-                            <input name="language" type="hidden" value="pl"/>
-                            <input class="svg-pl language-icon"
-                                   type="submit" value=""/>
-                            <input class="language-text" type="submit" value="Poland"/>
-                        </form>
-                    </li>
-                    <li>
-                        <form action="{% url 'set_language' %}" method="post"
-                              class="flex">
-                            {% csrf_token %}
-                            <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
-                            <input name="language" type="hidden" value="en"/>
-                            <input class="svg-en language-icon"
-                                   type="submit" value=""/>
-                            <input class="language-text" type="submit" value="English"/>
-                        </form>
-                    </li>
-                </ul>
-
-          </ul>
         </div>
+        <ul class="menu" id="menu">
+            <li><a
+                    {% if request.resolver_match.url_name == 'home' %}
+                class="nav-link-disabled"
+                {% else %}
+                href="{% url 'home' %}" class="nav-link"
+                {% endif %}
+                >{% trans 'Home' %}</a></li>
+            <li><a
+                    {% if request.resolver_match.url_name == 'news' %}
+                class="nav-link-disabled"
+                {% else %}
+                href="{% url 'news' %}" class="nav-link"
+                {% endif %}
+                >{% trans 'News' %}</a></li>
+            <li><a
+                    {% if request.resolver_match.url_name == 'concerts' %}
+                class="nav-link-disabled"
+                {% else %}
+                href="{% url 'concerts' %}" class="nav-link"
+                {% endif %}
+                >{% trans 'Concerts' %}</a></li>
+            <li><a
+                    {% if request.resolver_match.url_name == 'contact' %}
+                class="nav-link-disabled"
+                {% else %}
+                href="{% url 'contact' %}" class="nav-link"
+                {% endif %}
+                >{% trans 'Contact' %}</a></li>
+
+            <li><a
+                    {% if request.resolver_match.url_name == 'about' %}
+                class="nav-link-disabled"
+                {% else %}
+                href="{% url 'about' %}" class="nav-link"
+                {% endif %}
+                >{% trans 'About' %}</a></li>
+            <li>
+
+                <p class="text-lg mb-4 border-b-2 ml-4 border-stone-900">Languages</p>
+                <form action="{% url 'set_language' %}" method="post"
+                      class="flex">
+                    {% csrf_token %}
+                    <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
+                    <input name="language" type="hidden" value="uk"/>
+                    <input class="language-icon svg-uk"
+                           type="submit" value=""/>
+                    <input class="language-text" type="submit"
+                           value="Ukrainian"/>
+                </form>
+            </li>
+            <li>
+                <form action="{% url 'set_language' %}" method="post"
+                      class="flex">
+                    {% csrf_token %}
+                    <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
+                    <input name="language" type="hidden" value="pl"/>
+                    <input class="svg-pl language-icon"
+                           type="submit" value=""/>
+                    <input class="language-text" type="submit" value="Poland"/>
+                </form>
+            </li>
+            <li>
+                <form action="{% url 'set_language' %}" method="post"
+                      class="flex">
+                    {% csrf_token %}
+                    <input type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
+                    <input name="language" type="hidden" value="en"/>
+                    <input class="svg-en language-icon"
+                           type="submit" value=""/>
+                    <input class="language-text" type="submit" value="English"/>
+                </form>
+            </li>
+        </ul>
+
+        </ul>
+    </div>
 </nav>
 <div class="popup" id="popup"></div>

@@ -88,15 +88,15 @@ body.noscroll {
 
 /* hamburger svg language */
 .svg-uk {
-    background-image: url("../static/home/img/svg/ukraine.svg");
+    background-image: url("/static/home/img/svg/ukraine.svg");
 }
 
 .svg-pl {
-    background-image: url('../static/home/img/svg/poland.svg');
+    background-image: url('/static/home/img/svg/poland.svg');
 }
 
 .svg-en {
-    background-image: url('../static/home/img/svg/united-kingdom.svg');
+    background-image: url('/static/home/img/svg/united-kingdom.svg');
 }
 
 .language-icon {
