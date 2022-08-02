@@ -72,8 +72,8 @@ class ConcertsList(ListView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['past'] = Concerts.objects.filter(date__gte=date.today())
-        context['future'] = Concerts.objects.filter(date__lte=date.today())
+        context['future'] = Concerts.objects.filter(date__gte=date.today())
+        context['past'] = Concerts.objects.filter(date__lte=date.today())
         return context
 
     def get_queryset(self):
