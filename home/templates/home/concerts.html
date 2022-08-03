@@ -27,7 +27,7 @@
 
             <!-- title, place and location -->
             <div class="lg:flex lf:gap-x-20 lg:basis-full grid gap-y-1">
-                <div class="lg:basis-1/2 text-center text-2xl lg:font-bold lg:text-xl">{{ item.title }}</div>
+                <div class="lg:basis-1/2 lg:text-center text-2xl lg:font-bold lg:text-xl">{{ item.title }}</div>
                 <div class="">
                     <div class="font-bold">{{ item.place }}</div>
                     <div class="">{{ item.location }}</div>
@@ -41,7 +41,7 @@
 {% for item in past %}
 <div class="flex container mx-auto mb-12 semi-dark-mode-text">
     <!-- date and time -->
-    <div class="lg:flex basis-1/8 lg:gap-x-10 grid gap-y-1 text-center lg:mr-0 lg:pl-10 mr-3">
+    <div class="lg:flex basis-1/6 lg:gap-x-10 grid gap-y-1 text-center lg:mr-0 lg:pl-10 mr-3">
         <div class="text-5xl">{{ item.date|date:"d" }}</div>
         <div class="gap-y-1 grid ">
             <div class="basis-1/4 text-xl">{{ item.date|date:"M" }}</div>
@@ -52,7 +52,7 @@
 
     <!-- title, place and location -->
     <div class="lg:flex lf:gap-x-20 lg:basis-full grid gap-y-1">
-        <div class="lg:basis-1/2 text-center text-2xl lg:font-bold lg:text-xl">{{ item.title }}</div>
+        <div class="lg:basis-1/2 lg:text-center text-2xl lg:font-bold lg:text-xl">{{ item.title }}</div>
         <div class="">
             <div class="font-bold">{{ item.place }}</div>
             <div class="">{{ item.location }}</div>
