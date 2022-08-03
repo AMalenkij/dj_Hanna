@@ -97,12 +97,15 @@ body {
     color: var(--font-semi-color);
 }
 
+.semi-dark-mode-text {
+    color: var(--font-semi-color);
+}
+
 /* gradient hero */
 .dark-hero-gradient-mode {
     position: absolute;
     /*width: 100vw;*/
     width: 100%;
-    /* убрать от сюда это дерьмо */
     background-image: linear-gradient(to bottom, var(--bg-hero-gradient-color-from), var(--bg-hero-gradient-color-to));
 }
 

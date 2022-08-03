@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-01 19:22+0000\n"
+"POT-Creation-Date: 2022-08-02 23:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgid "News"
 msgstr "Новини"
 
 #: home/templates/breadcrumb.html:26 home/templates/hamburger.html:36
-#: home/templates/home/concerts.html:14
+#: home/templates/home/concerts.html:13
 msgid "Concerts"
 msgstr "Концерти"
 
@@ -74,11 +74,11 @@ msgstr ""
 "Підпишіться, щоб не пропустити вихід нових пісень. Бажаємо приємного "
 "прослуховування"
 
-#: home/templates/home/about.html:113
+#: home/templates/home/about.html:114
 msgid "Band Hanna"
 msgstr "Гурт Hanna"
 
-#: home/templates/home/about.html:115
+#: home/templates/home/about.html:116
 msgid ""
 "Hi there! Let's introduce ourselves. We are Hanna, a Polish - Ukrainian "
 "band  founded by singer-songwriter and  composer Hanna Tiekucheva. Musicians "
@@ -88,19 +88,35 @@ msgid ""
 "depths of our souls. With our works we want to convey a beautiful story of "
 "darkness, happiness, love, respect framed in a romantic and unique Eastern "
 "European atmosphere, no one will remain indifferent."
-msgstr "Гурт HANNA-Польсько-український музичний гурт, заснований співачкою та композиторкою Ганною Тєкучевою. Об'єднує в своїх рядах музикантів двох націй. У нашій музиці переплітаються меланхолійні мелодії, етнічні мотиви, електронні звучання, все це підкреслено солідною дозою престерованих гітар, потужним вокалом і текстами, що плинуть з глибин душі. Нашими творами ми хочемо передати прекрасну історію про морок, щастя, любов, повагу обрамлену в романтичну і не повторювану східноєвропейську атмосферу, ніхто не залишиться байдужмим."
+msgstr ""
+"Гурт HANNA-Польсько-український музичний гурт, заснований співачкою та "
+"композиторкою Ганною Тєкучевою. Об'єднує в своїх рядах музикантів двох "
+"націй. У нашій музиці переплітаються меланхолійні мелодії, етнічні мотиви, "
+"електронні звучання, все це підкреслено солідною дозою престерованих гітар, "
+"потужним вокалом і текстами, що плинуть з глибин душі. Нашими творами ми "
+"хочемо передати прекрасну історію про морок, щастя, любов, повагу обрамлену "
+"в романтичну і не повторювану східноєвропейську атмосферу, ніхто не "
+"залишиться байдужмим."
 
-#: home/templates/home/about.html:133
+#: home/templates/home/about.html:134
 msgid "Gallery"
 msgstr "Галерея"
 
-#: home/templates/home/about.html:207
+#: home/templates/home/about.html:208
 msgid "Live music"
 msgstr "Жива музика"
 
-#: home/templates/home/about.html:208
+#: home/templates/home/about.html:209
 msgid "buy tickets"
 msgstr "придбати квитки"
+
+#: home/templates/home/concerts.html:14
+msgid "future"
+msgstr "майбутні"
+
+#: home/templates/home/concerts.html:40
+msgid "past"
+msgstr "минулі"
 
 #: home/templates/home/contact.html:20
 msgid "Your message has been sent"
