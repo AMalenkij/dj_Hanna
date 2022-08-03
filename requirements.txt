@@ -1,14 +1,19 @@
 Django
 Pillow
+
+# heroku
 django-on-heroku
 gunicorn
 
 python-dotenv
 python-decouple
 
-#aws S3
+# aws S3
 boto3
 django-storages
 
-#multilang
+# multilang
 django-modeltranslation
+
+# TinyMCE text editor
+django-tinymce
