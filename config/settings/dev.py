@@ -9,9 +9,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
-STATIC_ROOT = BASE_DIR / 'static'
-STATIC_URL = 'static/'
 
-TINYMCE_JS_ROOT = os.path.join(STATIC_ROOT, "path/to/tiny_mce")
+MEDIA_URL = '/media/'
+
+STATIC_URL = 'static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+
