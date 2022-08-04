@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 
 import dj_database_url
@@ -14,6 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 INSTALLED_APPS = [
     # multilang app django-modeltranslation
     'modeltranslation',
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -120,5 +120,3 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
