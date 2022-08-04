@@ -23,8 +23,8 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
 
     'storages',
-    # 'tinymce',
     'ckeditor',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -35,8 +35,10 @@ MIDDLEWARE = [
 
     # multilang
     'django.middleware.locale.LocaleMiddleware',
-
+    # CORS headers allows your resources to be accessed on other domains.
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
+
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',

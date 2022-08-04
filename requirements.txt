@@ -20,3 +20,5 @@ django-ckeditor
 
 # Castom admin site
 django-jazzmin
+
+django-cors-headers

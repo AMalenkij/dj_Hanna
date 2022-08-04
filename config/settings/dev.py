@@ -1,3 +1,4 @@
+import os
 from .base import *
 
 # Quick-start development settings - unsuitable for production
@@ -9,11 +10,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 STATIC_ROOT = BASE_DIR / 'static'
 STATIC_URL = 'static/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 
 

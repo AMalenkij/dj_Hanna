@@ -43,6 +43,10 @@ EMAIL_HOST_USER = config('EMAIL')
 EMAIL_HOST_PASSWORD = config('EMAIL_PASSWORD')
 EMAIL_USE_TLS = True
 
+CORS_ALLOWED_ORIGINS = [
+    "https://hanna-s3.s3.amazonaws.com/static/",
+]
+
 # Heroku logs
 LOGGING = {
     'version': 1,
