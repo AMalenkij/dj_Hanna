@@ -24,7 +24,7 @@ INSTALLED_APPS = [
 
     'storages',
     # 'tinymce',
-    # 'ckeditor',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [

@@ -15,7 +15,7 @@ django-storages
 # multilang
 django-modeltranslation
 
-# TinyMCE text editor
+# text editor
 #django-tinymce
 
-#django-ckeditor
+django-ckeditor
