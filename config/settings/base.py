@@ -23,9 +23,8 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
 
     'storages',
-    # 'tinymce',
-    'ckeditor',
-
+    'tinymce',
+    # 'ckeditor',
 ]
 
 MIDDLEWARE = [
