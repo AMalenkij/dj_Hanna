@@ -43,6 +43,12 @@ EMAIL_HOST_USER = config('EMAIL')
 EMAIL_HOST_PASSWORD = config('EMAIL_PASSWORD')
 EMAIL_USE_TLS = True
 
+# TinyMCE
+
+TINYMCE_JS_URL = os.path.join(STATIC_URL, "path/to/tiny_mce/tiny_mce.js")
+
+
+
 # Heroku logs
 LOGGING = {
     'version': 1,
