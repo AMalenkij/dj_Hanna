@@ -23,7 +23,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
 
     'storages',
-    'tinymce',
+    # 'tinymce',
     # 'ckeditor',
 ]
 
@@ -121,4 +121,4 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATIC_ROOT = BASE_DIR / 'static'
+
