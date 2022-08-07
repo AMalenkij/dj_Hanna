@@ -1,0 +1,55 @@
+<!-- css style -->
+<link rel="stylesheet" href="/static/home/css/mini_player.css">
+
+<div class="player container mx-auto m-24">
+    <div class="player__header">
+        <div class="player__img player__img--absolute slider">
+            <button class="player__button player__button--absolute--nw playlist">
+                <img src="/static/home/img/svg_player/playlist.svg" alt="playlist-icon">
+            </button>
+            <button class="player__button player__button--absolute--center play">
+                <img src="/static/home/img/svg_player/play.svg" width="24" height="24" class="mx-auto" alt="play-icon">
+                <img src="/static/home/img/svg_player/pause.svg" width="24" height="24" class="mx-auto" alt="pause-icon">
+            </button>
+            <div class="slider__content">
+                {% for item in music %}
+                <img class="img slider__img" src={{item.song_img.url}} alt="cover">
+                {% endfor %}
+            </div>
+        </div>
+        <div class="player__controls">
+            <button class="player__button back">
+                <img class="img h-6"  src="/static/home/img/svg_player/left-arrow.svg"  alt="back-icon">
+            </button>
+            <p class="player__context slider__context">
+                <strong class="slider__name"></strong>
+                <span class="player__title slider__title"></span>
+            </p>
+            <button class="player__button next">
+                <img class="img h-6" src="/static/home/img/svg_player/right-arrow.svg"  alt="next-icon">
+            </button>
+            <div class="progres">
+                <div class="progres__filled border-gradient"></div>
+            </div>
+        </div>
+    </div>
+
+    <ul class="player__playlist list">
+        {% for item in music %}
+        <li class="player__song">
+            <img class="player__img img" src={{item.song_img.url}} alt="cover">
+            <p class="player__context">
+                <b class="player__song-name">{{item.band_name}}</b>
+                <span class="flex justify-between items-center ">
+            <span class="player__title">{{item.song_name}}</span>
+            <span class="player__song-time"></span>
+          </span>
+            </p>
+            <audio class="audio" src= {{item.audio_file.url}}></audio>
+        </li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+<script src="/static/home/js/mini_player.js"></script>

@@ -10,7 +10,7 @@ from .base import *
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['dj-hanna.herokuapp.com']
 
@@ -42,12 +42,6 @@ EMAIL_PORT = '587'
 EMAIL_HOST_USER = config('EMAIL')
 EMAIL_HOST_PASSWORD = config('EMAIL_PASSWORD')
 EMAIL_USE_TLS = True
-
-# TinyMCE
-
-#TINYMCE_JS_URL = os.path.join(STATIC_URL, "path/to/tiny_mce/tiny_mce.js")
-#TINYMCE_JS_ROOT = os.path.join(STATIC_ROOT, "path/to/tiny_mce")
-
 
 # Heroku logs
 LOGGING = {
