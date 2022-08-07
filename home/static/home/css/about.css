@@ -99,8 +99,8 @@
 .lightbox-prev,
 .lightbox-next {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    /*background-color: rgba(0, 0, 0, 0.8);*/
+    /*color: #fff;*/
     padding: 7px;
     top: 45%;
     cursor: pointer;
@@ -108,10 +108,13 @@
 
 .lightbox-prev {
     left: 0;
+    background:no-repeat url("/static/home/img/svg_player/left-arrow.svg");
 }
 
 .lightbox-next {
     right: 0;
+    background:no-repeat url("/static/home/img/svg_player/right-arrow.svg");
+
 }
 
 .lightbox-prev:hover,
