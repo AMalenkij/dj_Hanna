@@ -52,7 +52,7 @@ class Photo(models.Model):
 
     class Meta:
         verbose_name_plural = 'foto'
-        # ordering = ['pk']
+        ordering = ['id']
 
     def __str__(self):
         return self.title
