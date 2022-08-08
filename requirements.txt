@@ -16,6 +16,5 @@ django-storages
 django-modeltranslation
 
 # text editor
-#django-tinymce
 
 django-ckeditor

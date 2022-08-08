@@ -7,6 +7,7 @@ from django.shortcuts import render
 from django.views.generic import ListView
 
 from .models import Concerts
+from .models import Music
 from .models import News
 from .models import Photo
 
@@ -18,6 +19,11 @@ class AboutList(ListView):
     template_name = 'home/about.html'
     context_object_name = 'about'
     extra_context = {'title': 'about'}
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['music'] = Music.objects.all()
+        return context
 
     def get_queryset(self):
         return Photo.objects.filter(is_published=True)

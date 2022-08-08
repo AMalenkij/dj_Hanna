@@ -1,16 +1,13 @@
+from ckeditor.fields import RichTextField
 from django.db import models
 from django.urls import reverse
-# from tinymce import models as tinymce_models
-from ckeditor.fields import RichTextField
 
 
 class News(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL")
     intro = models.TextField(blank=True)
-    # content = tinymce_models.HTMLField(blank=True)
     content = RichTextField(blank=True, null=True)
-    # content = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     photo = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
@@ -55,7 +52,20 @@ class Photo(models.Model):
 
     class Meta:
         verbose_name_plural = 'foto'
-        ordering = ['-date']
+        ordering = ['id']
 
     def __str__(self):
         return self.title
+
+
+class Music(models.Model):
+    band_name = models.CharField(max_length=50)
+    song_name = models.CharField(max_length=50)
+    audio_file = models.FileField(upload_to='music/audio/')
+    song_img = models.ImageField(upload_to='music/photo/', blank=True)
+
+    class Meta:
+        verbose_name_plural = 'Music'
+
+    def __str__(self):
+        return self.band_name

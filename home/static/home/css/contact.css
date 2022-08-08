@@ -5,3 +5,9 @@
     align-items: center;
     height: 100vh;
 }
+
+@media screen and (max-width: 1024px) {
+    .special_bg {
+        height: 60vh;
+    }
+}
