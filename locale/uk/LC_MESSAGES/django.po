@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-02 23:57+0000\n"
+"POT-Creation-Date: 2022-08-09 22:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,7 +56,7 @@ msgstr "Українська"
 
 #: home/templates/hamburger.html:74 home/templates/header.html:110
 msgid "Poland"
-msgstr ""
+msgstr "Польська"
 
 #: home/templates/hamburger.html:85 home/templates/header.html:121
 msgid "English"
@@ -66,10 +66,9 @@ msgstr "Aнглійська"
 msgid "Listen on your platform"
 msgstr "Слухайте на своїй улюбленій платформі"
 
-#: home/templates/home/about.html:88
 msgid ""
-"Suscribe so you don't miss the release of new songs. We wish you a pleasant "
-"experience"
+"Subscribe, so you don't miss the release of new songs. We wish you a "
+"pleasant experience"
 msgstr ""
 "Підпишіться, щоб не пропустити вихід нових пісень. Бажаємо приємного "
 "прослуховування"
@@ -98,15 +97,15 @@ msgstr ""
 "в романтичну і не повторювану східноєвропейську атмосферу, ніхто не "
 "залишиться байдужмим."
 
-#: home/templates/home/about.html:134
+#: home/templates/home/about.html:129
 msgid "Gallery"
 msgstr "Галерея"
 
-#: home/templates/home/about.html:208
+#: home/templates/home/about.html:199
 msgid "Live music"
 msgstr "Жива музика"
 
-#: home/templates/home/about.html:209
+#: home/templates/home/about.html:200
 msgid "buy tickets"
 msgstr "придбати квитки"
 
@@ -142,5 +141,3 @@ msgstr "Повідомлення"
 msgid "Send"
 msgstr "Відправити"
 
-#~ msgid "Zespół HANNA"
-#~ msgstr "Гурт HANNA"
