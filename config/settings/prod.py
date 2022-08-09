@@ -12,7 +12,11 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dj-hanna.herokuapp.com']
+ALLOWED_HOSTS = ['dj-hanna.herokuapp.com',
+                 'hanna.zone']
+
+# whitenoise static
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 # Heroku Settings
 django_on_heroku.settings(locals(), staticfiles=False)
@@ -33,8 +37,8 @@ AWS_HEADERS = {'Access-Control-Allow-Origin': '*'}
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
 
-STATIC_URL = 'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
-MEDIA_URL = 'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
+STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
 
 # Email setting
 EMAIL_HOST = 'smtp.gmail.com'
@@ -43,7 +47,9 @@ EMAIL_HOST_USER = config('EMAIL')
 EMAIL_HOST_PASSWORD = config('EMAIL_PASSWORD')
 EMAIL_USE_TLS = True
 
-# Heroku logs
+# Heroku Logging
+DEBUG_PROPAGATE_EXCEPTIONS = True
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,

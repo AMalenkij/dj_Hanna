@@ -29,13 +29,13 @@
                     {% for p in paginator.page_range %}
                     {% if page_obj.number == p %}
                     <!--Active page -->
-                    <p class=" font-medium leading-none nav-link-disabled border-t-4 border-indigo-400 pt-3 mr-4 px-2">
+                    <p class=" font-medium leading-none nav-link-disabled pt-3 mr-4 px-2">
                         {{ p }}</p>
 
                     {% elif p >= page_obj.numper|add:-2 and page_obj.numper|add:+2 %}
                     {% else %}
                     <!--btn page -->
-                    <a class=" font-medium leading-none cursor-pointer nav-link border-t-4 border-transparent hover:border-indigo-400 pt-3 mr-4 px-2"
+                    <a class=" font-medium leading-none cursor-pointer nav-link pt-3 mr-4 px-2"
                        href='?page={{ p }}'>{{ p }}</a>
 
                     {% endif %}
