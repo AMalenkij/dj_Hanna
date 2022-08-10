@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-31 23:15+0000\n"
+"POT-Creation-Date: 2022-08-09 22:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,7 @@ msgid "News"
 msgstr "Aktualności"
 
 #: home/templates/breadcrumb.html:26 home/templates/hamburger.html:36
-#: home/templates/home/concerts.html:14
+#: home/templates/home/concerts.html:13
 msgid "Concerts"
 msgstr "Koncerty"
 
@@ -65,20 +65,28 @@ msgstr "Angielski"
 msgid "Listen on your platform"
 msgstr "Słuchaj na ulubionej platformie"
 
-#: home/templates/home/about.html:88
 msgid ""
-"Suscribe so you don't miss the release of new songs. We wish you a pleasant "
-"experience"
+"Subscribe, so you don't miss the release of new songs. We wish you a "
+"pleasant experience"
 msgstr ""
 "Subskrybuj, aby nie przegapić wydania nowych utworów. Życzymy miłego "
 "doświadczenia"
 
-#: home/templates/home/about.html:113
+#: home/templates/home/about.html:114
 msgid "Band Hanna"
 msgstr "Zespół HANNA"
 
-#: home/templates/home/about.html:115
+#: home/templates/home/about.html:116
 msgid ""
+"Hi there! Let's introduce ourselves. We are Hanna, a Polish - Ukrainian "
+"band  founded by singer-songwriter and  composer Hanna Tiekucheva. Musicians "
+"of two nations are united here.  Melancholic melodies, ethnic motifs, and "
+"electronic sounds are blended in our music and this all is emphasized by a "
+"solid dose of presto guitars, powerful vocals and lyrics that flow from the "
+"depths of our souls. With our works we want to convey a beautiful story of "
+"darkness, happiness, love, respect framed in a romantic and unique Eastern "
+"European atmosphere, no one will remain indifferent."
+msgstr ""
 "Zespół HANNA: Polsko-ukraińska grupa muzyczna założona przez wokalistkę i "
 "kompozytorkę Hanne Tekuczewe. Zrzeszająca w swoich szeregach muzyków dwóch "
 "narodów. Tworzona przez nas muzyka przeplata melancholijne melodie, motywy "
@@ -88,20 +96,27 @@ msgid ""
 "miłości, powadzę, ubraną w romantyczny i nie powtarzalny wschodnio "
 "europejski klimat, przy którym nikt nie przejdzie obojętnie. Zespół "
 "debiutował w 2020 r pod czas 44 Jarmarock FEST w Gdańsku , a w październiku "
-"2021 świat zobaczył pierwszy singl zespołu\"Modlitwa\""
-msgstr ""
+"2021 świat zobaczył pierwszy singl zespołu 'Modlitwa'."
 
-#: home/templates/home/about.html:133
+#: home/templates/home/about.html:129
 msgid "Gallery"
 msgstr "Galeri"
 
-#: home/templates/home/about.html:207
+#: home/templates/home/about.html:199
 msgid "Live music"
 msgstr "Muzyka na żywo"
 
-#: home/templates/home/about.html:208
+#: home/templates/home/about.html:200
 msgid "buy tickets"
 msgstr "Kup bilety"
+
+#: home/templates/home/concerts.html:14
+msgid "future"
+msgstr "przyszły"
+
+#: home/templates/home/concerts.html:40
+msgid "past"
+msgstr "przeszłość"
 
 #: home/templates/home/contact.html:20
 msgid "Your message has been sent"

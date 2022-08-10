@@ -7,10 +7,12 @@ from django.shortcuts import render
 from django.views.generic import ListView
 
 from .models import Concerts
+from .models import Music
 from .models import News
 from .models import Photo
 
 
+# Gallery in page about
 class AboutList(ListView):
     paginate_by = 12
     model = Photo
@@ -18,10 +20,16 @@ class AboutList(ListView):
     context_object_name = 'about'
     extra_context = {'title': 'about'}
 
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['music'] = Music.objects.all()
+        return context
+
     def get_queryset(self):
         return Photo.objects.filter(is_published=True)
 
 
+# form contact send e-mail
 def contact(request):
     context = {
         'title': 'Contact',
@@ -62,12 +70,17 @@ class HomeList(NewsList):
 
 
 class ConcertsList(ListView):
-    default = date.today
     context_object_name = 'concerts'
     model = Concerts
     # paginate_by = 10
     template_name = 'home/concerts.html'
     extra_context = {'title': 'Concerts'}
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['future'] = Concerts.objects.filter(date__gte=date.today())
+        context['past'] = Concerts.objects.filter(date__lte=date.today())
+        return context
 
     def get_queryset(self):
         return Concerts.objects.filter(is_published=True)

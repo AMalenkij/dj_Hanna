@@ -85,26 +85,27 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
         <div class="container mx-auto text-center ">
             <div class="text-5xl">{% trans 'Listen on your platform' %}</div>
             <div class="h-1 w-16 border-gradient mx-auto mt-4 rounded-xl"></div>
-            <div class="text-2xl p-10">{% trans "Suscribe so you don't miss the release of new songs. We wish you a pleasant experience" %}
+            <div class="text-2xl p-10">{% trans "Subscribe, so you don't miss the release of new songs. We wish you a pleasant experience" %}
             </div>
         </div>
-        <div class="ml-10 mt-20 lg:mb-20 lg:flex grid lg:grid-cols-3 grid-cols-2 lg:gap-x-10 gap-x-1 ">
-            <div class="h-20 w-32 lg:w-64 hover:opacity-80">
-                <img src="/static/home/img/logo-card/spotify.svg"
-                     alt="spotify"/></div>
-            <div class="h-20 w-32 lg:w-64 hover:opacity-80">
-                <img src="/static/home/img/logo-card/apple-music.svg"
-                     alt="apple-music"/></div>
-            <div class="h-20 w-32 lg:w-64 hover:opacity-80">
-                <img src="/static/home/img/logo-card/amazon-Music.svg"
-                     alt="amazon-Music"/></div>
-            <div class="h-20 w-32 lg:w-64 hover:opacity-80">
-                <img src="/static/home/img/logo-card/deezer.svg" alt="deezer"/>
+        <div class=" mt-16 lg:mb-20 lg:flex grid grid-cols-2 lg:gap-x-10 lg:justify-between lg:mx-32">
+
+            <div class="h-20 w-32 lg:w-64 hover:opacity-80 mx-auto">
+                <a href="https://open.spotify.com/artist/5FSxropE2EflPf3pLSyMhs?si=PS46gJQcQDC9Oaw74dWdDA&nd=1"><img src="/static/home/img/logo-card/spotify.svg"
+                     alt="spotify"/></a></div>
+            <div class="h-20 w-32 lg:w-64 hover:opacity-80 mx-auto">
+                <a href="https://music.amazon.com/albums/B0B6239WSZ" ><img src="/static/home/img/logo-card/amazon-Music.svg"
+                     alt="amazon-Music"/></a>
             </div>
-            <div class="h-20 w-32 lg:w-64 hover:opacity-80">
-                <img src="/static/home/img/logo-card/YouTube_Music.svg"
-                     alt="YouTube_Music"/></div>
-        </div>
+            <div class="h-20 w-32 lg:w-64 hover:opacity-80 mx-auto">
+                <a href="https://deezer.page.link/5EJMHaKsRLfKwa6P8"><img src="/static/home/img/logo-card/deezer.svg" alt="deezer"/></a>
+            </div>
+            <div class="h-20 w-32 lg:w-64 hover:opacity-80 mx-auto">
+                <a href="https://music.youtube.com/channel/UC2XPZACCw5h0cPPiQK7wjZQ?feature=share"><img src="/static/home/img/logo-card/YouTube_Music.svg"
+                     alt="YouTube_Music"/></a>
+            </div>
+            </div>
+
     </div>
     <!-- Content bloc about band -->
     <div class="lg:clip-poly clip-poly-md lg:mt-20  dark-mode">
@@ -112,16 +113,11 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
             <div class="lg:w-3/5 mb-36 text-2xl">
                 <h2 class="text-center mt-32 text-4xl">{% trans 'Band Hanna' %}</h2>
                 <div class="h-1 w-16 border-gradient mx-auto mt-2 mb-10 rounded-xl"></div>
-                <p>{% trans 'Zespół HANNA: Polsko-ukraińska grupa muzyczna założona przez wokalistkę i kompozytorkę Hanne Tekuczewe. Zrzeszająca w swoich szeregach muzyków dwóch narodów. Tworzona przez nas muzyka przeplata melancholijne melodie, motywy etniczne, elektroniczne brzmienia, wszystko to podkreślone solidną dawką przesterowanych gitar, potężnym wokalem oraz tekstami pisanymi z głębin duszy. Naszymi utworami chcemy przekazać piękną opowieść o mroku, szczęściu, miłości, powadzę, ubraną w romantyczny i nie powtarzalny wschodnio europejski klimat, przy którym nikt nie przejdzie obojętnie. Zespół debiutował w 2020 r pod czas 44 Jarmarock FEST w Gdańsku , a w październiku 2021 świat zobaczył pierwszy singl zespołu"Modlitwa"'%}</p>
+                <p>{% trans "Hi there! Let's introduce ourselves. We are Hanna, a Polish - Ukrainian band  founded by singer-songwriter and  composer Hanna Tiekucheva. Musicians of two nations are united here.  Melancholic melodies, ethnic motifs, and electronic sounds are blended in our music and this all is emphasized by a solid dose of presto guitars, powerful vocals and lyrics that flow from the depths of our souls. With our works we want to convey a beautiful story of darkness, happiness, love, respect framed in a romantic and unique Eastern European atmosphere, no one will remain indifferent." %}</p>
             </div>
-            <div class="lg:w-1/4 lg:mt-44 mb-32">
-                <iframe style="border-radius:12px"
-                        src="https://open.spotify.com/embed/album/4KKhcDjF3rAtpYqkGTWagd?utm_source=generator"
-                        width="100%"
-                        height="360"
-                        frameBorder="0"
-                        allowfullscreen=""
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <div class="lg:w-1/4 lg:mt-14 mb-12">
+    <!-- music player -->
+                {% include 'home/mini_player.html' %}
             </div>
         </div>
     </div>
@@ -134,11 +130,7 @@ m-914 -601 l577 578 160 -160 160 -160 -765 -765 -765 -765 -760 760 -760 760
         <div class="h-1 w-8 border-gradient mx-auto mt-4 rounded-xl"></div>
     </div>
     <div class="gallery-container mx-auto mb-44 mb-20 dark-mode">
-        {% for item in about %}
-        <div class="gallery-item" data-index="{{ item.id }}">
-            <img src="{{ item.photo.url }}">
-        </div>
-        {% endfor %}
+        {% include 'home/gallery.html' %}
     </div>
     <!-- card -->
     <div class="w-screen h-64">

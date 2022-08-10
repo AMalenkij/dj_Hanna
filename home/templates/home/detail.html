@@ -16,7 +16,7 @@
                 <span class="blog-date">{{ created_at|date:"Y.m.d" }}</span>
             </div>
             <div class="h-2 w-full border-gradient mt-2 mb-2 rounded-xl"></div>
-            <p>{{ content | linebreaks }}</p>
+            <p>{{ content | safe }}</p>
         </div>
     </div>
 </section>
