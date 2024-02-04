@@ -24,4 +24,4 @@ The website is designed in a minimalist style with gradients to add visual inter
 ## Deployment
 A stable version of the site is hosted on Heroku with a Postgres SQL server.
 
-Check out the site here https://www.hanna.zone
+Check out the site here https://hanna.gdn
